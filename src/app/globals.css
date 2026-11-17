@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-quicksand);
+  --font-serif: var(--font-quicksand);
+
+  /* Custom Colors */
+  --color-navy-900: #1F2A44;
+  --color-navy-800: #2a3b55;
+  --color-orange-500: #F58022;
+  --color-orange-600: #D16D1A;
+  --color-primary-blue: #3370F7;
+  --color-secondary-blue: #4C8FD6;
+  --color-secondary-teal: #2EA3C7;
+  --color-light-blue: #EAF1FE;
+  --color-neutral-gray: #85756F;
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1);
+    }
+  }
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+
+  @keyframes text-enter {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@layer utilities {
+  .animate-aurora {
+    animation: aurora 60s linear infinite;
+  }
+
+  .bg-grid-slate-100 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(241 245 249)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#1F2A44] to-[#F58022];
+  }
+  
+  .bg-dot-black\/\[0\.2\] {
+    background-image: radial-gradient(circle at 1px 1px, rgb(0 0 0 / 0.2) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+  
+  .bg-dot-thick-neutral-300 {
+    background-image: radial-gradient(circle at 1px 1px, rgb(212 212 212) 2px, transparent 0);
+    background-size: 32px 32px;
+  }
+  
+  .bg-dot-thick-orange-500 {
+    background-image: radial-gradient(circle at 1px 1px, rgb(249 115 22) 2px, transparent 0);
+    background-size: 32px 32px;
+  }
+  
+  .animate-spotlight {
+    animation: spotlight 2s ease .75s 1 forwards;
+  }
+
+  .animate-text-enter {
+    animation: text-enter 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-text-enter-delay-1 {
+    animation-delay: 0.07s;
+  }
+
+  .animate-text-enter-delay-2 {
+    animation-delay: 0.14s;
+  }
+}
+
+/* Respect reduced motion for text entrance */
+@media (prefers-reduced-motion: reduce) {
+  .animate-text-enter,
+  .animate-text-enter-delay-1,
+  .animate-text-enter-delay-2 {
+    animation: none !important;
+  }
+}
+
+/* Performance: stop infinite CSS animations on mobile/tablet */
+@media (max-width: 1023px) {
+  .animate-ping,
+  .animate-pulse,
+  .animate-aurora,
+  [class*="animate-[spin"] {
+    animation: none !important;
+  }
+}
+
+/* Performance: skip expensive GPU blurs on phones */
+@media (max-width: 767px) {
+  [class*="blur-["],
+  .blur-sm,
+  .blur-md,
+  .blur-lg,
+  .blur-xl,
+  .blur-2xl,
+  .blur-3xl {
+    filter: none !important;
+  }
+
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  [class*="backdrop-blur"] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
