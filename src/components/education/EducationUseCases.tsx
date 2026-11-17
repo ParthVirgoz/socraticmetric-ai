@@ -31,11 +31,11 @@ export function EducationUseCases() {
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-10">
           <div className="mb-4">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-[#EAF1FE] border border-[#3370F7]/20 text-[#3370F7] font-bold text-xs tracking-widest uppercase">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
               Use Cases
             </span>
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44]">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460]">
             Strategic Cognitive Verification
           </h2>
         </div>
@@ -53,14 +53,14 @@ export function EducationUseCases() {
                
                 className="flex flex-col sm:flex-row sm:items-start gap-6 group rounded-3xl border border-slate-200/60 bg-white p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md shadow-blue-900/5"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#3370F7] text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-[#3370F7]/20 group-hover:scale-105 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1E4E8A] text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-[#163460]/10 group-hover:scale-105 transition-transform duration-300">
                   {item.id}
                 </div>
                 <div className="text-center sm:text-left">
-                  <h3 className="text-xl font-bold text-[#1F2A44] mb-3 group-hover:text-[#3370F7] transition-colors duration-300 leading-snug">
+                  <h3 className="text-xl font-bold text-[#163460] mb-3 group-hover:text-[#1E4E8A] transition-colors duration-300 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-[#64748B] text-base leading-relaxed">
+                  <p className="text-[#65717D] text-base leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -78,14 +78,14 @@ export function EducationUseCases() {
                
                 className="flex flex-col sm:flex-row sm:items-start gap-6 group rounded-3xl border border-slate-200/60 bg-white p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md shadow-blue-900/5"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#F58022] text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-[#F58022]/20 group-hover:scale-105 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#E79636] text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-[#163460]/10 group-hover:scale-105 transition-transform duration-300">
                   {item.id}
                 </div>
                 <div className="text-center sm:text-left">
-                  <h3 className="text-xl font-bold text-[#1F2A44] mb-3 group-hover:text-[#F58022] transition-colors duration-300 leading-snug">
+                  <h3 className="text-xl font-bold text-[#163460] mb-3 group-hover:text-[#A5662C] transition-colors duration-300 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-[#64748B] text-base leading-relaxed">
+                  <p className="text-[#65717D] text-base leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

@@ -63,8 +63,8 @@ export const BackgroundBeams = ({
       ctx.clearRect(0, 0, width, height);
 
       const gradient = ctx.createLinearGradient(0, 0, width, height);
-      gradient.addColorStop(0, "rgba(51, 112, 247, 0.05)");
-      gradient.addColorStop(1, "rgba(245, 128, 34, 0.05)");
+      gradient.addColorStop(0, "rgba(30, 78, 138, 0.05)");
+      gradient.addColorStop(1, "rgba(231, 150, 54, 0.05)");
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
 
@@ -80,9 +80,9 @@ export const BackgroundBeams = ({
 
         ctx.beginPath();
         const lineGradient = ctx.createLinearGradient(p.x, p.y, p.x, p.y + p.length);
-        lineGradient.addColorStop(0, `rgba(51, 112, 247, 0)`);
-        lineGradient.addColorStop(0.5, `rgba(51, 112, 247, ${p.opacity})`);
-        lineGradient.addColorStop(1, `rgba(51, 112, 247, 0)`);
+        lineGradient.addColorStop(0, `rgba(30, 78, 138, 0)`);
+        lineGradient.addColorStop(0.5, `rgba(30, 78, 138, ${p.opacity})`);
+        lineGradient.addColorStop(1, `rgba(30, 78, 138, 0)`);
         
         ctx.strokeStyle = lineGradient;
         ctx.moveTo(p.x, p.y);

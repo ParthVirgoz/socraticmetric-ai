@@ -40,7 +40,7 @@ export function ScrollToTop() {
           >
             <Button
               onClick={scrollToTop}
-              className="rounded-full h-12 w-12 p-0 bg-[#3370F7] hover:bg-[#4C8FD6] shadow-lg shadow-[#3370F7]/30 border border-white/20"
+              className="rounded-full h-12 w-12 p-0 bg-[#1E4E8A] hover:bg-[#2663A5] shadow-lg shadow-[#163460]/10 border border-white/20"
               aria-label="Scroll to top"
             >
             <ArrowUp className="h-6 w-6 text-white" />

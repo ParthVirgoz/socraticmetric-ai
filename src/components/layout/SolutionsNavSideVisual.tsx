@@ -135,7 +135,7 @@ export function SolutionsNavSideVisual({ variant }: { variant: SolutionsNavSideV
         <div className="flex shrink-0 flex-col items-center">
           <div className="relative h-10 w-10">
             <svg className="h-10 w-10 -rotate-90" viewBox="0 0 40 40" aria-hidden>
-              <circle cx="20" cy="20" r="14" fill="none" stroke="#e2e8f0" strokeWidth="3.5" />
+              <circle cx="20" cy="20" r="14" fill="none" stroke="#E5E7E4" strokeWidth="3.5" />
               <circle
                 cx="20"
                 cy="20"

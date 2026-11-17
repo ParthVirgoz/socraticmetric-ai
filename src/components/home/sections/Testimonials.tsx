@@ -11,7 +11,7 @@ const testimonials = [
     title: "Dean of Academic Affairs",
     org: "Westcliff University",
     initials: "SE",
-    color: "from-[#3370F7] to-[#4C8FD6]",
+    color: "from-[#163460] to-[#2663A5]",
     rating: 5,
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     title: "Head of Compliance",
     org: "Enterprise Solutions",
     initials: "MW",
-    color: "from-emerald-500 to-teal-500",
+    color: "from-[#1A4175] to-[#163460]",
     rating: 5,
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
     title: "Director of Readiness",
     org: "Federal Agency",
     initials: "JH",
-    color: "from-[#F58022] to-amber-500",
+    color: "from-[#E79636] to-[#C27B2E]",
     rating: 5,
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     title: "Prof. of Computer Science",
     org: "State University",
     initials: "LC",
-    color: "from-violet-500 to-purple-500",
+    color: "from-[#2663A5] to-[#1A4175]",
     rating: 5,
   },
   {
@@ -51,7 +51,7 @@ const testimonials = [
     title: "VP of Development",
     org: "Global Tech Group",
     initials: "PN",
-    color: "from-rose-500 to-pink-500",
+    color: "from-[#ECA63A] to-[#E79636]",
     rating: 5,
   },
   {
@@ -61,7 +61,7 @@ const testimonials = [
     title: "Chief Learning Officer",
     org: "Brandt Associates",
     initials: "TB",
-    color: "from-sky-500 to-blue-500",
+    color: "from-[#8CA4C2] to-[#1E4E8A]",
     rating: 5,
   },
 ];
@@ -121,15 +121,15 @@ export function Testimonials() {
           <div
             className="max-w-2xl text-center md:text-left"
           >
-            <span className="mb-4 inline-block rounded-full border border-[#3370F7]/20 bg-[#EAF1FE] px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest text-[#1D4ED8]">
+            <span className="mb-4 inline-block rounded-full border border-[#1E4E8A]/20 bg-[#F5F1E8] px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest text-[#1A4175]">
               Testimonials
             </span>
             <h2
               id="testimonials-heading"
-              className="mb-4 font-serif text-3xl font-bold leading-tight text-[#1F2A44] sm:text-4xl lg:text-5xl"
+              className="mb-4 font-serif text-3xl font-bold leading-tight text-[#163460] sm:text-4xl lg:text-5xl"
             >
               Trusted by Leaders Who{" "}
-              <span className="bg-gradient-to-r from-[#3370F7] to-[#4C8FD6] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#1E4E8A] to-[#2663A5] bg-clip-text text-transparent">
                 Demand Real Proof
               </span>
             </h2>
@@ -142,14 +142,14 @@ export function Testimonials() {
           <div className="hidden gap-3 md:flex">
             <button
               onClick={() => scroll("left")}
-              className="group flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:border-[#3370F7] hover:bg-[#EAF1FE] hover:text-[#3370F7] active:scale-95"
+              className="group flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:border-[#1E4E8A] hover:bg-[#F5F1E8] hover:text-[#1E4E8A] active:scale-95"
               aria-label="Previous testimonials"
             >
               <ChevronLeft className="h-6 w-6 transition-transform group-hover:-translate-x-0.5" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="group flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:border-[#3370F7] hover:bg-[#3370F7] hover:text-white active:scale-95"
+              className="group flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition-all hover:border-[#1E4E8A] hover:bg-[#1E4E8A] hover:text-white active:scale-95"
               aria-label="Next testimonials"
             >
               <ChevronRight className="h-6 w-6 transition-transform group-hover:translate-x-0.5" />
@@ -160,8 +160,8 @@ export function Testimonials() {
         {/* Carousel Container */}
         <div className="relative -mx-6 px-6 md:-mx-12 md:px-12">
           {/* Edge fades */}
-          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-6 bg-gradient-to-r from-[#F0F6FF] to-transparent md:w-16" />
-          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-6 bg-gradient-to-l from-[#F0F6FF] to-transparent md:w-16" />
+          <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-6 bg-gradient-to-r from-[#F8F6F0] to-transparent md:w-16" />
+          <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-6 bg-gradient-to-l from-[#F8F6F0] to-transparent md:w-16" />
 
           <div
             ref={scrollRef}
@@ -208,12 +208,12 @@ export function Testimonials() {
                 {/* Author outside the bubble */}
                 <div className="mt-5 flex items-center gap-3 pl-5">
                   <div className={`rounded-full bg-gradient-to-br p-[2px] ${t.color}`}>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xs font-bold text-[#1F2A44]">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xs font-bold text-[#163460]">
                       {t.initials}
                     </div>
                   </div>
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-bold text-[#1F2A44]">{t.name}</p>
+                    <p className="truncate text-sm font-bold text-[#163460]">{t.name}</p>
                     <p className="truncate text-xs font-medium text-slate-500">
                       {t.title} · {t.org}
                     </p>

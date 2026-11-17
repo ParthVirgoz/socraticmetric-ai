@@ -13,29 +13,29 @@ const stats = [
     value: "4",
     description: "Issued AI patents",
     icon: Award,
-    accent: "from-[#6FA0FF] to-[#9CC2FF]",
-    iconColor: "text-[#8FB0F5]",
+    accent: "from-[#8CA4C2] to-[#B5C2D0]",
+    iconColor: "text-[#8CA4C2]",
   },
   {
     value: "International",
     description: "Jurisdiction coverage",
     icon: Globe2,
-    accent: "from-[#9CC2FF] to-white",
+    accent: "from-[#B5C2D0] to-white",
     iconColor: "text-slate-300",
   },
   {
     value: "2024–2026",
     description: "Issue date range",
     icon: CalendarRange,
-    accent: "from-[#F58022] to-[#FFB347]",
-    iconColor: "text-[#F5A052]",
+    accent: "from-[#E79636] to-[#F3D09A]",
+    iconColor: "text-[#ECA63A]",
   },
   {
     value: "Proprietary",
     description: "Oral verification technology",
     icon: Sparkles,
-    accent: "from-[#6FA0FF] via-[#9CC2FF] to-[#FFB347]",
-    iconColor: "text-[#8FB0F5]",
+    accent: "from-[#8CA4C2] via-[#B5C2D0] to-[#F3D09A]",
+    iconColor: "text-[#8CA4C2]",
   },
 ];
 
@@ -45,7 +45,7 @@ const patents = [
       "Systems and methods for adaptive, AI-driven oral assessment of knowledge",
     id: "11,990,139",
     date: "May 21, 2024",
-    accent: "from-[#3370F7] to-[#4C8FD6]",
+    accent: "from-[#1E4E8A] to-[#2663A5]",
   },
   {
     title:
@@ -59,7 +59,7 @@ const patents = [
       "Systems and methods for real-time assessment of knowledge through iterative, AI-mediated questioning",
     id: "12,211,511",
     date: "February 4, 2025",
-    accent: "from-[#F58022] to-amber-400",
+    accent: "from-[#E79636] to-amber-400",
   },
   {
     title:
@@ -79,7 +79,7 @@ export function HomePatents() {
     >
       <div className="container relative mx-auto max-w-6xl">
         {/* Dark glass panel */}
-        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#1F2A44] via-[#1a2540] to-[#141d33] px-5 py-12 shadow-[0_40px_100px_-30px_rgba(31,42,68,0.6)] ring-1 ring-white/10 sm:rounded-[2.5rem] sm:px-8 md:px-12 md:py-16 lg:px-16">
+        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#163460] via-[#163460] to-[#102748] px-5 py-12 shadow-[0_32px_72px_-36px_rgba(22,52,96,0.3)] ring-1 ring-white/10 sm:rounded-[2.5rem] sm:px-8 md:px-12 md:py-16 lg:px-16">
           {/* Atmosphere inside the panel */}
           <div className="pointer-events-none absolute inset-0" aria-hidden>
             {/* Top edge highlight */}
@@ -93,18 +93,18 @@ export function HomePatents() {
               className="mx-auto mb-10 max-w-3xl text-center md:mb-14"
             >
               <div className="mb-6 flex items-center justify-center gap-3">
-                <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#8FB0F5]/60" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#8FB0F5]">
+                <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#8CA4C2]/60" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#8CA4C2]">
                   Patented Technology
                 </span>
-                <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#8FB0F5]/60" />
+                <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#8CA4C2]/60" />
               </div>
               <h2
                 id="home-patents-heading"
                 className="font-serif text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl"
               >
                 Backed by{" "}
-                <span className="bg-gradient-to-r from-[#8FB0F5] to-[#C4D7FF] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#8CA4C2] to-[#B5C2D0] bg-clip-text text-transparent">
                   Four Issued US Patents
                 </span>
               </h2>
@@ -185,14 +185,14 @@ export function HomePatents() {
 
                   <div className="mt-5 flex flex-wrap items-center gap-2.5 border-t border-white/10 pt-4">
                     <div className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.06] px-2.5 py-1.5 text-xs text-slate-300">
-                      <FileText className="h-3.5 w-3.5 text-[#F5A052]" />
+                      <FileText className="h-3.5 w-3.5 text-[#ECA63A]" />
                       <span>
                         Patent No:{" "}
                         <span className="font-bold text-white">{patent.id}</span>
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.06] px-2.5 py-1.5 text-xs text-slate-300">
-                      <Calendar className="h-3.5 w-3.5 text-[#8FB0F5]" />
+                      <Calendar className="h-3.5 w-3.5 text-[#8CA4C2]" />
                       <span>
                         Issued:{" "}
                         <span className="font-semibold text-white">{patent.date}</span>

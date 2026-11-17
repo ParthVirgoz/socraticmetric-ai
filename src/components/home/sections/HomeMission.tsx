@@ -10,21 +10,21 @@ export function HomeMission() {
           className="flex flex-col items-center"
         >
           <div className="mb-8 flex items-center justify-center gap-3">
-            <div className="h-px w-6 bg-gradient-to-r from-transparent to-[#3370F7]/40" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#1D4ED8]">
+            <div className="h-px w-6 bg-gradient-to-r from-transparent to-[#1E4E8A]/40" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#1A4175]">
               Our Mission
             </span>
-            <div className="h-px w-6 bg-gradient-to-l from-transparent to-[#3370F7]/40" />
+            <div className="h-px w-6 bg-gradient-to-l from-transparent to-[#1E4E8A]/40" />
           </div>
 
-          <div className="w-full rounded-2xl border border-[#1F2A44] bg-white p-8 shadow-[8px_8px_0px_0px_#1F2A44] sm:p-12 md:p-16">
-            <h2 className="mb-8 text-center font-serif text-3xl font-bold leading-[1.15] text-[#1F2A44] sm:text-4xl md:text-5xl lg:text-[3.25rem]">
+          <div className="w-full rounded-2xl border border-[#163460] bg-white p-8 shadow-[8px_8px_0px_0px_#163460] sm:p-12 md:p-16">
+            <h2 className="mb-8 text-center font-serif text-3xl font-bold leading-[1.15] text-[#163460] sm:text-4xl md:text-5xl lg:text-[3.25rem]">
               The New Standard for Cognitive & Academic Verification
             </h2>
 
-            <div className="space-y-6 text-center text-base leading-relaxed text-[#475569] sm:text-lg">
+            <div className="space-y-6 text-center text-base leading-relaxed text-[#4D5C6E] sm:text-lg">
               <p>
-                <strong className="font-bold text-[#1F2A44]">
+                <strong className="font-bold text-[#163460]">
                   Written output is no longer proof of understanding
                 </strong>
                 . In an era where AI-generated content is indistinguishable from
@@ -34,7 +34,7 @@ export function HomeMission() {
 
               <p>
                 Socratic Metric™ brings back the gold standard of assessment:{" "}
-                <strong className="font-bold text-[#1F2A44]">
+                <strong className="font-bold text-[#163460]">
                   AI-moderated oral Assessment
                 </strong>{" "}
                 — reimagined for scale, consistency, and live cognitive verification.
@@ -42,42 +42,42 @@ export function HomeMission() {
             </div>
 
             <div className="mt-10 sm:mt-12">
-              <p className="mb-6 text-center text-base font-medium text-[#1F2A44] sm:text-lg">
+              <p className="mb-6 text-center text-base font-medium text-[#163460] sm:text-lg">
                 Each interactive oral session evaluates cognition in motion by capturing:
               </p>
 
               <ul className="mx-auto max-w-2xl space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1D4ED8]" strokeWidth={2} />
-                  <p className="text-[#475569]">
-                    <strong className="font-semibold text-[#1F2A44]">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1A4175]" strokeWidth={2} />
+                  <p className="text-[#4D5C6E]">
+                    <strong className="font-semibold text-[#163460]">
                       Authentic reasoning & articulate defense:
                     </strong>{" "}
                     Requiring users to explain, refine, and defend their understanding aloud in real-time conversation.
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1D4ED8]" strokeWidth={2} />
-                  <p className="text-[#475569]">
-                    <strong className="font-semibold text-[#1F2A44]">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1A4175]" strokeWidth={2} />
+                  <p className="text-[#4D5C6E]">
+                    <strong className="font-semibold text-[#163460]">
                       Deep comprehension via adaptive questioning:
                     </strong>{" "}
                     Probing reasoning depth through targeted, real-time follow-up questions and real-world scenarios.
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1D4ED8]" strokeWidth={2} />
-                  <p className="text-[#475569]">
-                    <strong className="font-semibold text-[#1F2A44]">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1A4175]" strokeWidth={2} />
+                  <p className="text-[#4D5C6E]">
+                    <strong className="font-semibold text-[#163460]">
                       Active learning & neural engagement:
                     </strong>{" "}
                     Leveraging cognitive neuroscience—specifically the Production Effect—to strengthen memory and retention as users read and respond aloud.
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1D4ED8]" strokeWidth={2} />
-                  <p className="text-[#475569]">
-                    <strong className="font-semibold text-[#1F2A44]">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1A4175]" strokeWidth={2} />
+                  <p className="text-[#4D5C6E]">
+                    <strong className="font-semibold text-[#163460]">
                       Audit-ready evaluation & feedback:
                     </strong>{" "}
                     Delivering immediate, iterative AI guidance alongside identity-verified, transcript-backed records aligned to your rubrics and standards.
@@ -88,20 +88,20 @@ export function HomeMission() {
             
             <div className="mt-10 mx-auto max-w-2xl border-t border-slate-100 pt-8 space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <p className="text-[#475569] text-sm sm:text-base">
-                  <strong className="font-semibold text-[#1F2A44] mr-2">Built for:</strong> 
+                <p className="text-[#4D5C6E] text-sm sm:text-base">
+                  <strong className="font-semibold text-[#163460] mr-2">Built for:</strong>
                   Westcliff University
                 </p>
-                <p className="text-[#475569] text-sm sm:text-base">
-                  <strong className="font-semibold text-[#1F2A44] mr-2">Pilot Term:</strong> 
+                <p className="text-[#4D5C6E] text-sm sm:text-base">
+                  <strong className="font-semibold text-[#163460] mr-2">Pilot Term:</strong>
                   Fall 2024
                 </p>
-                <p className="text-[#475569] text-sm sm:text-base">
-                  <strong className="font-semibold text-[#1F2A44] mr-2">Other Sectors:</strong> 
+                <p className="text-[#4D5C6E] text-sm sm:text-base">
+                  <strong className="font-semibold text-[#163460] mr-2">Other Sectors:</strong>
                   Education, Enterprise, and Government
                 </p>
-                <p className="text-[#475569] text-sm sm:text-base">
-                  <strong className="font-semibold text-[#1F2A44] mr-2">Goal:</strong> 
+                <p className="text-[#4D5C6E] text-sm sm:text-base">
+                  <strong className="font-semibold text-[#163460] mr-2">Goal:</strong>
                   Assess true understanding without increasing human workload
                 </p>
               </div>
@@ -111,7 +111,7 @@ export function HomeMission() {
           <div className="mt-12 flex justify-center">
             <Link
               href="/request-demo"
-              className="group inline-flex h-14 items-center justify-center rounded-lg bg-[#EA580C] px-8 text-base font-bold text-white shadow-md shadow-orange-200 transition-all duration-200 hover:bg-[#C2410C] hover:shadow-lg hover:shadow-orange-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:scale-[0.98]"
+              className="group inline-flex h-14 items-center justify-center rounded-lg bg-[#E79636] px-8 text-base font-bold text-[#163460] shadow-md shadow-orange-200 transition-all duration-200 hover:bg-[#F3D09A] hover:shadow-lg hover:shadow-orange-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#163460] focus-visible:ring-offset-2 active:scale-[0.98]"
             >
               Book a demo
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

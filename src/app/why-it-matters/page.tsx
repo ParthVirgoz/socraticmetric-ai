@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/home/sections/ContactSection";
 
 export default function WhyItMattersPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8FAFC] font-sans text-[#1F2A44] selection:bg-[#F58022]/20 selection:text-[#1F2A44]">
+    <div className="flex min-h-screen flex-col bg-[#F5F5F2] font-sans text-[#163460] selection:bg-[#E79636]/20 selection:text-[#163460]">
       <Navbar />
       <main className="flex-1">
         <WhyItMattersHero />

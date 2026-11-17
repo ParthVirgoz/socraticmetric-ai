@@ -15,50 +15,50 @@ const steps = [
   {
     label: "Textbook question",
     icon: BookOpen,
-    box: "bg-white border-[#1F2A44]/25",
-    iconClass: "text-[#1F2A44]",
-    labelClass: "text-[#1F2A44]",
+    box: "bg-white border-[#163460]/25",
+    iconClass: "text-[#163460]",
+    labelClass: "text-[#163460]",
   },
   {
     label: "Screenshot or Copy-Paste question",
     icon: ImageIcon,
-    box: "bg-[#EAF1FE] border-[#1F2A44]/25",
-    iconClass: "text-[#1F2A44]",
-    labelClass: "text-[#1F2A44]",
+    box: "bg-[#F5F1E8] border-[#163460]/25",
+    iconClass: "text-[#163460]",
+    labelClass: "text-[#163460]",
   },
   {
     label: "ChatGPT",
     icon: MessageCircle,
-    box: "bg-[#1F2A44] border-[#1F2A44]",
+    box: "bg-[#163460] border-[#163460]",
     iconClass: "text-white",
-    labelClass: "text-[#1F2A44]",
+    labelClass: "text-[#163460]",
   },
   {
     label: "Humanizer AI Tools",
     icon: Wand2,
-    box: "bg-[#FFF4ED] border-[#1F2A44]/25",
-    iconClass: "text-[#F58022]",
-    labelClass: "text-[#1F2A44]",
+    box: "bg-[#FBF5EA] border-[#163460]/25",
+    iconClass: "text-[#A5662C]",
+    labelClass: "text-[#163460]",
   },
   {
     label: "Self-check AI Using AI-Detector Tools",
     icon: ScanSearch,
-    box: "bg-[#EAF1FE] border-[#1F2A44]/25",
-    iconClass: "text-[#3370F7]",
-    labelClass: "text-[#1F2A44]",
+    box: "bg-[#F5F1E8] border-[#163460]/25",
+    iconClass: "text-[#1E4E8A]",
+    labelClass: "text-[#163460]",
   },
   {
     label: "Ready to submit answers",
     icon: Check,
-    box: "bg-white border-[#1F2A44]/25",
-    iconClass: "text-[#3370F7]",
-    labelClass: "text-[#1F2A44]",
+    box: "bg-white border-[#163460]/25",
+    iconClass: "text-[#1E4E8A]",
+    labelClass: "text-[#163460]",
     strokeWidth: 3,
   },
   {
     label: "Grade but no learning",
     icon: Star,
-    box: "bg-[#FEE2E2] border-[#1F2A44]/30",
+    box: "bg-[#FEE2E2] border-[#163460]/30",
     iconClass: "text-[#DC2626]",
     labelClass: "text-[#DC2626]",
     strike: true,
@@ -75,26 +75,26 @@ export function EducationHero() {
           className="flex flex-col items-center text-center"
         >
           <div className="mb-5">
-            <span className="inline-block rounded-full border border-[#3370F7]/20 bg-[#EAF1FE] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#3370F7]">
+            <span className="inline-block rounded-full border border-[#1E4E8A]/20 bg-[#F5F1E8] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#1E4E8A]">
               Education
             </span>
           </div>
 
-          <h1 className="animate-text-enter max-w-3xl font-serif text-3xl font-bold leading-[1.15] tracking-tight text-[#1F2A44] sm:text-4xl md:text-5xl lg:text-[3.25rem]">
+          <h1 className="animate-text-enter max-w-3xl font-serif text-3xl font-bold leading-[1.15] tracking-tight text-[#163460] sm:text-4xl md:text-5xl lg:text-[3.25rem]">
             The AI cheating crisis{" "}
-            <span className="italic text-[#3370F7]">in education.</span>
+            <span className="italic text-[#1E4E8A]">in education.</span>
           </h1>
 
-          <div className="mt-8 inline-flex max-w-xl flex-col items-center rounded-2xl border border-[#3370F7]/20 bg-[#EAF1FE] px-8 py-5 sm:mt-10 sm:px-12 sm:py-6">
-            <p className="text-4xl font-bold tracking-tight text-[#3370F7] sm:text-5xl md:text-6xl">
+          <div className="mt-8 inline-flex max-w-xl flex-col items-center rounded-2xl border border-[#1E4E8A]/20 bg-[#F5F1E8] px-8 py-5 sm:mt-10 sm:px-12 sm:py-6">
+            <p className="text-4xl font-bold tracking-tight text-[#1E4E8A] sm:text-5xl md:text-6xl">
               90%
             </p>
-            <p className="mt-1.5 text-sm font-medium text-[#64748B] sm:text-base md:text-lg">
+            <p className="mt-1.5 text-sm font-medium text-[#65717D] sm:text-base md:text-lg">
               of students now use AI to complete coursework
             </p>
           </div>
 
-          <p className="mt-10 text-base font-medium text-[#64748B] sm:mt-12 sm:text-lg">
+          <p className="mt-10 text-base font-medium text-[#65717D] sm:mt-12 sm:text-lg">
             Their process usually looks like this:
           </p>
 
@@ -214,17 +214,17 @@ export function EducationHero() {
             </ol>
           </div>
 
-          <p className="mt-10 max-w-2xl text-base leading-relaxed text-[#475569] sm:mt-12 sm:text-lg md:text-xl">
+          <p className="mt-10 max-w-2xl text-base leading-relaxed text-[#4D5C6E] sm:mt-12 sm:text-lg md:text-xl">
             The traditional assessment model is broken. Socratic Metric brings
             back what matters:{" "}
-            <strong className="font-bold text-[#1F2A44]">
+            <strong className="font-bold text-[#163460]">
               verifying real understanding.
             </strong>
           </p>
 
           <Link
             href={REQUEST_DEMO_BOOKING_HREF}
-            className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#3370F7] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_0_0_#1F2A44] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#4C8FD6] hover:shadow-[0_6px_0_0_#1F2A44] active:translate-y-0.5 active:shadow-[0_2px_0_0_#1F2A44] sm:mt-8 sm:px-7 sm:text-base"
+            className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#1E4E8A] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_0_0_#163460] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2663A5] hover:shadow-[0_6px_0_0_#163460] active:translate-y-0.5 active:shadow-[0_2px_0_0_#163460] sm:mt-8 sm:px-7 sm:text-base"
           >
             See how Socratic Metric solves this
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

@@ -3,17 +3,17 @@ import { Search, PenTool, ClipboardList, AlertCircle } from "lucide-react";
 export function EnterpriseRisk() {
   const risks = [
     {
-      icon: <Search className="w-8 h-8 text-[#F58022]" strokeWidth={1.75} />,
+      icon: <Search className="w-8 h-8 text-[#A5662C]" strokeWidth={1.75} />,
       iconBg: "bg-orange-50",
       title: "Leadership submitting strategic rationale they cannot defend aloud",
     },
     {
-      icon: <PenTool className="w-8 h-8 text-[#3370F7]" strokeWidth={1.75} />,
+      icon: <PenTool className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
       iconBg: "bg-blue-50",
       title: "Compliance officers approving documentation without reasoning through exposure",
     },
     {
-      icon: <ClipboardList className="w-8 h-8 text-[#3370F7]" strokeWidth={1.75} />,
+      icon: <ClipboardList className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
       iconBg: "bg-blue-50",
       title: "Client-facing teams presenting solutions they cannot adapt in real time",
     },
@@ -29,14 +29,14 @@ export function EnterpriseRisk() {
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-16 space-y-4">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#F58022]" />
-            <span className="text-[#F58022] font-bold text-sm tracking-widest uppercase">The New Risk</span>
-            <div className="h-px w-12 bg-[#F58022]" />
+            <div className="h-px w-12 bg-[#E79636]" />
+            <span className="text-[#A5662C] font-bold text-sm tracking-widest uppercase">The New Risk</span>
+            <div className="h-px w-12 bg-[#E79636]" />
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
             The false assurance of competence in the AI era
           </h2>
-          <p className="text-lg md:text-xl text-[#64748B] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-[#65717D] max-w-3xl mx-auto leading-relaxed">
             In regulated, revenue-facing, and governance-sensitive environments, polished AI
             documentation introduces a serious vulnerability. When leadership decisions and
             compliance approvals are based on documents no one fully comprehends, operational and
@@ -55,7 +55,7 @@ export function EnterpriseRisk() {
               >
                 {risk.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#1F2A44] leading-snug">
+              <h3 className="text-lg font-bold text-[#163460] leading-snug">
                 {risk.title}
               </h3>
             </div>

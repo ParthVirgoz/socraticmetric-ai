@@ -8,7 +8,7 @@ const testimonials = [
     title: "Professor of Computer Science",
     org: "State University",
     initials: "SM",
-    color: "from-[#3370F7] to-[#4C8FD6]",
+    color: "from-[#1E4E8A] to-[#2663A5]",
     rating: 5,
   },
   {
@@ -18,7 +18,7 @@ const testimonials = [
     title: "Director of Honor Systems",
     org: "Ivy League College",
     initials: "AV",
-    color: "from-[#F58022] to-[#D16D1A]",
+    color: "from-[#E79636] to-[#C27B2E]",
     rating: 5,
   },
   {
@@ -50,11 +50,11 @@ export function EducationTestimonial() {
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-10">
           <div className="mb-4">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-[#EAF1FE] border border-[#3370F7]/20 text-[#3370F7] font-bold text-xs tracking-widest uppercase">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
               Voices
             </span>
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44]">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460]">
             What Educators are Saying
           </h2>
         </div>
@@ -83,7 +83,7 @@ export function EducationTestimonial() {
               </div>
 
               {/* Quote text */}
-              <blockquote className="text-[#64748B] text-base leading-relaxed flex-grow italic">
+              <blockquote className="text-[#65717D] text-base leading-relaxed flex-grow italic">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
 
@@ -93,7 +93,7 @@ export function EducationTestimonial() {
                   {t.initials}
                 </div>
                 <div className="min-w-0">
-                  <cite className="font-bold text-[#1F2A44] text-sm not-italic block truncate">{t.name}</cite>
+                  <cite className="font-bold text-[#163460] text-sm not-italic block truncate">{t.name}</cite>
                   <span className="text-slate-400 text-xs block truncate">{t.title}</span>
                   <span className="text-slate-400 text-xs block truncate font-medium">{t.org}</span>
                 </div>

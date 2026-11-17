@@ -23,14 +23,14 @@ export function EducationCompliance() {
         <div className="grid lg:grid-cols-2 items-center gap-8 lg:gap-12">
           <div className="space-y-6">
             <div className="mb-4">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#EAF1FE] border border-[#3370F7]/20 text-[#3370F7] font-bold text-xs tracking-widest uppercase">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
                 Compliance
               </span>
             </div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight">
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
               Support Policy, Compliance, and Accreditation
             </h2>
-            <p className="text-lg md:text-xl text-[#64748B] leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl text-[#65717D] leading-relaxed max-w-lg">
               Socratic Metric gives institutions an identity-verified audit trail, moving beyond silent
               processing to prove that credits are awarded based on verified human cognition.
             </p>
@@ -38,7 +38,7 @@ export function EducationCompliance() {
 
           <div className="relative group">
             <div className="relative rounded-3xl bg-white/95 backdrop-blur-xl border border-slate-200/60 p-6 md:p-8 shadow-md shadow-blue-900/5 overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3370F7]/40 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E4E8A]/40 to-transparent" />
               <div className="space-y-6 relative z-10">
                 {points.map((point, index) => (
                   <div
@@ -50,9 +50,9 @@ export function EducationCompliance() {
                     className="flex items-start gap-4"
                   >
                     <div className="mt-1 bg-blue-50 rounded-full p-1 shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-[#3370F7]" />
+                      <CheckCircle2 className="w-5 h-5 text-[#1E4E8A]" />
                     </div>
-                    <span className="text-[#1F2A44] font-medium text-lg leading-snug">
+                    <span className="text-[#163460] font-medium text-lg leading-snug">
                       <span className="font-bold">{point.title}: </span>
                       {point.body}
                     </span>
@@ -60,7 +60,7 @@ export function EducationCompliance() {
                 ))}
               </div>
 
-              <div className="absolute bottom-6 right-6 text-[#3370F7]/10 pointer-events-none">
+              <div className="absolute bottom-6 right-6 text-[#1E4E8A]/10 pointer-events-none">
                 <RotateCw className="w-24 h-24 animate-[spin_20s_linear_infinite]" />
               </div>
             </div>

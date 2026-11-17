@@ -76,7 +76,7 @@ function SolutionsMenuItem({ item }: { item: NavItem }) {
 
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger className="bg-transparent px-4 py-2 h-9 rounded-full text-sm font-semibold text-[#3D4A63] hover:text-[#3370F7] hover:bg-[#EAF1FE]/80 data-[state=open]:bg-[#EAF1FE]/80 data-[state=open]:text-[#3370F7] data-[active]:bg-transparent transition-all duration-300">
+      <NavigationMenuTrigger className="bg-transparent px-4 py-2 h-9 rounded-full text-sm font-semibold text-[#40566F] hover:text-[#1E4E8A] hover:bg-[#F5F1E8]/80 data-[state=open]:bg-[#F5F1E8]/80 data-[state=open]:text-[#1E4E8A] data-[active]:bg-transparent transition-all duration-300">
         {item.label}
       </NavigationMenuTrigger>
       <NavigationMenuContent>
@@ -91,7 +91,7 @@ function SolutionsMenuItem({ item }: { item: NavItem }) {
                       href={child.href}
                       className={cn(
                         "flex items-center gap-3 rounded-xl p-3 leading-none no-underline outline-none transition-all duration-300",
-                        hoveredIndex === idx ? "bg-[#EAF1FE]/80 text-[#3370F7] shadow-sm" : "text-[#3D4A63] hover:bg-[#EAF1FE]/50 hover:text-[#3370F7]"
+                        hoveredIndex === idx ? "bg-[#F5F1E8]/80 text-[#1E4E8A] shadow-sm" : "text-[#40566F] hover:bg-[#F5F1E8]/50 hover:text-[#1E4E8A]"
                       )}
                     >
                       {Icon && <Icon className="h-5 w-5" />}
@@ -113,13 +113,13 @@ function SolutionsMenuItem({ item }: { item: NavItem }) {
               >
                 <SolutionsNavSideVisual variant={sideVariant} />
                 <div>
-                  <h4 className="text-base font-bold text-[#1F2A44] mb-2">{activeChild.label}</h4>
-                  <p className="text-sm text-[#85756F] leading-relaxed">{activeChild.description}</p>
+                  <h4 className="text-base font-bold text-[#163460] mb-2">{activeChild.label}</h4>
+                  <p className="text-sm text-[#69737D] leading-relaxed">{activeChild.description}</p>
                 </div>
                 <NavigationMenuLink asChild>
                   <Link
                     href={activeChild.href}
-                    className="text-[#3370F7] font-bold text-sm flex items-center gap-2 group transition-all w-fit bg-[#EAF1FE]/80 hover:bg-[#EAF1FE] hover:shadow-sm px-5 py-2.5 rounded-full border border-transparent hover:border-[#3370F7]/20"
+                    className="text-[#1E4E8A] font-bold text-sm flex items-center gap-2 group transition-all w-fit bg-[#F5F1E8]/80 hover:bg-[#F5F1E8] hover:shadow-sm px-5 py-2.5 rounded-full border border-transparent hover:border-[#1E4E8A]/20"
                   >
                     Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
@@ -195,7 +195,7 @@ export function Navbar() {
         {/* Mobile Menu Toggle */}
         <button 
           type="button"
-          className="md:hidden p-2 text-[#85756F] hover:text-[#F58022]"
+          className="md:hidden p-2 text-[#69737D] hover:text-[#A5662C]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileMenuOpen}
@@ -215,7 +215,7 @@ export function Navbar() {
                   <NavigationMenuItem key={item.label}>
                     {item.children ? (
                       <>
-                        <NavigationMenuTrigger className="bg-transparent px-4 py-2 h-9 rounded-full text-sm font-semibold text-[#3D4A63] hover:text-[#3370F7] hover:bg-[#EAF1FE]/80 data-[state=open]:bg-[#EAF1FE]/80 data-[state=open]:text-[#3370F7] data-[active]:bg-transparent transition-all duration-300">
+                        <NavigationMenuTrigger className="bg-transparent px-4 py-2 h-9 rounded-full text-sm font-semibold text-[#40566F] hover:text-[#1E4E8A] hover:bg-[#F5F1E8]/80 data-[state=open]:bg-[#F5F1E8]/80 data-[state=open]:text-[#1E4E8A] data-[active]:bg-transparent transition-all duration-300">
                           {item.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -225,7 +225,7 @@ export function Navbar() {
                                 <NavigationMenuLink asChild>
                                     <Link
                                       href={child.href}
-                                      className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-[#EAF1FE]/50 hover:text-[#3370F7] text-[#3D4A63] text-sm font-medium"
+                                      className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F5F1E8]/50 hover:text-[#1E4E8A] text-[#40566F] text-sm font-medium"
                                     >
                                     {child.label}
                                   </Link>
@@ -237,7 +237,7 @@ export function Navbar() {
                       </>
                     ) : (
                       <NavigationMenuLink asChild>
-                        <Link href={item.href} className="group inline-flex h-9 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-semibold text-[#3D4A63] transition-all duration-300 hover:bg-[#EAF1FE]/80 hover:text-[#3370F7] focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <Link href={item.href} className="group inline-flex h-9 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-semibold text-[#40566F] transition-all duration-300 hover:bg-[#F5F1E8]/80 hover:text-[#1E4E8A] focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                           {item.label}
                         </Link>
                       </NavigationMenuLink>
@@ -253,7 +253,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center pl-4">
             <Link
               href={REQUEST_DEMO_BOOKING_HREF}
-              className="group inline-flex h-10 w-max items-center justify-center rounded-full bg-[#2558D8] px-6 py-2 text-sm font-bold text-white shadow-md shadow-[#2558D8]/20 transition-all duration-300 hover:bg-[#1D4ED8] hover:shadow-lg hover:shadow-[#2558D8]/40 hover:-translate-y-0.5 active:scale-95"
+              className="group inline-flex h-10 w-max items-center justify-center rounded-full bg-[#1E4E8A] px-6 py-2 text-sm font-bold text-white shadow-md shadow-[#163460]/10 transition-all duration-300 hover:bg-[#1A4175] hover:shadow-lg hover:shadow-[#163460]/10 hover:-translate-y-0.5 active:scale-95"
             >
               Book a demo
             </Link>
@@ -294,7 +294,7 @@ export function Navbar() {
                           setMobileMenuOpen(false);
                         }
                       }}
-                      className="block font-bold text-[#1F2A44] text-xl hover:text-[#3370F7] transition-colors py-2 w-full"
+                      className="block font-bold text-[#163460] text-xl hover:text-[#1E4E8A] transition-colors py-2 w-full"
                     >
                       {item.label}
                     </Link>
@@ -302,7 +302,7 @@ export function Navbar() {
                       <button 
                         type="button"
                         onClick={() => toggleMobileExpand(item.label)}
-                        className="p-2 text-[#85756F] hover:text-[#3370F7] bg-[#F5F5F5] hover:bg-[#EAF1FE] rounded-full transition-colors"
+                        className="p-2 text-[#69737D] hover:text-[#1E4E8A] bg-[#F8F6F0] hover:bg-[#F5F1E8] rounded-full transition-colors"
                         aria-label={`Toggle ${item.label} submenu`}
                         aria-expanded={mobileExpanded === item.label}
                       >
@@ -321,7 +321,7 @@ export function Navbar() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-4 space-y-4 border-l-2 border-[#EAF1FE] ml-2 mt-2 py-2">
+                        <div className="pl-4 space-y-4 border-l-2 border-[#F5F1E8] ml-2 mt-2 py-2">
                           {item.children.map((child) => {
                             const Icon = child.icon;
                             return (
@@ -333,14 +333,14 @@ export function Navbar() {
                               >
                                 <div className="flex items-center gap-3">
                                   {Icon && (
-                                    <div className="flex-shrink-0 h-8 w-8 rounded-md bg-[#F5F5F5] group-hover:bg-[#EAF1FE] text-[#85756F] group-hover:text-[#3370F7] flex items-center justify-center transition-colors">
+                                    <div className="flex-shrink-0 h-8 w-8 rounded-md bg-[#F8F6F0] group-hover:bg-[#F5F1E8] text-[#69737D] group-hover:text-[#1E4E8A] flex items-center justify-center transition-colors">
                                       <Icon className="h-4 w-4" />
                                     </div>
                                   )}
                                   <div className="flex flex-col">
-                                    <span className="font-semibold text-[#1F2A44] group-hover:text-[#F58022] transition-colors">{child.label}</span>
+                                    <span className="font-semibold text-[#163460] group-hover:text-[#A5662C] transition-colors">{child.label}</span>
                                     {child.description && (
-                                      <span className="text-xs text-[#85756F] line-clamp-1 mt-0.5">{child.description}</span>
+                                      <span className="text-xs text-[#69737D] line-clamp-1 mt-0.5">{child.description}</span>
                                     )}
                                   </div>
                                 </div>
@@ -360,7 +360,7 @@ export function Navbar() {
                     <Link
                       href={REQUEST_DEMO_BOOKING_HREF}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex w-full h-12 items-center justify-center rounded-full bg-[#3370F7] px-8 text-base font-bold text-white shadow-lg shadow-[#3370F7]/30 transition-all duration-300 hover:bg-[#4C8FD6] hover:shadow-xl hover:shadow-[#3370F7]/50 active:scale-95"
+                      className="flex w-full h-12 items-center justify-center rounded-full bg-[#1E4E8A] px-8 text-base font-bold text-white shadow-lg shadow-[#163460]/10 transition-all duration-300 hover:bg-[#2663A5] hover:shadow-xl hover:shadow-[#163460]/10 active:scale-95"
                     >
                       Book a demo
                     </Link>

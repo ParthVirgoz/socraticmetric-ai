@@ -43,10 +43,10 @@ export function LazyHeroPreview({ src, title, messageType }: Props) {
         className="group relative flex min-h-[min(52vh,420px)] w-full flex-col items-center justify-center overflow-hidden rounded-[22px] border border-slate-200 bg-white px-6 py-12 text-center shadow-[0_4px_24px_rgba(15,23,42,0.07)]"
         aria-label={`Load ${title}`}
       >
-        <span className="relative mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#3370F7] text-white shadow-lg shadow-[#3370F7]/30">
+        <span className="relative mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#1E4E8A] text-white shadow-lg shadow-[#163460]/10">
           <Play className="relative ml-0.5 h-7 w-7 fill-current" aria-hidden />
         </span>
-        <span className="text-base font-bold text-[#1F2A44]">Tap to load interactive preview</span>
+        <span className="text-base font-bold text-[#163460]">Tap to load interactive preview</span>
         <span className="mt-1.5 max-w-xs text-sm font-medium text-slate-500">
           Saved for faster mobile loading
         </span>

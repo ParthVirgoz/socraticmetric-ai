@@ -15,7 +15,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "72px 80px",
-          background: "linear-gradient(135deg, #1F2A44 0%, #163460 55%, #0f2440 100%)",
+          background: "linear-gradient(135deg, #163460 0%, #163460 55%, #0f2440 100%)",
           color: "#ffffff",
         }}
       >
@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
               width: 14,
               height: 14,
               borderRadius: "50%",
-              background: "#3370F7",
+              background: "#1E4E8A",
             }}
           />
           <span
@@ -41,7 +41,7 @@ export default function OpenGraphImage() {
               fontWeight: 700,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "#9BB8FF",
+              color: "#8CA4C2",
             }}
           >
             Socratic Metric™

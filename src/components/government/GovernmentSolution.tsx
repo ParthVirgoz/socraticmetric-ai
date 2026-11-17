@@ -3,13 +3,13 @@ import { RefreshCw, ClipboardCheck, ShieldCheck } from "lucide-react";
 export function GovernmentSolution() {
   const solutions = [
     {
-      icon: <RefreshCw className="w-8 h-8 text-[#F58022]" strokeWidth={1.75} />,
+      icon: <RefreshCw className="w-8 h-8 text-[#A5662C]" strokeWidth={1.75} />,
       bg: "bg-orange-50",
       title: "AI-moderated adaptive dialogue",
       desc: "Present complex operational scenarios organically and use targeted follow-up questions to verify operators can articulate and defend mission-critical reasoning aloud.",
     },
     {
-      icon: <ClipboardCheck className="w-8 h-8 text-[#3370F7]" strokeWidth={1.75} />,
+      icon: <ClipboardCheck className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
       bg: "bg-blue-50",
       title: "Cognitive readiness evaluation",
       desc: "Go beyond memory tests by evaluating reasoning in motion during simulations, recertification, and pre-launch readiness checks, ensuring true comprehension under pressure.",
@@ -25,17 +25,17 @@ export function GovernmentSolution() {
   return (
     <section
       id="how-it-works"
-      className="relative py-20 md:py-32 bg-[#F8FAFC] overflow-hidden"
+      className="relative py-20 md:py-32 bg-[#F5F5F2] overflow-hidden"
     >
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#3370F7]" />
-            <span className="text-[#3370F7] font-bold text-sm tracking-widest uppercase">How It Works</span>
-            <div className="h-px w-12 bg-[#3370F7]" />
+            <div className="h-px w-12 bg-[#1E4E8A]" />
+            <span className="text-[#1E4E8A] font-bold text-sm tracking-widest uppercase">How It Works</span>
+            <div className="h-px w-12 bg-[#1E4E8A]" />
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
             Cognition in motion: the new readiness layer for critical operations
           </h2>
         </div>
@@ -51,8 +51,8 @@ export function GovernmentSolution() {
               >
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold text-[#1F2A44]">{item.title}</h3>
-              <p className="text-[#64748B] leading-relaxed text-base flex-grow">
+              <h3 className="text-xl font-bold text-[#163460]">{item.title}</h3>
+              <p className="text-[#65717D] leading-relaxed text-base flex-grow">
                 {item.desc}
               </p>
             </div>

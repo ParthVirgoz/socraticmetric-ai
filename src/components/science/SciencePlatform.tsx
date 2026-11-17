@@ -7,13 +7,13 @@ export function SciencePlatform() {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-[#1F2A44] relative overflow-hidden text-white">
+    <section className="py-10 md:py-12 bg-[#163460] relative overflow-hidden text-white">
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <div className="mb-6">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#3370F7]/20 border border-[#4C8FD6]/30 text-[#4C8FD6] font-bold text-xs tracking-widest uppercase">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-[#1E4E8A]/20 border border-[#2663A5]/30 text-[#2663A5] font-bold text-xs tracking-widest uppercase">
                 The Platform
               </span>
             </div>
@@ -34,7 +34,7 @@ export function SciencePlatform() {
                  
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#3370F7] flex items-center justify-center font-bold text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#1E4E8A] flex items-center justify-center font-bold text-sm">
                     {i + 1}
                   </div>
                   <p className="text-slate-200 leading-relaxed pt-1">{step}</p>
@@ -57,7 +57,7 @@ export function SciencePlatform() {
             <div
               className="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white/10"
             >
-              <h3 className="font-serif text-2xl font-bold mb-4 text-[#F58022]">
+              <h3 className="font-serif text-2xl font-bold mb-4 text-[#A5662C]">
                 Accessibility and Implementation
               </h3>
               <p className="text-slate-300 leading-relaxed mb-4">

@@ -14,13 +14,13 @@ export function EnterpriseCompliance() {
         <div className="grid lg:grid-cols-2 items-center gap-16 lg:gap-24">
           <div className="space-y-6">
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[#3370F7]" />
-              <span className="text-[#3370F7] font-bold text-sm tracking-widest uppercase">Governance</span>
+              <div className="h-px w-12 bg-[#1E4E8A]" />
+              <span className="text-[#1E4E8A] font-bold text-sm tracking-widest uppercase">Governance</span>
             </div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight">
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
               AI-era leadership and compliance readiness infrastructure
             </h2>
-            <div className="space-y-4 text-lg md:text-xl text-[#64748B] leading-relaxed max-w-lg">
+            <div className="space-y-4 text-lg md:text-xl text-[#65717D] leading-relaxed max-w-lg">
               <p>
                 In the AI era, governance depends not on documentation alone, but on verified
                 cognitive alignment.
@@ -34,7 +34,7 @@ export function EnterpriseCompliance() {
 
           <div className="relative group">
             <div className="relative rounded-3xl bg-white/95 backdrop-blur-xl border border-white p-8 md:p-12 shadow-2xl shadow-black/[0.06] overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3370F7]/40 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E4E8A]/40 to-transparent" />
               <div className="space-y-6 relative z-10">
                 {points.map((point, index) => (
                   <div
@@ -46,16 +46,16 @@ export function EnterpriseCompliance() {
                     className="flex items-start gap-4"
                   >
                     <div className="mt-1 bg-blue-50 rounded-full p-1 shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-[#3370F7]" />
+                      <CheckCircle2 className="w-5 h-5 text-[#1E4E8A]" />
                     </div>
-                    <span className="text-[#1F2A44] font-medium text-lg leading-snug">
+                    <span className="text-[#163460] font-medium text-lg leading-snug">
                       {point}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="absolute bottom-6 right-6 text-[#3370F7]/10 pointer-events-none">
+              <div className="absolute bottom-6 right-6 text-[#1E4E8A]/10 pointer-events-none">
                 <RotateCw className="w-24 h-24 animate-[spin_20s_linear_infinite]" />
               </div>
             </div>

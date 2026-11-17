@@ -9,20 +9,20 @@ export function EducationRisk() {
       desc: "Sophisticated AI-generated responses that mask gaps in real student understanding.",
     },
     {
-      icon: <BookOpen className="w-8 h-8 text-[#3370F7]" strokeWidth={1.75} />,
-      bg: "bg-[#EAF1FE]",
+      icon: <BookOpen className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
+      bg: "bg-[#F5F1E8]",
       title: "Limited Cognitive Visibility",
       desc: "Silent reading and writing offer no way to know if a student actually processed the entire material.",
     },
     {
-      icon: <Award className="w-8 h-8 text-[#3370F7]" strokeWidth={1.75} />,
-      bg: "bg-[#EAF1FE]",
+      icon: <Award className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
+      bg: "bg-[#F5F1E8]",
       title: "Credential Devaluation",
       desc: "If institutions do not modernize assessment, degrees lose their long-term meaning and value.",
     },
     {
-      icon: <Hourglass className="w-8 h-8 text-[#F58022]" strokeWidth={1.75} />,
-      bg: "bg-[#F58022]/10",
+      icon: <Hourglass className="w-8 h-8 text-[#A5662C]" strokeWidth={1.75} />,
+      bg: "bg-[#E79636]/10",
       title: "Investigative Fatigue",
       desc: "Faculty time is increasingly consumed by the impossible task of proving AI misconduct in written work.",
     },
@@ -33,14 +33,14 @@ export function EducationRisk() {
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-10 space-y-4">
           <div className="mb-4">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-orange-50 border border-orange-200 text-[#F58022] font-bold text-xs tracking-widest uppercase">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-orange-50 border border-orange-200 text-[#A5662C] font-bold text-xs tracking-widest uppercase">
               The New Risk
             </span>
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
             The False Assurance of Competence in Higher Education
           </h2>
-          <p className="text-lg md:text-xl text-[#64748B] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-[#65717D] max-w-3xl mx-auto leading-relaxed">
             Generative AI tools allow students to submit polished written work that bypasses genuine
             comprehension. When linguistic fluency no longer equals competence, grading written
             documentation alone puts the credibility of academic work and degrees at risk.
@@ -58,10 +58,10 @@ export function EducationRisk() {
               >
                 {risk.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#1F2A44] leading-snug">
+              <h3 className="text-lg font-bold text-[#163460] leading-snug">
                 {risk.title}
               </h3>
-              <p className="text-sm text-[#64748B] leading-relaxed">{risk.desc}</p>
+              <p className="text-sm text-[#65717D] leading-relaxed">{risk.desc}</p>
             </div>
           ))}
         </div>

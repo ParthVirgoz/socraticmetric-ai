@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const steps = [
   {
@@ -15,10 +16,10 @@ const steps = [
     description:
       "Educators create assignments by defining core topics, linking reference materials, and selecting AI questioning modes.",
     icon: Settings2,
-    accent: "from-blue-500 to-[#3370F7]",
-    shadow: "shadow-blue-500/20",
-    ring: "hover:ring-blue-200",
-    numColor: "text-blue-700",
+    accent: "from-[#1A4175] to-[#163460]",
+    shadow: "shadow-[#163460]/10",
+    ring: "hover:ring-[#8CA4C2]/50",
+    numColor: "text-[#163460]",
   },
   {
     number: "02",
@@ -26,10 +27,10 @@ const steps = [
     description:
       "Professors generate a shareable link and post it directly into Canvas or their university's LMS.",
     icon: Share2,
-    accent: "from-indigo-500 to-indigo-600",
-    shadow: "shadow-indigo-500/20",
-    ring: "hover:ring-indigo-200",
-    numColor: "text-indigo-700",
+    accent: "from-[#2663A5] to-[#1E4E8A]",
+    shadow: "shadow-[#163460]/10",
+    ring: "hover:ring-[#8CA4C2]/50",
+    numColor: "text-[#163460]",
   },
   {
     number: "03",
@@ -37,10 +38,10 @@ const steps = [
     description:
       "Students read prompts aloud, record voice responses, and refine their answers through guided AI iterations.",
     icon: Mic,
-    accent: "from-orange-400 to-[#F58022]",
-    shadow: "shadow-orange-500/20",
-    ring: "hover:ring-orange-200",
-    numColor: "text-orange-700",
+    accent: "from-[#E79636] to-[#C27B2E]",
+    shadow: "shadow-[#163460]/10",
+    ring: "hover:ring-[#E79636]/40",
+    numColor: "text-[#85542C]",
   },
   {
     number: "04",
@@ -48,10 +49,10 @@ const steps = [
     description:
       "Educators access comprehensive dashboards featuring rubric grading, audio/video metrics, and full transcripts.",
     icon: LayoutDashboard,
-    accent: "from-emerald-500 to-emerald-600",
-    shadow: "shadow-emerald-500/20",
-    ring: "hover:ring-emerald-200",
-    numColor: "text-emerald-700",
+    accent: "from-[#8CA4C2] to-[#2663A5]",
+    shadow: "shadow-[#163460]/10",
+    ring: "hover:ring-[#8CA4C2]/50",
+    numColor: "text-[#163460]",
   },
 ];
 
@@ -65,8 +66,8 @@ export function HowItWorks() {
       {/* Light aurora background */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         {/* Soft vertical wash from white into the page tint */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F6FAFF] to-[#EFF5FF]" />        {/* Dotted texture */}
-        <div className="absolute inset-0 bg-[radial-gradient(#3370F71a_1px,transparent_1px)] bg-[size:22px_22px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_45%,#000_50%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-[#FAF8F2] to-[#EFF5FF]" />        {/* Dotted texture */}
+        <div className="absolute inset-0 bg-[radial-gradient(#1E4E8A1a_1px,transparent_1px)] bg-[size:22px_22px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_45%,#000_50%,transparent_100%)]" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 md:px-12">
@@ -74,15 +75,15 @@ export function HowItWorks() {
           className="mx-auto mb-10 max-w-3xl text-center md:mb-14"
         >
           <div className="mb-6 flex items-center justify-center gap-3">
-            <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#3370F7]" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#3370F7]">
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#1E4E8A]" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1E4E8A]">
               The Process
             </span>
-            <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#3370F7]" />
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#1E4E8A]" />
           </div>
           <h2
             id="how-it-works-heading"
-            className="font-serif text-4xl font-bold leading-[1.1] tracking-tight text-[#1F2A44] sm:text-5xl md:text-6xl"
+            className="font-serif text-4xl font-bold leading-[1.1] tracking-tight text-[#163460] sm:text-5xl md:text-6xl"
           >
             How It Works
           </h2>
@@ -97,7 +98,7 @@ export function HowItWorks() {
             className="absolute left-[50px] top-[52px] hidden h-px w-[calc(100%-100px)] lg:block"
             style={{
               backgroundImage:
-                "linear-gradient(to right, #94a3b8 40%, transparent 40%)",
+                "linear-gradient(to right, #8897AD 40%, transparent 40%)",
               backgroundSize: "12px 1px",
               backgroundRepeat: "repeat-x",
             }}
@@ -108,12 +109,9 @@ export function HowItWorks() {
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div
+                <ScrollReveal
                   key={step.number}
-                 
-                 
-                 
-                 
+                  delayMs={index * 75}
                   className="group relative"
                 >
                   <div
@@ -141,14 +139,14 @@ export function HowItWorks() {
                     </div>
 
                     {/* Content Section */}
-                    <h3 className="mb-3 text-xl font-bold leading-tight text-[#1F2A44] transition-colors duration-300 group-hover:text-[#3370F7]">
+                    <h3 className="mb-3 text-xl font-bold leading-tight text-[#163460] transition-colors duration-300 group-hover:text-[#1E4E8A]">
                       {step.title}
                     </h3>
                     <p className="flex-1 text-[15px] font-medium leading-relaxed text-slate-600">
                       {step.description}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -160,14 +158,14 @@ export function HowItWorks() {
         >
           <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/60 bg-white px-5 py-2.5 shadow-sm">
             <CheckCircle2 className="h-5 w-5 text-emerald-500" strokeWidth={2.5} />
-            <span className="text-sm font-semibold text-[#1F2A44]">
+            <span className="text-sm font-semibold text-[#163460]">
               Seamless LMS Integration Available
             </span>
           </div>
 
           <Link
             href="/education"
-            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#3370F7] to-[#4C8FD6] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#3370F7]/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#3370F7]/40 active:scale-95"
+            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#1E4E8A] to-[#2663A5] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#163460]/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#163460]/10 active:scale-95"
           >
             {/* Shine sweep on hover */}
             <span
@@ -175,7 +173,7 @@ export function HowItWorks() {
               aria-hidden
             />
             <span className="relative">Learn more about education solutions</span>
-            <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-white/20 transition-all duration-300 group-hover:bg-white group-hover:text-[#3370F7]">
+            <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-white/20 transition-all duration-300 group-hover:bg-white group-hover:text-[#1E4E8A]">
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" strokeWidth={2.5} />
             </span>
           </Link>

@@ -10,7 +10,7 @@ export function Cover({
   return (
     <span
       className={cn(
-        "inline-block rounded-lg bg-[#EAF1FE] px-2 py-2 text-[#3370F7] transition-colors duration-200 hover:bg-[#F58022]/10 hover:text-[#F58022]",
+        "inline-block rounded-lg bg-[#F5F1E8] px-2 py-2 text-[#1E4E8A] transition-colors duration-200 hover:bg-[#E79636]/10 hover:text-[#A5662C]",
         className
       )}
     >

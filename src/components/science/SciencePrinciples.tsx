@@ -7,11 +7,11 @@ export function SciencePrinciples() {
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-10 max-w-3xl mx-auto">
           <div className="mb-6">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-orange-50 border border-orange-200 text-[#F58022] font-bold text-xs tracking-widest uppercase">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-orange-50 border border-orange-200 text-[#A5662C] font-bold text-xs tracking-widest uppercase">
               Cognitive Neuroscience
             </span>
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight mb-6">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight mb-6">
             The Science Behind Oral Learning
           </h2>
         </div>

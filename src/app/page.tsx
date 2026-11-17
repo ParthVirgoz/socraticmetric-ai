@@ -13,6 +13,7 @@ import { ContactSection } from "@/components/home/sections/ContactSection";
 // import { IndustrySelectDialog } from "@/components/home/IndustrySelectDialog";
 import { createPageMetadata } from "@/lib/site-metadata";
 import { HomeJsonLd } from "@/components/seo/HomeJsonLd";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = createPageMetadata({
   title: "SocraticMetric AI | Verify Authentic Understanding in the AI Era",
@@ -24,7 +25,7 @@ export const metadata = createPageMetadata({
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F0F6FF] text-[#1F2A44] overflow-x-hidden font-sans">
+    <div className="flex min-h-screen flex-col bg-[#F8F6F0] text-[#163460] overflow-x-hidden font-sans">
       <Navbar />
 
       <main className="flex-1">
@@ -32,13 +33,13 @@ export default function Home() {
         {/* <IndustrySelectDialog /> */}
         <HeroSection />
         <HowItWorks />
-        <HomePullQuote />
-        <LogoClouds />
-        <HomeMission />
-        <HomePatents />
-        <Testimonials />
-        <FaqSection />
-        <ContactSection />
+        <ScrollReveal><HomePullQuote /></ScrollReveal>
+        <ScrollReveal><LogoClouds /></ScrollReveal>
+        <ScrollReveal><HomeMission /></ScrollReveal>
+        <ScrollReveal><HomePatents /></ScrollReveal>
+        <ScrollReveal><Testimonials /></ScrollReveal>
+        <ScrollReveal><FaqSection /></ScrollReveal>
+        <ScrollReveal><ContactSection /></ScrollReveal>
       </main>
 
       <Footer />

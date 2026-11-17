@@ -166,7 +166,7 @@ export function FaqSection() {
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(51,112,247,0.05)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(30,78,138,0.05)_0%,transparent_50%)]" />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
@@ -180,11 +180,11 @@ export function FaqSection() {
               </span>
               <h2
                 id="faq-heading"
-                className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#1F2A44] leading-tight"
+                className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#163460] leading-tight"
               >
                 Frequently <br className="hidden lg:block" />
                 Asked <br className="hidden lg:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3370F7] to-[#4C8FD6]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E4E8A] to-[#2663A5]">
                   Questions.
                 </span>
               </h2>
@@ -209,14 +209,14 @@ export function FaqSection() {
                       className={cn(
                         "relative flex items-center justify-between w-full rounded-2xl px-6 py-4 text-left text-base font-bold transition-all duration-300 overflow-hidden group",
                         isActive
-                          ? "text-white shadow-lg shadow-[#3370F7]/25"
-                          : "bg-white border border-slate-200 text-[#1F2A44] hover:border-slate-300 hover:shadow-md"
+                          ? "text-white shadow-lg shadow-[#163460]/10"
+                          : "bg-white border border-slate-200 text-[#163460] hover:border-slate-300 hover:shadow-md"
                       )}
                     >
                       {isActive && (
                         <motion.div
                           layoutId="activeTab"
-                          className="absolute inset-0 bg-gradient-to-r from-[#3370F7] to-[#4C8FD6]"
+                          className="absolute inset-0 bg-gradient-to-r from-[#1E4E8A] to-[#2663A5]"
                           initial={false}
                           transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         />
@@ -240,7 +240,7 @@ export function FaqSection() {
           <div className="lg:col-span-8 min-w-0">
             <div className="bg-white rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 sm:p-8 md:p-10">
               <div className="mb-8 pb-6 border-b border-slate-100">
-                <h3 className="text-xl font-bold text-[#1F2A44]">
+                <h3 className="text-xl font-bold text-[#163460]">
                   {activeMeta.heading}
                 </h3>
               </div>
@@ -266,7 +266,7 @@ export function FaqSection() {
                         >
                           <span className={cn(
                             "flex-1 font-bold text-base sm:text-lg leading-snug transition-colors duration-200",
-                            isOpen ? "text-[#3370F7]" : "text-[#1F2A44] group-hover:text-[#3370F7]"
+                            isOpen ? "text-[#1E4E8A]" : "text-[#163460] group-hover:text-[#1E4E8A]"
                           )}>
                             {item.question}
                           </span>
@@ -274,8 +274,8 @@ export function FaqSection() {
                             className={cn(
                               "mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300",
                               isOpen
-                                ? "bg-[#EAF1FE] text-[#3370F7] rotate-180"
-                                : "bg-slate-50 text-slate-400 group-hover:bg-[#EAF1FE] group-hover:text-[#3370F7]"
+                                ? "bg-[#F5F1E8] text-[#1E4E8A] rotate-180"
+                                : "bg-slate-50 text-slate-400 group-hover:bg-[#F5F1E8] group-hover:text-[#1E4E8A]"
                             )}
                             aria-hidden
                           >

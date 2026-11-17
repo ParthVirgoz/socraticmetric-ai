@@ -25,14 +25,14 @@ export function ScienceEvidence() {
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <div>
             <div className="mb-6">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#EAF1FE] border border-[#3370F7]/20 text-[#3370F7] font-bold text-xs tracking-widest uppercase">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
                 Research
               </span>
             </div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1F2A44] leading-tight mb-6">
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight mb-6">
               Evidence of Impact
             </h2>
-            <p className="text-lg text-[#64748B] leading-relaxed mb-6">
+            <p className="text-lg text-[#65717D] leading-relaxed mb-6">
               Multiple peer-reviewed studies support the distinct advantages of oral engagement and the production effect.
             </p>
 
@@ -47,11 +47,11 @@ export function ScienceEvidence() {
                   className="flex items-start gap-4"
                 >
                   <div className="mt-1 bg-blue-50 rounded-full p-1 shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-[#3370F7]" />
+                    <CheckCircle2 className="w-5 h-5 text-[#1E4E8A]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#1F2A44] text-lg mb-2">{study.author}</h4>
-                    <p className="text-[#64748B] leading-relaxed">{study.finding}</p>
+                    <h4 className="font-bold text-[#163460] text-lg mb-2">{study.author}</h4>
+                    <p className="text-[#65717D] leading-relaxed">{study.finding}</p>
                   </div>
                 </div>
               ))}
@@ -61,17 +61,17 @@ export function ScienceEvidence() {
           <div
             className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-md"
           >
-            <h3 className="font-serif text-2xl font-bold text-[#1F2A44] mb-6">
+            <h3 className="font-serif text-2xl font-bold text-[#163460] mb-6">
               Addressing the Counter Evidence
             </h3>
-            <div className="space-y-4 text-[#64748B] leading-relaxed">
+            <div className="space-y-4 text-[#65717D] leading-relaxed">
               <p>
                 Research shows that highly fluent readers can achieve comparable comprehension through silent reading under optimal conditions. This does not refute the value of oral assessment; it clarifies its purpose.
               </p>
               <p>
                 Silent reading optimizes efficiency for low-stakes information processing. Oral reading ensures verifiable comprehension, creates distinctive memory traces, and produces observable evidence of understanding.
               </p>
-              <p className="font-medium text-[#1F2A44]">
+              <p className="font-medium text-[#163460]">
                 Socratic Metric occupies the domain where verifiable authenticity and demonstrable learning are absolute priorities—precisely where traditional assessment fails in the AI age.
               </p>
             </div>

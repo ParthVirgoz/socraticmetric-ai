@@ -17,13 +17,13 @@ function TocList({
   className?: string;
 }) {
   return (
-    <ul className={cn("m-0 list-none space-y-0.5 border-l-2 border-[#EAF1FE] pl-3", className)}>
+    <ul className={cn("m-0 list-none space-y-0.5 border-l-2 border-[#F5F1E8] pl-3", className)}>
       {items.map((item) => (
         <li key={item.id} className={item.level === 3 ? "pl-2" : ""}>
           <a
             href={`#${item.id}`}
             onClick={onItemClick}
-            className="block rounded-md py-1.5 pr-2 text-sm leading-snug text-[#85756F] transition-colors hover:bg-[#F1F5F9] hover:text-[#3370F7] line-clamp-4"
+            className="block rounded-md py-1.5 pr-2 text-sm leading-snug text-[#69737D] transition-colors hover:bg-[#F1F2EE] hover:text-[#1E4E8A] line-clamp-4"
           >
             {item.text}
           </a>
@@ -90,7 +90,7 @@ export function BlogPostToc({ items }: { items: TocEntry[] }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             aria-hidden
-            className="fixed inset-0 z-[70] bg-[#1F2A44]/40 backdrop-blur-[2px]"
+            className="fixed inset-0 z-[70] bg-[#163460]/40 backdrop-blur-[2px]"
             onClick={close}
           />
           <motion.aside
@@ -103,18 +103,18 @@ export function BlogPostToc({ items }: { items: TocEntry[] }) {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 320 }}
-            className="fixed bottom-0 left-0 top-0 z-[71] flex w-[min(100vw-1rem,20.5rem)] flex-col border-r border-slate-200/90 bg-white/98 shadow-2xl shadow-[#1F2A44]/15 ring-1 ring-black/[0.06] backdrop-blur-xl sm:w-[min(100vw-2rem,22rem)]"
+            className="fixed bottom-0 left-0 top-0 z-[71] flex w-[min(100vw-1rem,20.5rem)] flex-col border-r border-slate-200/90 bg-white/98 shadow-2xl shadow-[#163460]/15 ring-1 ring-black/[0.06] backdrop-blur-xl sm:w-[min(100vw-2rem,22rem)]"
           >
             <div className="flex shrink-0 items-center justify-between gap-3 border-b border-slate-200/80 px-4 py-4 sm:px-5">
               <div className="flex min-w-0 items-center gap-2.5">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#EAF1FE] ring-1 ring-[#3370F7]/12">
-                  <ListTree className="h-4 w-4 text-[#3370F7]" aria-hidden strokeWidth={2} />
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F5F1E8] ring-1 ring-[#1E4E8A]/12">
+                  <ListTree className="h-4 w-4 text-[#1E4E8A]" aria-hidden strokeWidth={2} />
                 </span>
                 <div className="min-w-0">
-                  <p id={titleId} className="text-sm font-bold text-[#1F2A44]">
+                  <p id={titleId} className="text-sm font-bold text-[#163460]">
                     On this page
                   </p>
-                  <p className="text-xs text-[#85756F]">{items.length} sections</p>
+                  <p className="text-xs text-[#69737D]">{items.length} sections</p>
                 </div>
               </div>
               <button
@@ -124,7 +124,7 @@ export function BlogPostToc({ items }: { items: TocEntry[] }) {
                   close();
                   fabRef.current?.focus();
                 }}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200/90 bg-[#F8FAFC] text-[#1F2A44] transition-colors hover:border-slate-300 hover:bg-slate-100"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200/90 bg-[#F5F5F2] text-[#163460] transition-colors hover:border-slate-300 hover:bg-slate-100"
                 aria-label="Close table of contents"
               >
                 <X className="h-5 w-5" strokeWidth={2} aria-hidden />
@@ -137,7 +137,7 @@ export function BlogPostToc({ items }: { items: TocEntry[] }) {
                   close();
                   fabRef.current?.focus();
                 }}
-                className="border-l-[#3370F7]/25"
+                className="border-l-[#1E4E8A]/25"
               />
             </nav>
           </motion.aside>
@@ -156,11 +156,11 @@ export function BlogPostToc({ items }: { items: TocEntry[] }) {
         aria-controls={panelId}
         aria-label="Toggle table of contents"
         className={cn(
-          "fixed z-[65] flex items-center gap-2 rounded-full border border-[#3370F7]/25 bg-[#1F2A44] px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-[#1F2A44]/25 ring-2 ring-white/10 transition-transform hover:scale-[1.02] hover:bg-[#252f4d] active:scale-[0.98] sm:px-4 sm:py-3 sm:text-[11px]",
+          "fixed z-[65] flex items-center gap-2 rounded-full border border-[#1E4E8A]/25 bg-[#163460] px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-[#163460]/12 ring-2 ring-white/10 transition-transform hover:scale-[1.02] hover:bg-[#1A4175] active:scale-[0.98] sm:px-4 sm:py-3 sm:text-[11px]",
           "left-[max(0.75rem,env(safe-area-inset-left,0px))] bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] sm:left-5 sm:bottom-8 lg:left-6",
         )}
       >
-        <ListTree className="h-4 w-4 shrink-0 text-[#9BB8FF]" aria-hidden strokeWidth={2} />
+        <ListTree className="h-4 w-4 shrink-0 text-[#8CA4C2]" aria-hidden strokeWidth={2} />
         <span className="max-w-[9.5rem] truncate sm:max-w-none">On this page</span>
       </button>
       {mounted ? createPortal(portalContent, document.body) : null}

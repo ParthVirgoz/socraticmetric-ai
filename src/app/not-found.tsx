@@ -14,19 +14,19 @@ export const metadata = createPageMetadata({
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8FAFC] font-sans text-[#1F2A44] selection:bg-[#F58022]/20 selection:text-[#1F2A44] overflow-x-hidden">
+    <div className="flex min-h-screen flex-col bg-[#F5F5F2] font-sans text-[#163460] selection:bg-[#E79636]/20 selection:text-[#163460] overflow-x-hidden">
       <Navbar />
       
       <main className="flex-1 flex flex-col items-center justify-center pt-32 pb-20 md:pt-40 md:pb-32 px-6">
         <div className="container max-w-4xl mx-auto text-center">
           {/* 404 Header */}
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-[#3370F7]/10 text-[#3370F7] text-sm font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-[#1E4E8A]/10 text-[#1E4E8A] text-sm font-bold tracking-widest uppercase">
             Error 404
           </div>
-          <h1 className="animate-text-enter font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#1F2A44] leading-[1.1] mb-6">
+          <h1 className="animate-text-enter font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#163460] leading-[1.1] mb-6">
             Page Not Found
           </h1>
-          <p className="text-lg md:text-xl text-[#64748B] leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-[#65717D] leading-relaxed max-w-2xl mx-auto mb-10">
             We couldn't find the page you're looking for. It might have been moved, deleted, or never existed in the first place.
           </p>
 
@@ -47,7 +47,7 @@ export default function NotFound() {
 
           {/* Helpful Links Grid */}
           <div className="text-left bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/50 border border-slate-100">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1F2A44] mb-8 text-center sm:text-left">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#163460] mb-8 text-center sm:text-left">
               Explore Our Solutions
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
@@ -94,10 +94,10 @@ export default function NotFound() {
                     <link.icon className={`w-6 h-6 ${link.color}`} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#1F2A44] group-hover:text-[#3370F7] transition-colors mb-1">
+                    <h3 className="font-bold text-[#163460] group-hover:text-[#1E4E8A] transition-colors mb-1">
                       {link.title}
                     </h3>
-                    <p className="text-sm text-[#64748B] leading-relaxed">
+                    <p className="text-sm text-[#65717D] leading-relaxed">
                       {link.desc}
                     </p>
                   </div>

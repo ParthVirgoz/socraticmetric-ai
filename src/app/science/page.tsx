@@ -18,7 +18,7 @@ export const metadata = createPageMetadata({
 
 export default function SciencePage() {
   return (
-    <main className="min-h-screen bg-[#F0F6FF]">
+    <main className="min-h-screen bg-[#F8F6F0]">
       <Navbar />
       <div className="flex-1">
         <ScienceHero />

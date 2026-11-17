@@ -17,7 +17,7 @@ export function ContactSection() {
               <br />
               session.
               <br />
-              <em className="font-serif italic text-[#8FB0F5]">
+              <em className="font-serif italic text-[#8CA4C2]">
                 See the proof for yourself.
               </em>
             </h2>
@@ -34,7 +34,7 @@ export function ContactSection() {
           <div className="w-full shrink-0 md:w-auto">
             <Link
               href={REQUEST_DEMO_BOOKING_HREF}
-              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#2558D8] px-7 py-3.5 text-[15px] font-bold text-white shadow-lg shadow-[#2558D8]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-[#2558D8]/40 active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#1E4E8A] px-7 py-3.5 text-[15px] font-bold text-white shadow-lg shadow-[#163460]/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1A4175] hover:shadow-xl hover:shadow-[#163460]/10 active:scale-95"
             >
               Book a demo
               <ArrowRight

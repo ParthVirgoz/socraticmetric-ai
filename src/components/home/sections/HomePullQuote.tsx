@@ -9,17 +9,17 @@ export function HomePullQuote() {
           {/* Left visual accent: large quote mark and vertical line */}
           <div className="flex shrink-0 flex-col items-center">
             <span
-              className="flex h-8 items-end font-serif text-6xl font-black leading-none text-[#3370F7]/30 md:h-12 md:text-[5.5rem]"
+              className="flex h-8 items-end font-serif text-6xl font-black leading-none text-[#1E4E8A]/30 md:h-12 md:text-[5.5rem]"
               aria-hidden="true"
             >
               &ldquo;
             </span>
-            <div className="mt-4 w-[2px] flex-1 rounded-full bg-gradient-to-b from-[#3370F7] via-[#3370F7]/70 to-[#3370F7]/10" />
+            <div className="mt-4 w-[2px] flex-1 rounded-full bg-gradient-to-b from-[#1E4E8A] via-[#1E4E8A]/70 to-[#1E4E8A]/10" />
           </div>
 
           {/* Quote text */}
           <div className="py-2 md:py-4">
-            <h2 className="font-serif text-2xl italic leading-[1.4] text-[#1F2A44] sm:text-3xl md:text-4xl lg:text-[2.5rem] md:leading-[1.45]">
+            <h2 className="font-serif text-2xl italic leading-[1.4] text-[#163460] sm:text-3xl md:text-4xl lg:text-[2.5rem] md:leading-[1.45]">
               &ldquo;When AI can write the document, Socratic Metric evaluates live cognition—verifying real understanding, not just polished output.&rdquo;
             </h2>
           </div>

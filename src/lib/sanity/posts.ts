@@ -19,10 +19,10 @@ function formatPostDate(iso: string | undefined): string {
 
 function mapSanityListItem(p: SanityPostListGroq, index: number): BlogPostCard {
   const gradients = [
-    "bg-gradient-to-br from-[#EAF1FE] to-[#F1F5F9]",
-    "bg-gradient-to-br from-[#FFF4ED] to-[#F1F5F9]",
-    "bg-gradient-to-br from-slate-100 to-[#EAF1FE]/60",
-    "bg-gradient-to-br from-[#EAF1FE]/80 to-[#F58022]/10",
+    "bg-gradient-to-br from-[#F5F1E8] to-[#F1F2EE]",
+    "bg-gradient-to-br from-[#FBF5EA] to-[#F1F2EE]",
+    "bg-gradient-to-br from-slate-100 to-[#F5F1E8]/60",
+    "bg-gradient-to-br from-[#F5F1E8]/80 to-[#E79636]/10",
   ];
   return {
     slug: p.slug,

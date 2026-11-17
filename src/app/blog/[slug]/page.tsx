@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const fallbackArticleClass =
-  "prose prose-lg lg:prose-xl max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-[#1F2A44] prose-h2:scroll-mt-28 prose-h3:scroll-mt-28 prose-p:text-[#64748B] prose-p:leading-[1.75] prose-li:text-[#64748B] prose-li:leading-relaxed prose-strong:text-[#1F2A44] prose-a:text-[#3370F7] prose-a:no-underline hover:prose-a:underline prose-ul:marker:text-[#3370F7]";
+  "prose prose-lg lg:prose-xl max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-[#163460] prose-h2:scroll-mt-28 prose-h3:scroll-mt-28 prose-p:text-[#65717D] prose-p:leading-[1.75] prose-li:text-[#65717D] prose-li:leading-relaxed prose-strong:text-[#163460] prose-a:text-[#1E4E8A] prose-a:no-underline hover:prose-a:underline prose-ul:marker:text-[#1E4E8A]";
 
 const articleInnerClass = "max-w-[46rem] mx-auto w-full";
 
@@ -65,13 +65,13 @@ export default async function BlogPostPage({ params }: Props) {
         coverImageUrl={post.coverImageUrl}
       />
       {/* Masthead: typography on deep navy — image never sits behind text */}
-      <header className="relative isolate overflow-hidden bg-[#1F2A44] pt-24 text-white md:pt-28 lg:pt-32">
+      <header className="relative isolate overflow-hidden bg-[#163460] pt-24 text-white md:pt-28 lg:pt-32">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.35]"
           style={{
-            backgroundImage: `radial-gradient(ellipse 120% 80% at 20% 0%, rgb(51 112 247 / 0.45), transparent 55%),
-              radial-gradient(ellipse 90% 70% at 100% 20%, rgb(245 128 34 / 0.2), transparent 50%),
-              linear-gradient(180deg, rgb(31 42 68) 0%, rgb(22 32 52) 100%)`,
+            backgroundImage: `radial-gradient(ellipse 120% 80% at 20% 0%, rgb(30 78 138 / 0.45), transparent 55%),
+              radial-gradient(ellipse 90% 70% at 100% 20%, rgb(231 150 54 / 0.2), transparent 50%),
+              linear-gradient(180deg, rgb(22 52 96) 0%, rgb(22 32 52) 100%)`,
           }}
           aria-hidden
         />
@@ -92,13 +92,13 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="text-white/25" aria-hidden>
               ·
             </span>
-            <Link href="/blog" className="text-xs font-semibold text-[#9BB8FF] transition-colors hover:text-white">
+            <Link href="/blog" className="text-xs font-semibold text-[#8CA4C2] transition-colors hover:text-white">
               All articles
             </Link>
           </div>
 
           <div className="mb-5 flex flex-wrap items-center gap-3">
-            <span className="rounded-full border border-[#3370F7]/40 bg-[#3370F7]/25 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#C8D9FF] sm:text-xs">
+            <span className="rounded-full border border-[#1E4E8A]/40 bg-[#1E4E8A]/25 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#C8D9FF] sm:text-xs">
               {post.category}
             </span>
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/45 sm:text-xs">
@@ -116,7 +116,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#3370F7]/80 to-[#1F2A44] text-sm font-bold text-white ring-2 ring-white/20">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#1E4E8A]/80 to-[#163460] text-sm font-bold text-white ring-2 ring-white/20">
                 {post.author.charAt(0)}
               </div>
               <div>
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm text-white/70">
               <span className="inline-flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-[#F58022]" strokeWidth={2} aria-hidden />
+                <Calendar className="h-4 w-4 text-[#A5662C]" strokeWidth={2} aria-hidden />
                 {post.date}
               </span>
               <span className="hidden h-4 w-px bg-white/20 sm:block" aria-hidden />
@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }: Props) {
           aria-hidden
         />
         <div
-          className="relative z-10 h-12 bg-[#F1F5F9] [clip-path:ellipse(120%_100%_at_50%_100%)] sm:h-16 md:h-20"
+          className="relative z-10 h-12 bg-[#F1F2EE] [clip-path:ellipse(120%_100%_at_50%_100%)] sm:h-16 md:h-20"
           aria-hidden
         />
       </header>
@@ -153,18 +153,18 @@ export default async function BlogPostPage({ params }: Props) {
         className="relative overflow-hidden pb-20 pt-6 md:pb-28 md:pt-8"
         aria-label="Article body"
       >
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#E8EDF3]/40 via-[#F1F5F9] to-[#F1F5F9]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#ECEEEA]/40 via-[#F1F2EE] to-[#F1F2EE]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_30%,transparent_100%)] opacity-70" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-14">
-          <article className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border border-white bg-white/95 shadow-xl shadow-[#1F2A44]/[0.06] ring-1 ring-black/[0.05] backdrop-blur-sm sm:rounded-3xl">
+          <article className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border border-white bg-white/95 shadow-xl shadow-[#163460]/[0.06] ring-1 ring-black/[0.05] backdrop-blur-sm sm:rounded-3xl">
             <div
-              className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#3370F7] via-[#4C8FD6]/80 to-[#F58022]/70 sm:w-1.5 sm:rounded-l-3xl"
+              className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#1E4E8A] via-[#2663A5]/80 to-[#E79636]/70 sm:w-1.5 sm:rounded-l-3xl"
               aria-hidden
             />
 
             {hasCover ? (
-              <figure className="relative w-full overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-[#E8EDF3] via-[#F1F5F9] to-[#F8FAFC]">
+              <figure className="relative w-full overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-[#ECEEEA] via-[#F1F2EE] to-[#F5F5F2]">
                 {/* Height scales with viewport (svh avoids mobile URL-bar jump); caps grow by breakpoint */}
                 <div
                   className="relative mx-auto w-full max-w-full
@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: Props) {
             ) : null}
 
             <div className="relative px-5 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 lg:px-14 lg:py-14">
-              <div className="pointer-events-none absolute right-6 top-6 hidden h-16 w-16 rounded-2xl bg-gradient-to-br from-[#EAF1FE]/80 to-transparent lg:block" aria-hidden />
+              <div className="pointer-events-none absolute right-6 top-6 hidden h-16 w-16 rounded-2xl bg-gradient-to-br from-[#F5F1E8]/80 to-transparent lg:block" aria-hidden />
 
               {post.body?.length ? (
                 <div className={`${articleInnerClass} [&_h2:first-child]:mt-0 [&_h3:first-child]:mt-0`}>

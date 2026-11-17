@@ -47,12 +47,12 @@ function WalkthroughPlayer({
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <h3 className="font-serif text-xl font-bold text-[#1F2A44] sm:text-2xl">{title}</h3>
-        <p className="mt-2 text-base text-[#64748B] leading-relaxed">{subtitle}</p>
+        <h3 className="font-serif text-xl font-bold text-[#163460] sm:text-2xl">{title}</h3>
+        <p className="mt-2 text-base text-[#65717D] leading-relaxed">{subtitle}</p>
       </div>
 
       <div className="relative mx-auto w-full min-w-0">
-        <div className="pointer-events-none absolute -inset-1 rounded-[1.25rem] bg-gradient-to-r from-[#3370F7] via-[#4C8FD6] to-[#F58022] opacity-15 blur-2xl sm:rounded-[2rem]" />
+        <div className="pointer-events-none absolute -inset-1 rounded-[1.25rem] bg-gradient-to-r from-[#1E4E8A] via-[#2663A5] to-[#E79636] opacity-15 blur-2xl sm:rounded-[2rem]" />
 
         <div className="relative isolate aspect-video w-full max-w-full overflow-hidden rounded-xl border border-slate-200/90 bg-black shadow-xl shadow-slate-200/60 sm:rounded-2xl md:rounded-3xl">
           {playing ? (
@@ -68,7 +68,7 @@ function WalkthroughPlayer({
             <button
               type="button"
               onClick={() => setPlaying(true)}
-              className="group absolute inset-0 z-10 flex cursor-pointer items-center justify-center border-0 bg-black p-0 text-left outline-none ring-offset-2 focus-visible:ring-2 focus-visible:ring-[#3370F7]"
+              className="group absolute inset-0 z-10 flex cursor-pointer items-center justify-center border-0 bg-black p-0 text-left outline-none ring-offset-2 focus-visible:ring-2 focus-visible:ring-[#1E4E8A]"
               aria-label={playLabel}
             >
               <Image
@@ -82,8 +82,8 @@ function WalkthroughPlayer({
                 draggable={false}
               />
               <span className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/15 group-focus-visible:bg-black/20" aria-hidden />
-              <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3370F7] text-white shadow-lg shadow-[#3370F7]/35 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#4C8FD6] sm:h-14 sm:w-14 md:h-16 md:w-16">
-                <span className="absolute inset-0 rounded-full bg-[#3370F7] opacity-30 animate-ping" aria-hidden />
+              <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1E4E8A] text-white shadow-lg shadow-[#1E4E8A]/35 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#2663A5] sm:h-14 sm:w-14 md:h-16 md:w-16">
+                <span className="absolute inset-0 rounded-full bg-[#1E4E8A] opacity-30 animate-ping" aria-hidden />
                 <Play className="relative ml-0.5 h-6 w-6 fill-current sm:h-7 sm:w-7 md:h-8 md:w-8" aria-hidden />
               </span>
             </button>
@@ -103,17 +103,17 @@ export function EducationWalkthroughVideos() {
 
       <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-12">
         <div className="mx-auto mb-8 max-w-3xl space-y-3 text-center">
-          <span className="inline-block rounded-full border border-[#3370F7]/20 bg-[#EAF1FE] px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#3370F7] shadow-sm">
+          <span className="inline-block rounded-full border border-[#1E4E8A]/20 bg-[#F5F1E8] px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#1E4E8A] shadow-sm">
             Platform walkthroughs
           </span>
-          <h2 className="font-serif text-2xl font-bold leading-tight text-[#1F2A44] sm:text-3xl md:text-4xl lg:text-[2.65rem]">
+          <h2 className="font-serif text-2xl font-bold leading-tight text-[#163460] sm:text-3xl md:text-4xl lg:text-[2.65rem]">
             See how the{" "}
-            <span className="bg-gradient-to-r from-[#3370F7] to-[#4C8FD6] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#1E4E8A] to-[#2663A5] bg-clip-text text-transparent">
               educator and student portals
             </span>{" "}
             work
           </h2>
-          <p className="text-lg text-[#64748B] md:text-xl">
+          <p className="text-lg text-[#65717D] md:text-xl">
             Step-through videos for setting up assessments on the educator side and completing
             verified sessions from the learner experience.
           </p>

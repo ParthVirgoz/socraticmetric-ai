@@ -14,7 +14,7 @@ export function HeroSection() {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-14 selection:bg-[#F58022]/20 selection:text-[#1F2A44] md:pt-32 md:pb-20 lg:pt-36 lg:pb-24">
+    <section className="relative overflow-hidden pt-28 pb-14 selection:bg-[#E79636]/20 selection:text-[#163460] md:pt-32 md:pb-20 lg:pt-36 lg:pb-24">
       {/* Atmosphere */}
       <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden>
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_55%_at_50%_0%,#000_55%,transparent_100%)]" />
@@ -26,11 +26,11 @@ export function HeroSection() {
             className="flex w-full flex-col items-center text-center"
           >
             <div
-              className="animate-text-enter mb-6 inline-flex items-center gap-2 rounded-full border border-[#3370F7]/20 bg-white/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#3370F7] shadow-sm backdrop-blur-md sm:text-sm"
+              className="animate-text-enter mb-6 inline-flex items-center gap-2 rounded-full border border-[#1E4E8A]/20 bg-white/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#1E4E8A] shadow-sm backdrop-blur-md sm:text-sm"
             >
               <span className="relative flex h-2 w-2">
-                <span className="absolute inset-0 hidden animate-ping rounded-full bg-[#F58022]/70 lg:block" />
-                <span className="relative h-2 w-2 rounded-full bg-[#F58022]" />
+                <span className="absolute inset-0 hidden animate-ping rounded-full bg-[#E79636]/70 lg:block" />
+                <span className="relative h-2 w-2 rounded-full bg-[#E79636]" />
               </span>
               <span>
                 <span className="font-bold">#1</span> in Live Cognitive Verification
@@ -38,7 +38,7 @@ export function HeroSection() {
             </div>
 
             <h1
-              className="animate-text-enter animate-text-enter-delay-1 max-w-4xl font-serif text-[2.35rem] font-bold leading-[1.08] tracking-tight text-[#1F2A44] sm:text-5xl md:text-6xl lg:text-[4rem] lg:leading-[1.04]"
+              className="animate-text-enter animate-text-enter-delay-1 max-w-4xl font-serif text-[2.35rem] font-bold leading-[1.08] tracking-tight text-[#163460] sm:text-5xl md:text-6xl lg:text-[4rem] lg:leading-[1.04]"
             >
               AI-Moderated Oral
               <br className="hidden sm:block" /> Assessment Platform
@@ -56,22 +56,18 @@ export function HeroSection() {
             >
               <Link
                 href={REQUEST_DEMO_BOOKING_HREF}
-                className="group relative inline-flex h-14 w-full min-w-[220px] items-center justify-center overflow-hidden rounded-full p-[2px] font-bold text-white shadow-xl shadow-[#3370F7]/30 outline-none ring-1 ring-[#3370F7]/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#3370F7]/50 active:scale-95 sm:w-auto"
+                className="group inline-flex h-14 w-full min-w-[220px] items-center justify-center gap-2 rounded-full bg-[#1E4E8A] px-8 text-base font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#163460] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E79636] focus-visible:ring-offset-2 active:scale-[0.98] sm:w-auto"
               >
-                <span className="absolute inset-[-1000%] hidden md:block animate-[spin_2.5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#EAF1FE_0%,#3370F7_50%,#EAF1FE_100%)]" />
-                <span className="relative inline-flex h-full w-full items-center justify-center gap-2 rounded-full bg-[#3370F7] px-8 text-base font-bold text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#3370F7] group-hover:to-[#4C8FD6]">
-                  Book a demo
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                    strokeWidth={2.5}
-                  />
-                </span>
-                <span className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-white/0 via-white/20 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                Book a demo
+                <ArrowRight
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  strokeWidth={2.5}
+                />
               </Link>
 
               <Link
                 href="#how-it-works"
-                className="inline-flex h-14 w-full min-w-[180px] items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/80 px-8 text-base font-bold text-[#1F2A44] shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:shadow-md active:scale-95 sm:w-auto"
+                className="inline-flex h-14 w-full min-w-[180px] items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/80 px-8 text-base font-bold text-[#163460] shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:shadow-md active:scale-95 sm:w-auto"
               >
                 See How It Works
               </Link>
@@ -83,8 +79,8 @@ export function HeroSection() {
             className="relative mt-12 w-full max-w-4xl md:mt-16"
           >
 
-            <div className="relative overflow-hidden rounded-2xl border border-white/70 bg-white/40 p-1.5 shadow-[0_30px_80px_-28px_rgba(31,42,68,0.45)] backdrop-blur-sm sm:rounded-3xl sm:p-2">
-              <div className="relative isolate aspect-video overflow-hidden rounded-xl bg-[#0f172a] sm:rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl border border-white/70 bg-white/40 p-1.5 shadow-[0_24px_56px_-28px_rgba(22,52,96,0.18)] backdrop-blur-sm sm:rounded-3xl sm:p-2">
+              <div className="relative isolate aspect-video overflow-hidden rounded-xl bg-[#163460] sm:rounded-2xl">
                 {playing ? (
                   <iframe
                     src={youtubeEmbedSrc(YOUTUBE_VIDEO_ID)}
@@ -98,7 +94,7 @@ export function HeroSection() {
                   <button
                     type="button"
                     onClick={() => setPlaying(true)}
-                    className="group absolute inset-0 z-10 flex cursor-pointer items-center justify-center border-0 bg-black p-0 text-left outline-none ring-offset-2 focus-visible:ring-2 focus-visible:ring-[#3370F7]"
+                    className="group absolute inset-0 z-10 flex cursor-pointer items-center justify-center border-0 bg-black p-0 text-left outline-none ring-offset-2 focus-visible:ring-2 focus-visible:ring-[#1E4E8A]"
                     aria-label="Play Socratic Metric demo video inline"
                   >
                     <Image
@@ -110,14 +106,14 @@ export function HeroSection() {
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                     />
                     <span
-                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0f172a]/55 via-[#0f172a]/10 to-transparent transition-opacity duration-300 group-hover:from-[#0f172a]/65"
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#163460]/55 via-[#163460]/10 to-transparent transition-opacity duration-300 group-hover:from-[#163460]/65"
                       aria-hidden
                     />
 
                     <span className="relative flex flex-col items-center gap-3">
-                      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#3370F7] text-white shadow-lg shadow-[#3370F7]/40 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#4C8FD6] group-hover:shadow-xl sm:h-16 sm:w-16">
+                      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#1E4E8A] text-white shadow-lg shadow-[#163460]/10 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#2663A5] group-hover:shadow-xl sm:h-16 sm:w-16">
                         <span
-                          className="absolute inset-0 hidden animate-ping rounded-full bg-[#3370F7] opacity-25 lg:block"
+                          className="absolute inset-0 hidden animate-ping rounded-full bg-[#1E4E8A] opacity-25 lg:block"
                           aria-hidden
                         />
                         <Play

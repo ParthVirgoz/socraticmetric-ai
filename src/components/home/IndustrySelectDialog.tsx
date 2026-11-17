@@ -13,12 +13,12 @@ const industries = [
     icon: GraduationCap,
     tagline: "Universities, Schools & Training",
     description: "Verify that students truly understand their subject matter—not just generate AI essays.",
-    gradient: "from-[#3370F7]/10 to-[#3370F7]/5",
-    border: "border-[#3370F7]/20 hover:border-[#3370F7]/50",
-    iconBg: "bg-[#3370F7]/10",
-    iconColor: "text-[#3370F7]",
-    hoverShadow: "hover:shadow-[#3370F7]/10",
-    arrowColor: "text-[#3370F7]",
+    gradient: "from-[#1E4E8A]/10 to-[#1E4E8A]/5",
+    border: "border-[#1E4E8A]/20 hover:border-[#1E4E8A]/50",
+    iconBg: "bg-[#1E4E8A]/10",
+    iconColor: "text-[#1E4E8A]",
+    hoverShadow: "hover:shadow-[#1E4E8A]/10",
+    arrowColor: "text-[#1E4E8A]",
   },
   {
     id: "enterprise",
@@ -110,7 +110,7 @@ export function IndustrySelectDialog() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 40 }}
               transition={{ duration: 0.2, type: "spring", stiffness: 110, damping: 18 }}
-              className="pointer-events-auto w-full sm:max-w-xl md:max-w-2xl bg-[#F0F6FF] sm:rounded-3xl rounded-t-3xl shadow-2xl shadow-black/25 border border-[#3370F7]/10 overflow-hidden"
+              className="pointer-events-auto w-full sm:max-w-xl md:max-w-2xl bg-[#F8F6F0] sm:rounded-3xl rounded-t-3xl shadow-2xl shadow-black/25 border border-[#1E4E8A]/10 overflow-hidden"
             >
               {/* Header */}
               <div className="relative px-5 sm:px-8 pt-5 sm:pt-8 pb-4 sm:pb-6 text-center">
@@ -127,12 +127,12 @@ export function IndustrySelectDialog() {
                 </button>
 
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#3370F7]/8 border border-[#3370F7]/15 text-[#3370F7] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F58022] animate-pulse" />
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1E4E8A]/8 border border-[#1E4E8A]/15 text-[#1E4E8A] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E79636] animate-pulse" />
                   Welcome to Socratic Metric
                 </div>
 
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1F2A44] leading-tight">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#163460] leading-tight">
                   Who are you verifying for?
                 </h2>
                 <p className="mt-1.5 sm:mt-2 text-slate-500 text-xs sm:text-sm max-w-sm mx-auto">
@@ -150,7 +150,7 @@ export function IndustrySelectDialog() {
                     transition={{ delay: 0.15 + idx * 0.07 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => handleSelect(ind.href)}
-                    className={`group w-full text-left rounded-2xl border bg-gradient-to-br ${ind.gradient} ${ind.border} transition-all duration-250 shadow-sm hover:shadow-lg ${ind.hoverShadow} cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#3370F7] active:scale-[0.99]`}
+                    className={`group w-full text-left rounded-2xl border bg-gradient-to-br ${ind.gradient} ${ind.border} transition-all duration-250 shadow-sm hover:shadow-lg ${ind.hoverShadow} cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] active:scale-[0.99]`}
                   >
                     <div className="flex items-center gap-4 px-4 py-3.5 sm:px-5 sm:py-4">
                       {/* Icon */}
@@ -161,7 +161,7 @@ export function IndustrySelectDialog() {
                       {/* Text */}
                       <div className="flex-1 min-w-0">
                         <p className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider leading-none mb-1">{ind.tagline}</p>
-                        <h3 className="font-bold text-[#1F2A44] text-base sm:text-lg leading-tight">{ind.label}</h3>
+                        <h3 className="font-bold text-[#163460] text-base sm:text-lg leading-tight">{ind.label}</h3>
                         <p className="text-slate-500 text-xs leading-relaxed mt-0.5 hidden sm:block">{ind.description}</p>
                       </div>
 

@@ -26,11 +26,11 @@ export function LogoClouds({
         {/* Header */}
         <div className="text-center mb-8 space-y-4">
           <div className="flex items-center justify-center gap-3">
-            <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#3370F7]/40" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#1D4ED8]">
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#1E4E8A]/40" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#1A4175]">
               Trusted By
             </span>
-            <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#3370F7]/40" />
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#1E4E8A]/40" />
           </div>
           <p className="text-slate-600 text-base md:text-lg font-medium max-w-lg mx-auto">
             Partnering with institutions that demand verified understanding.
