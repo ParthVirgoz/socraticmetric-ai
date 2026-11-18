@@ -94,7 +94,7 @@ export default function AboutPage() {
                           and defend their reasoning aloud.
                         </p>
                         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 text-xs font-semibold">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                           Session in progress
                         </div>
                       </div>

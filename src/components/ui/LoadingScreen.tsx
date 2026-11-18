@@ -36,7 +36,6 @@ export function LoadingScreen() {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#F1F2EE] overflow-hidden"
           >{/* Subtle dot grid */}
-            <div className="absolute inset-0 bg-[radial-gradient(#8897AD_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.15] pointer-events-none" />
 
             <motion.div
               initial={{ scale: 0.9, opacity: 0, y: 10 }}
@@ -45,7 +44,7 @@ export function LoadingScreen() {
               transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-center gap-6 relative z-10"
             >
-              <div className="relative flex items-center justify-center w-28 h-28 md:w-36 md:h-36 rounded-3xl bg-white/60 backdrop-blur-xl shadow-2xl shadow-[#1E4E8A]/10 border border-white/80 ring-1 ring-black/[0.02]">
+              <div className="relative flex h-28 w-28 items-center justify-center rounded-3xl border border-slate-200/80 bg-white/80 backdrop-blur-md md:h-36 md:w-36">
                 <Lottie animationData={animationData} loop={true} className="w-20 h-20 md:w-24 md:h-24" />
               </div>
               

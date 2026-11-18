@@ -40,7 +40,7 @@ export function EnterpriseHero() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <Link
                 href={REQUEST_DEMO_BOOKING_HREF}
-                className="inline-flex h-14 w-full items-center justify-center rounded-xl bg-[#1E4E8A] px-8 text-base font-bold text-white shadow-lg shadow-[#163460]/10 transition-all hover:-translate-y-0.5 hover:bg-[#2663A5] hover:shadow-xl active:scale-95 sm:w-auto"
+                className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-white/10 bg-[#1E4E8A] px-8 text-base font-bold text-white transition-colors hover:bg-[#2663A5] active:scale-95 sm:w-auto"
               >
                 Talk to our team
               </Link>
@@ -60,7 +60,6 @@ export function EnterpriseHero() {
               className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-100 shadow-sm text-[#1E4E8A] text-xs font-bold tracking-wide uppercase z-20"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1E4E8A] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1E4E8A]" />
               </span>
               Policy oral check preview

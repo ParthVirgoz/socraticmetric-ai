@@ -224,7 +224,7 @@ export function EducationHero() {
 
           <Link
             href={REQUEST_DEMO_BOOKING_HREF}
-            className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#1E4E8A] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_0_0_#163460] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#2663A5] hover:shadow-[0_6px_0_0_#163460] active:translate-y-0.5 active:shadow-[0_2px_0_0_#163460] sm:mt-8 sm:px-7 sm:text-base"
+            className="mt-7 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#1E4E8A] px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#2663A5] active:scale-[0.98] sm:mt-8 sm:px-7 sm:text-base"
           >
             See how Socratic Metric solves this
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

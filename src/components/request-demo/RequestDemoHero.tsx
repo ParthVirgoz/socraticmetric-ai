@@ -46,7 +46,7 @@ export function RequestDemoHero() {
           {/* Right Column: Premium Interactive Glass Card */}
           <div className="relative perspective-1000 group">
             
-            <div className="aspect-[4/3] w-full bg-white rounded-3xl shadow-2xl shadow-[#1E4E8A]/10 border border-white relative overflow-hidden flex flex-col transition-all duration-500 transform group-hover:-translate-y-1 md:bg-white/80 md:backdrop-blur-2xl">
+            <div className="aspect-[4/3] w-full bg-white rounded-3xl border border-slate-200 relative overflow-hidden flex flex-col transition-all duration-300 md:bg-white/90 md:backdrop-blur-md">
 
                {/* MacOS Style Header */}
                <div className="h-14 bg-white/60 border-b border-slate-100 flex items-center px-6 relative z-10 backdrop-blur-md">
@@ -56,7 +56,7 @@ export function RequestDemoHero() {
                    <div className="w-3 h-3 rounded-full bg-slate-300 group-hover:bg-green-400 transition-colors duration-300 delay-150"></div>
                  </div>
                  <div className="mx-auto flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-100 text-xs font-bold tracking-wide text-[#1E4E8A] uppercase shadow-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#1E4E8A] animate-pulse"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1E4E8A]"></span>
                     Live Simulation
                  </div>
                </div>
@@ -70,13 +70,9 @@ export function RequestDemoHero() {
                    scroll
                    className="group/play relative mb-8 inline-flex cursor-pointer flex-col items-center outline-none"
                  >
-                    <span className="absolute inset-0 rounded-full bg-[#1E4E8A] opacity-30 blur-xl transition-opacity duration-300 animate-pulse group-hover/play:opacity-60" aria-hidden />
-                    <span className="relative inline-flex h-24 w-24 items-center justify-center overflow-hidden rounded-full p-[2px] shadow-xl shadow-[#163460]/10 outline-none transition-all duration-300 hover:scale-[1.05] active:scale-95 focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2">
-                      <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#F5F1E8_0%,#1E4E8A_50%,#F5F1E8_100%)] opacity-100 transition-opacity duration-500" />
-                      <span className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-white transition-all duration-300 group-hover/play:bg-slate-50">
-                        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-tr from-[#1E4E8A] to-[#2663A5] pl-2 shadow-inner">
+                    <span className="relative inline-flex h-24 w-24 items-center justify-center rounded-full border border-[#1E4E8A]/20 bg-white outline-none transition-transform duration-300 hover:scale-[1.05] active:scale-95 focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-[#1E4E8A] pl-2">
                           <Play className="h-8 w-8 fill-current text-white drop-shadow-md" aria-hidden />
-                        </span>
                       </span>
                     </span>
                     <span className="sr-only">Jump to live scheduling</span>

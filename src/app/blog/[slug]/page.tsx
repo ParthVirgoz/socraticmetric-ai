@@ -64,22 +64,7 @@ export default async function BlogPostPage({ params }: Props) {
         author={post.author}
         coverImageUrl={post.coverImageUrl}
       />
-      {/* Masthead: typography on deep navy — image never sits behind text */}
       <header className="relative isolate overflow-hidden bg-[#163460] pt-24 text-white md:pt-28 lg:pt-32">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage: `radial-gradient(ellipse 120% 80% at 20% 0%, rgb(30 78 138 / 0.45), transparent 55%),
-              radial-gradient(ellipse 90% 70% at 100% 20%, rgb(231 150 54 / 0.2), transparent 50%),
-              linear-gradient(180deg, rgb(22 52 96) 0%, rgb(22 32 52) 100%)`,
-          }}
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:48px_48px] opacity-50 [mask-image:linear-gradient(180deg,white_40%,transparent_100%)]"
-          aria-hidden
-        />
-
         <div className="relative z-10 mx-auto max-w-7xl px-4 pb-10 sm:px-6 sm:pb-12 md:pb-14 lg:px-10 lg:pb-16 xl:px-14">
           <div className="mb-8 flex flex-wrap items-center gap-3 md:mb-10">
             <Link
@@ -116,7 +101,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#1E4E8A]/80 to-[#163460] text-sm font-bold text-white ring-2 ring-white/20">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-[#1E4E8A] text-sm font-bold text-white">
                 {post.author.charAt(0)}
               </div>
               <div>
@@ -138,33 +123,18 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Bottom curve into page background */}
-        <div
-          className="relative z-10 h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
-          aria-hidden
-        />
-        <div
-          className="relative z-10 h-12 bg-[#F1F2EE] [clip-path:ellipse(120%_100%_at_50%_100%)] sm:h-16 md:h-20"
-          aria-hidden
-        />
+        <div className="relative z-10 h-px w-full border-t border-white/10" aria-hidden />
       </header>
 
       <section
         className="relative overflow-hidden pb-20 pt-6 md:pb-28 md:pt-8"
         aria-label="Article body"
       >
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#ECEEEA]/40 via-[#F1F2EE] to-[#F1F2EE]" />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_30%,transparent_100%)] opacity-70" />
-
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-14">
-          <article className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border border-white bg-white/95 shadow-xl shadow-[#163460]/[0.06] ring-1 ring-black/[0.05] backdrop-blur-sm sm:rounded-3xl">
-            <div
-              className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#1E4E8A] via-[#2663A5]/80 to-[#E79636]/70 sm:w-1.5 sm:rounded-l-3xl"
-              aria-hidden
-            />
+          <article className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 backdrop-blur-md sm:rounded-3xl">
 
             {hasCover ? (
-              <figure className="relative w-full overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-[#ECEEEA] via-[#F1F2EE] to-[#F5F5F2]">
+              <figure className="relative w-full overflow-hidden border-b border-slate-200/80 bg-[#F1F2EE]">
                 {/* Height scales with viewport (svh avoids mobile URL-bar jump); caps grow by breakpoint */}
                 <div
                   className="relative mx-auto w-full max-w-full
@@ -187,8 +157,6 @@ export default async function BlogPostPage({ params }: Props) {
             ) : null}
 
             <div className="relative px-5 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 lg:px-14 lg:py-14">
-              <div className="pointer-events-none absolute right-6 top-6 hidden h-16 w-16 rounded-2xl bg-gradient-to-br from-[#F5F1E8]/80 to-transparent lg:block" aria-hidden />
-
               {post.body?.length ? (
                 <div className={`${articleInnerClass} [&_h2:first-child]:mt-0 [&_h3:first-child]:mt-0`}>
                   <PortableText value={post.body} components={blogPortableTextComponents} />

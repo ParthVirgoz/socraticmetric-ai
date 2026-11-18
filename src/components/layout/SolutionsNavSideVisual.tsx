@@ -158,7 +158,6 @@ export function SolutionsNavSideVisual({ variant }: { variant: SolutionsNavSideV
       <div className="relative mt-2.5 space-y-2">
         <div className="flex items-center gap-2 rounded-xl border border-slate-200/90 bg-white/95 px-2 py-1.5 shadow-sm">
           <span className="relative flex h-2 w-2 shrink-0">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500/35 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
           </span>
           <div className="min-w-0 flex-1">

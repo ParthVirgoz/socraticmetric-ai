@@ -20,7 +20,7 @@ function Waveform() {
 
 function VerificationJourneyVisual() {
   return (
-    <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-200/90 bg-white p-5 shadow-xl shadow-slate-300/25 sm:max-w-lg sm:p-6">
+    <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-200/90 bg-white/95 p-5 backdrop-blur-md sm:max-w-lg sm:p-6">
       {/* Unverified documentation */}
       <div
         className="rounded-xl border border-slate-100 bg-slate-50/90 p-4 sm:p-5"
@@ -52,7 +52,7 @@ function VerificationJourneyVisual() {
       >
         <div className="relative flex h-[4.5rem] w-14 shrink-0 justify-center sm:h-[5rem] sm:w-16">
           <div className="absolute left-1/2 top-0 h-full w-0 -translate-x-1/2 border-l-2 border-dashed border-slate-300" />
-          <div className="relative z-10 my-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#1E4E8A] shadow-lg shadow-[#1E4E8A]/35 ring-4 ring-white sm:h-14 sm:w-14">
+          <div className="relative z-10 my-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#1E4E8A] sm:h-14 sm:w-14">
             <Mic className="h-5 w-5 text-white sm:h-6 sm:w-6" strokeWidth={2} />
           </div>
         </div>
@@ -137,7 +137,7 @@ export function WhyItMattersHero() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <Link
                 href={REQUEST_DEMO_BOOKING_HREF}
-                className="inline-flex h-14 w-full items-center justify-center rounded-xl bg-[#1E4E8A] px-8 text-base font-bold text-white shadow-lg shadow-[#163460]/10 transition-all hover:-translate-y-0.5 hover:bg-[#2663A5] hover:shadow-xl active:scale-95 sm:w-auto"
+                className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-white/10 bg-[#1E4E8A] px-8 text-base font-bold text-white transition-colors hover:bg-[#2663A5] active:scale-95 sm:w-auto"
               >
                 Talk to our team
               </Link>

@@ -79,12 +79,11 @@ export function HomePatents() {
     >
       <div className="container relative mx-auto max-w-6xl">
         {/* Dark glass panel */}
-        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#163460] via-[#163460] to-[#102748] px-5 py-12 shadow-[0_32px_72px_-36px_rgba(22,52,96,0.3)] ring-1 ring-white/10 sm:rounded-[2.5rem] sm:px-8 md:px-12 md:py-16 lg:px-16">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-[#163460] via-[#163460] to-[#102748] px-5 py-12 sm:rounded-[2.5rem] sm:px-8 md:px-12 md:py-16 lg:px-16">
           {/* Atmosphere inside the panel */}
           <div className="pointer-events-none absolute inset-0" aria-hidden>
             {/* Top edge highlight */}
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />            {/* Fine grid */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,#000_40%,transparent_100%)]" />
           </div>
 
           <div className="relative">
@@ -207,10 +206,10 @@ export function HomePatents() {
             <div
               className="mt-10 flex justify-center md:mt-12"
             >
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-2.5 md:backdrop-blur-md">
-                <ShieldCheck className="h-5 w-5 text-emerald-300" strokeWidth={2.5} />
-                <span className="text-sm font-semibold text-white">
-                  Proprietary Oral Verification Technology
+              <div className="inline-flex max-w-3xl items-start gap-3 rounded-xl border border-[#E79636]/30 bg-white/[0.06] px-5 py-3 text-left md:items-center md:backdrop-blur-md">
+                <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#F3D09A] md:mt-0" strokeWidth={2.5} />
+                <span className="text-sm font-semibold leading-relaxed text-white">
+                  Protected by Issued U.S. AI Patents in Adaptive Oral Evaluation Technology.
                 </span>
               </div>
             </div>

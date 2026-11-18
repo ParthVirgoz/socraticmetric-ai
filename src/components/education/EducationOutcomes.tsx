@@ -7,10 +7,6 @@ export function EducationOutcomes() {
 
   return (
     <section className="relative py-10 md:py-12 bg-transparent overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] opacity-[0.15] [mask-image:radial-gradient(ellipse_80%_70%_at_50%_50%,#000_40%,transparent_100%)]" />
-      </div>
-
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="text-center mb-10 space-y-4">
           <div className="mb-4">

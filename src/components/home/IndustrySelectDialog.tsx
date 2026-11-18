@@ -128,7 +128,7 @@ export function IndustrySelectDialog() {
 
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1E4E8A]/8 border border-[#1E4E8A]/15 text-[#1E4E8A] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E79636] animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E79636]" />
                   Welcome to Socratic Metric
                 </div>
 

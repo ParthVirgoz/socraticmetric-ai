@@ -80,7 +80,7 @@ function SolutionsMenuItem({ item }: { item: NavItem }) {
         {item.label}
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <div className="flex w-[640px] p-4 bg-white/90 backdrop-blur-xl border border-white/40 ring-1 ring-white/50 rounded-2xl shadow-xl">
+        <div className="flex w-[640px] rounded-2xl border border-slate-200 bg-white/95 p-4 backdrop-blur-md">
           <ul className="w-1/2 space-y-2 border-r border-slate-100 pr-4">
             {children.map((child, idx) => {
               const Icon = child.icon;
@@ -174,8 +174,7 @@ export function Navbar() {
           "relative z-50 flex items-center justify-between transition-all duration-500",
           useSolidNav
             ? cn(
-                "w-full max-w-6xl rounded-full border border-white/70 bg-white px-5 py-2.5 shadow-[0_8px_32px_rgb(15,23,42,0.08)] ring-1 ring-black/[0.06] md:bg-white/85 md:backdrop-blur-xl sm:px-6 sm:py-3",
-                blogArticle && "md:bg-white/92 shadow-[0_12px_40px_rgb(15,23,42,0.12)] ring-black/[0.08]",
+                "w-full max-w-6xl rounded-full border border-slate-200/90 bg-white px-5 py-2.5 backdrop-blur-md md:bg-white/90 sm:px-6 sm:py-3",
               )
             : "w-full max-w-full rounded-none border-b border-transparent bg-white/0 px-6 py-6 md:px-12",
         )}
@@ -219,7 +218,7 @@ export function Navbar() {
                           {item.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                          <ul className="grid w-[200px] gap-2 p-3 bg-white/90 backdrop-blur-xl border border-white/40 ring-1 ring-white/50 rounded-2xl shadow-xl">
+                          <ul className="grid w-[200px] gap-2 rounded-2xl border border-slate-200 bg-white/95 p-3 backdrop-blur-md">
                             {item.children.map((child) => (
                               <li key={child.label}>
                                 <NavigationMenuLink asChild>

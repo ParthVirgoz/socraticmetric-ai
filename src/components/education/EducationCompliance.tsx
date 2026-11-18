@@ -37,7 +37,7 @@ export function EducationCompliance() {
           </div>
 
           <div className="relative group">
-            <div className="relative rounded-3xl bg-white/95 backdrop-blur-xl border border-slate-200/60 p-6 md:p-8 shadow-md shadow-blue-900/5 overflow-hidden">
+            <div className="relative rounded-3xl border border-slate-200/80 bg-white/95 p-6 backdrop-blur-md md:p-8">
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E4E8A]/40 to-transparent" />
               <div className="space-y-6 relative z-10">
                 {points.map((point, index) => (
@@ -61,7 +61,7 @@ export function EducationCompliance() {
               </div>
 
               <div className="absolute bottom-6 right-6 text-[#1E4E8A]/10 pointer-events-none">
-                <RotateCw className="w-24 h-24 animate-[spin_20s_linear_infinite]" />
+                <RotateCw className="w-24 h-24" />
               </div>
             </div>
           </div>

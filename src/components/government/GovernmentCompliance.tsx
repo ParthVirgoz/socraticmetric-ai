@@ -29,7 +29,7 @@ export function GovernmentCompliance() {
           </div>
 
           <div className="relative group">
-            <div className="relative rounded-3xl bg-white/95 backdrop-blur-xl border border-white p-8 md:p-12 shadow-2xl shadow-black/[0.06] overflow-hidden">
+            <div className="relative rounded-3xl border border-slate-200/80 bg-white/95 p-8 backdrop-blur-md md:p-12">
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E4E8A]/40 to-transparent" />
               <div className="space-y-6 relative z-10">
                 {points.map((point, index) => (
@@ -52,7 +52,7 @@ export function GovernmentCompliance() {
               </div>
 
               <div className="absolute bottom-6 right-6 text-[#1E4E8A]/10 pointer-events-none">
-                <RotateCw className="w-24 h-24 animate-[spin_20s_linear_infinite]" />
+                <RotateCw className="w-24 h-24" />
               </div>
             </div>
           </div>

@@ -77,7 +77,7 @@ export function RequestDemoForm() {
         </div>
 
         <div ref={mountRef} className="relative max-w-4xl mx-auto group">
-          <div className="bg-white rounded-3xl p-4 md:p-8 shadow-2xl shadow-[#1E4E8A]/10 border border-slate-100 relative min-h-[520px]">
+          <div className="relative min-h-[520px] rounded-3xl border border-slate-200/80 bg-white/95 p-4 backdrop-blur-md md:p-8">
             {visible ? (
               <Cal
                 calLink={CALCOM_LINK}

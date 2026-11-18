@@ -5,6 +5,7 @@ import { HowItWorks } from "@/components/home/sections/HowItWorks";
 import { HomePullQuote } from "@/components/home/sections/HomePullQuote";
 import { LogoClouds } from "@/components/home/sections/LogoClouds";
 import { HomeMission } from "@/components/home/sections/HomeMission";
+import { HomeProof } from "@/components/home/sections/HomeProof";
 import { HomePatents } from "@/components/home/sections/HomePatents";
 import { Testimonials } from "@/components/home/sections/Testimonials";
 import { FaqSection } from "@/components/home/sections/FaqSection";
@@ -25,7 +26,7 @@ export const metadata = createPageMetadata({
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F8F6F0] text-[#163460] overflow-x-hidden font-sans">
+    <div className="flex min-h-screen flex-col bg-[#F8F6F0] text-[#163460] overflow-x-clip font-sans">
       <Navbar />
 
       <main className="flex-1">
@@ -36,6 +37,7 @@ export default function Home() {
         <ScrollReveal><HomePullQuote /></ScrollReveal>
         <ScrollReveal><LogoClouds /></ScrollReveal>
         <ScrollReveal><HomeMission /></ScrollReveal>
+        <ScrollReveal><HomeProof /></ScrollReveal>
         <ScrollReveal><HomePatents /></ScrollReveal>
         <ScrollReveal><Testimonials /></ScrollReveal>
         <ScrollReveal><FaqSection /></ScrollReveal>

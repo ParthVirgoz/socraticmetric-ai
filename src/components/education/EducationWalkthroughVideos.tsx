@@ -52,7 +52,6 @@ function WalkthroughPlayer({
       </div>
 
       <div className="relative mx-auto w-full min-w-0">
-        <div className="pointer-events-none absolute -inset-1 rounded-[1.25rem] bg-gradient-to-r from-[#1E4E8A] via-[#2663A5] to-[#E79636] opacity-15 blur-2xl sm:rounded-[2rem]" />
 
         <div className="relative isolate aspect-video w-full max-w-full overflow-hidden rounded-xl border border-slate-200/90 bg-black shadow-xl shadow-slate-200/60 sm:rounded-2xl md:rounded-3xl">
           {playing ? (
@@ -83,7 +82,6 @@ function WalkthroughPlayer({
               />
               <span className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/15 group-focus-visible:bg-black/20" aria-hidden />
               <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1E4E8A] text-white shadow-lg shadow-[#1E4E8A]/35 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#2663A5] sm:h-14 sm:w-14 md:h-16 md:w-16">
-                <span className="absolute inset-0 rounded-full bg-[#1E4E8A] opacity-30 animate-ping" aria-hidden />
                 <Play className="relative ml-0.5 h-6 w-6 fill-current sm:h-7 sm:w-7 md:h-8 md:w-8" aria-hidden />
               </span>
             </button>

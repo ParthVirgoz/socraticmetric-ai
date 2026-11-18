@@ -2,21 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { REQUEST_DEMO_BOOKING_HREF } from "@/lib/urls";
 import Image from "next/image";
-import { Linkedin, Twitter, Mail, MapPin } from "lucide-react";
+import { Linkedin, Mail, MapPin, ShieldCheck } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="relative bg-[#F1F2EE] w-full overflow-hidden pt-20 pb-10 sm:pt-24 sm:pb-12 text-[#69737D]">
-      {/* Animated Background UI */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        {/* Modern Dot Pattern */}
-        <div className="absolute inset-0 bg-[#F1F2EE] bg-[radial-gradient(#8897AD_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.15]"></div>
-        
-        {/* Fade mask so the top edge blends perfectly */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F1F2EE] via-[#F1F2EE]/80 to-transparent"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-6 md:px-12 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16 lg:mb-24">
           
           {/* Brand Column */}
@@ -94,6 +85,21 @@ export function Footer() {
           </div>
         </div>
         
+        <div className="mb-10 flex flex-col gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#1E4E8A]" aria-hidden="true" />
+            <p className="text-sm font-semibold leading-relaxed text-[#163460]">
+              Protected by Issued U.S. AI Patents in Adaptive Oral Evaluation Technology.
+            </p>
+          </div>
+          <Link
+            href="/#patents"
+            className="inline-flex min-h-10 shrink-0 cursor-pointer items-center justify-center rounded-md bg-[#1E4E8A] px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:scale-[1.02] hover:bg-[#163460] active:scale-[0.98]"
+          >
+            View issued patents
+          </Link>
+        </div>
+
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-600 font-medium">
           <p>&copy; {new Date().getFullYear()} Socratic Metric. All rights reserved.</p>
