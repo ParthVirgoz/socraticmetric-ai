@@ -1,43 +1,80 @@
+import { AnimatedMetric } from "@/components/industry/AnimatedMetric";
+import { LockKeyhole, ScrollText, ShieldCheck } from "lucide-react";
+
 export function ScienceAIReplication() {
   return (
-    <section className="py-10 md:py-12 relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl text-center">
-        <div
-          className="space-y-6"
-        >
-          <div className="mb-6">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-orange-50 border border-orange-200 text-[#A5662C] font-bold text-xs tracking-widest uppercase">
-              The Bottom Line
-            </span>
+    <section
+      aria-labelledby="science-enterprise-return-heading"
+      className="bg-[#F8FAFC] py-16 md:py-20"
+    >
+      <div className="container mx-auto max-w-7xl px-6 md:px-12">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
+          <div className="max-w-2xl">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#1E4E8A]">
+              The enterprise return
+            </p>
+            <h2
+              id="science-enterprise-return-heading"
+              className="font-serif text-3xl font-bold leading-[1.1] tracking-tight text-[#163460] sm:text-4xl md:text-5xl"
+            >
+              Make the explanation—not just the answer—available for review.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-[#65717D] sm:text-lg">
+              Oral assessment raises the evidence bar by asking learners to
+              explain and respond to follow-up questions. It is not a claim that
+              AI cannot imitate speech; it is a structured way to examine
+              comprehension and preserve an audit trail.
+            </p>
           </div>
 
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-            Why AI Cannot Replicate This Process
-          </h2>
-
-          <div className="text-lg md:text-xl text-[#65717D] leading-relaxed space-y-6 text-left">
-            <p>
-              Current generative AI systems can easily produce fluent text without any actual understanding. However, humans speaking aloud must coordinate complex neural systems for motor planning, semantic retrieval, auditory monitoring, and real-time error correction.
-            </p>
-            <p>
-              This temporally-anchored, multimodal, embodied process cannot be replicated by simple text generation. It requires biological cognition in action. Socratic Metric measures not what a user can have written for them, but what they can articulate, refine, and defend in their own voice.
-            </p>
-          </div>
-
-          <div className="pt-8 border-t border-slate-100 text-left space-y-6">
-            <p className="text-lg md:text-xl text-[#65717D] leading-relaxed">
-              Traditional assessments increasingly cannot distinguish between genuine human learning and AI-generated output. Socratic Metric provides a neuroscience-grounded verification solution that makes learning visible, auditable, and resistant to AI circumvention.
-            </p>
-            <p className="text-lg md:text-xl text-[#65717D] leading-relaxed">
-              By requiring live oral engagement, the platform leverages the fundamental principles of how the human brain actually learns, demonstrating true competence through active production, multimodal encoding, and iterative feedback.
-            </p>
-            <div className="bg-white rounded-3xl p-6 md:p-8 mt-8 border border-blue-200 text-center shadow-md">
-              <p className="font-serif text-2xl md:text-3xl font-bold text-[#1E4E8A] leading-relaxed">
-                As cognitive research demonstrates, comprehension is not silent. It has a voice.
-              </p>
-            </div>
-          </div>
+          <ul className="divide-y divide-slate-200 border-y border-slate-200">
+            <li className="flex items-start gap-3 py-5">
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#1E4E8A]" aria-hidden="true" />
+              <div>
+                <h3 className="font-semibold tracking-tight text-[#163460]">
+                  Identity-aware assessment records
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                  Keep verification context with each learner&apos;s response.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3 py-5">
+              <ScrollText className="mt-0.5 h-5 w-5 shrink-0 text-[#1E4E8A]" aria-hidden="true" />
+              <div>
+                <h3 className="font-semibold tracking-tight text-[#163460]">
+                  Immutable, transcript-backed logs
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                  Preserve the response, evaluation, and feedback history for
+                  authorized review.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3 py-5">
+              <LockKeyhole className="mt-0.5 h-5 w-5 shrink-0 text-[#1E4E8A]" aria-hidden="true" />
+              <div>
+                <h3 className="font-semibold tracking-tight text-[#163460]">
+                  Reviewable compliance evidence
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                  Give institutional and enterprise reviewers access to
+                  rubric-aligned session details.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
+
+        <dl className="mt-10 grid grid-cols-3 gap-3 border-y border-slate-200 py-5 sm:gap-6">
+          <AnimatedMetric label="Concurrent users" value={3000} suffix="+" />
+          <AnimatedMetric label="Issued U.S. AI patents" value={4} />
+          <AnimatedMetric
+            label="Reported AI bypass rate"
+            value={0}
+            zeroLabel="Zero"
+          />
+        </dl>
       </div>
     </section>
   );

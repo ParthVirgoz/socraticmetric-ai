@@ -16,14 +16,14 @@ export default function EducationPage() {
       <Navbar />
       <main className="flex-1">
         <EducationHero />
-        <EducationWalkthroughVideos />
         <EducationRisk />
         <EducationSolution />
         <EducationCompliance />
         <EducationOutcomes />
+        <EducationWalkthroughVideos />
         <EducationUseCases />
         <EducationTestimonial />
-        <ContactSection />
+        <ContactSection initialUseCase="higher-education" />
       </main>
       <Footer />
     </div>

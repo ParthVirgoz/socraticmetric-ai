@@ -1,68 +1,31 @@
-import { HelpCircle, Cog, Eye, AlertTriangle } from "lucide-react";
+import { SectorRiskMatrix } from "@/components/industry/SectorRiskMatrix";
 
 export function GovernmentRisk() {
-  const risks = [
-    {
-      icon: <HelpCircle className="w-8 h-8 text-[#A5662C]" strokeWidth={1.75} />,
-      iconBg: "bg-orange-50",
-      title: "Operators relying on AI-generated mission plans they cannot independently defend",
-    },
-    {
-      icon: <Cog className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
-      iconBg: "bg-blue-50",
-      title: "Hidden gaps in technical fluency and system redundancy logic",
-    },
-    {
-      icon: <Eye className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
-      iconBg: "bg-blue-50",
-      title: "Inability to articulate failure cascades and real-time anomaly response strategies",
-    },
-    {
-      icon: <AlertTriangle className="w-8 h-8 text-amber-600" strokeWidth={1.75} />,
-      iconBg: "bg-amber-50",
-      title:
-        "Operational and safety exposure from a reliance on written output over true comprehension",
-    },
-  ];
-
   return (
-    <section className="relative py-20 md:py-32 bg-white overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="text-center mb-16 space-y-4">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#E79636]" />
-            <span className="text-[#A5662C] font-bold text-sm tracking-widest uppercase">The New Risk</span>
-            <div className="h-px w-12 bg-[#E79636]" />
-          </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-            The false assurance of competence in high-stakes operations
-          </h2>
-          <p className="text-lg md:text-xl text-[#65717D] max-w-3xl mx-auto leading-relaxed">
-            Generative AI has fundamentally altered how safety doctrine and operational procedures are
-            produced.             When mission-critical systems and decisions rely on polished documentation the
-            operator cannot fully reason through, mission performance and public safety face
-            unprecedented exposure.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {risks.map((risk, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center space-y-6"
-            >
-              <div
-                className={`w-16 h-16 flex items-center justify-center rounded-2xl ${risk.iconBg} transition-transform duration-300`}
-              >
-                {risk.icon}
-              </div>
-              <h3 className="text-lg font-bold text-[#163460] leading-snug">
-                {risk.title}
-              </h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <SectorRiskMatrix
+      sector="Government & Defense"
+      title="Mission readiness cannot rest on a completed module."
+      description="Agency directors and defense contractors need evidence that personnel can explain approved clearance protocols and reason through operational scenarios. Assessment must use only material approved for the system's authorization boundary."
+      comparisons={[
+        {
+          traditional:
+            "A completed module does not demonstrate that personnel can explain a clearance protocol or doctrine.",
+          oralDefense:
+            "Personnel reason through approved scenarios and defend their decisions aloud.",
+        },
+        {
+          traditional:
+            "Static tests can leave gaps in contingency handling and response rationale hidden.",
+          oralDefense:
+            "Targeted follow-up questions probe response and reasoning against approved criteria.",
+        },
+        {
+          traditional:
+            "A training record shows completion, not whether an individual can articulate the procedure.",
+          oralDefense:
+            "Identity-aware transcripts and evaluation records create an auditable training trail.",
+        },
+      ]}
+    />
   );
 }

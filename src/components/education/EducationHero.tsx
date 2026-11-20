@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { REQUEST_DEMO_BOOKING_HREF } from "@/lib/urls";
 import {
   BookOpen,
   ImageIcon,
@@ -81,9 +80,14 @@ export function EducationHero() {
           </div>
 
           <h1 className="animate-text-enter max-w-3xl font-serif text-3xl font-bold leading-[1.15] tracking-tight text-[#163460] sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-            The AI cheating crisis{" "}
-            <span className="italic text-[#1E4E8A]">in education.</span>
+            Protect academic integrity{" "}
+            <span className="italic text-[#1E4E8A]">in the age of AI.</span>
           </h1>
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-[#4D5C6E] sm:text-lg">
+            For provosts, deans, and instructional designers: close student
+            comprehension gaps with Canvas-connected assignments, adaptive
+            oral follow-ups, and iterative feedback.
+          </p>
 
           <div className="mt-8 inline-flex max-w-xl flex-col items-center rounded-2xl border border-[#1E4E8A]/20 bg-[#F5F1E8] px-8 py-5 sm:mt-10 sm:px-12 sm:py-6">
             <p className="text-4xl font-bold tracking-tight text-[#1E4E8A] sm:text-5xl md:text-6xl">
@@ -215,20 +219,29 @@ export function EducationHero() {
           </div>
 
           <p className="mt-10 max-w-2xl text-base leading-relaxed text-[#4D5C6E] sm:mt-12 sm:text-lg md:text-xl">
-            The traditional assessment model is broken. Socratic Metric brings
-            back what matters:{" "}
+            Move beyond detector scores. Pair Canvas workflows with live
+            explanations and feedback loops to verify what students
+            understand:{" "}
             <strong className="font-bold text-[#163460]">
-              verifying real understanding.
+              not just what they submit.
             </strong>
           </p>
 
-          <Link
-            href={REQUEST_DEMO_BOOKING_HREF}
-            className="mt-7 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#1E4E8A] px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#2663A5] active:scale-[0.98] sm:mt-8 sm:px-7 sm:text-base"
-          >
-            See how Socratic Metric solves this
-            <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-          </Link>
+          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-[#1E4E8A] px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2663A5] active:scale-[0.98] sm:px-7 sm:text-base"
+            >
+              Book a tailored demo
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </Link>
+            <Link
+              href="#how-it-works"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-[#163460] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#1E4E8A]/40 sm:px-7 sm:text-base"
+            >
+              Explore the workflow
+            </Link>
+          </div>
         </div>
       </div>
     </section>

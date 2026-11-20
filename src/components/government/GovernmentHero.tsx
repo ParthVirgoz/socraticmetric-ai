@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { REQUEST_DEMO_BOOKING_HREF } from "@/lib/urls";
-import { LazyHeroPreview } from "@/components/ui/LazyHeroPreview";
+import { SectorPortalPreview } from "@/components/industry/SectorPortalPreview";
 
 export function GovernmentHero() {
   return (
-    <div className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-[#EEF1EF] to-[#F5F5F2]">
+    <div className="relative overflow-hidden bg-[#F8F6F0] pt-32 pb-20 md:pt-40 md:pb-32">
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -18,29 +17,31 @@ export function GovernmentHero() {
             </div>
 
             <h1 className="animate-text-enter font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#163460] leading-[1.15]">
-              When AI can generate the procedure,{" "}
+              Mission readiness cannot be inferred from{" "}
               <span className="text-[#1E4E8A]">
-                written output no longer guarantees operational readiness.
+                completed training.
               </span>
             </h1>
 
             <div className="space-y-4 text-lg md:text-xl text-[#65717D] leading-relaxed max-w-lg">
               <p>
-                Generative AI can produce flawless mission plans, safety analyses, and operational
-                procedures, creating a dangerous false assurance of competence.
+                For agency directors and defense contractors, assess whether
+                personnel can explain approved clearance protocols and reason
+                through operational scenarios.
               </p>
               <p>
-                Socratic Metric™ evaluates live cognition, verifying that your operators can reason
-                through cascading failures, articulate redundancy logic, and execute under pressure.
+                Use only material authorized for the deployment. Classified
+                information must remain in systems explicitly approved for its
+                classification.
               </p>
             </div>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <Link
-                href={REQUEST_DEMO_BOOKING_HREF}
+                href="#contact"
                 className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-white/10 bg-[#1E4E8A] px-8 text-base font-bold text-white transition-colors hover:bg-[#2663A5] active:scale-95 sm:w-auto"
               >
-                Talk to our team
+                Book a tailored demo
               </Link>
               <Link
                 href="#how-it-works"
@@ -64,10 +65,21 @@ export function GovernmentHero() {
             </div>
 
             <div className="w-full max-w-full mx-auto">
-              <LazyHeroPreview
-                src="/animation/hero-government-voice.html"
-                title="SocraticMetric government pre-mission oral check — live preview"
-                messageType="sm-gov-hero"
+              <SectorPortalPreview
+                sector="Government & Defense"
+                context="Personnel readiness · Unclassified demo"
+                title="Clearance Protocol Assessment"
+                status="Demo protocol"
+                objectiveLabel="Readiness objective"
+                objective="Explain approved access-control and incident-response steps using authorized training material."
+                details={[
+                  { label: "Reference material", value: "Approved unclassified directive" },
+                  { label: "Question mode", value: "Scenario · Oral defense" },
+                ]}
+                verification="Reason through an approved scenario"
+                evidence="Transcript · rubric · immutable session log"
+                studentPrompt="A badge fails at a controlled entry point. What is the approved first action, and who should be notified?"
+                followUpQuestion="How should the response change if a tailgating attempt is reported?"
               />
             </div>
           </div>

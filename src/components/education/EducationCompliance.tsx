@@ -1,72 +1,28 @@
-import { CheckCircle2, RotateCw } from "lucide-react";
+import { SectorEvidenceSection } from "@/components/industry/SectorEvidenceSection";
 
 export function EducationCompliance() {
-  const points = [
-    {
-      title: "FERPA-Compliant Audit Records",
-      body: "Transcript-backed evidence of authentic student engagement for accreditation and review.",
-    },
-    {
-      title: "Voice-Verified Identity",
-      body: "Integrated authentication ensures the right student is performing the assessment, safeguarding session integrity.",
-    },
-    {
-      title: "Evidence of Original Authorship",
-      body: "Align oral reading and spoken responses with written submissions to detect non-authentic authorship.",
-    },
-  ];
-
   return (
-    <section className="relative py-10 md:py-12 bg-transparent overflow-hidden">
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 items-center gap-8 lg:gap-12">
-          <div className="space-y-6">
-            <div className="mb-4">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
-                Compliance
-              </span>
-            </div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-              Support Policy, Compliance, and Accreditation
-            </h2>
-            <p className="text-lg md:text-xl text-[#65717D] leading-relaxed max-w-lg">
-              Socratic Metric gives institutions an identity-verified audit trail, moving beyond silent
-              processing to prove that credits are awarded based on verified human cognition.
-            </p>
-          </div>
-
-          <div className="relative group">
-            <div className="relative rounded-3xl border border-slate-200/80 bg-white/95 p-6 backdrop-blur-md md:p-8">
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E4E8A]/40 to-transparent" />
-              <div className="space-y-6 relative z-10">
-                {points.map((point, index) => (
-                  <div
-                    key={index}
-                   
-                   
-                   
-                   
-                    className="flex items-start gap-4"
-                  >
-                    <div className="mt-1 bg-blue-50 rounded-full p-1 shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-[#1E4E8A]" />
-                    </div>
-                    <span className="text-[#163460] font-medium text-lg leading-snug">
-                      <span className="font-bold">{point.title}: </span>
-                      {point.body}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="absolute bottom-6 right-6 text-[#1E4E8A]/10 pointer-events-none">
-                <RotateCw className="w-24 h-24" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <SectorEvidenceSection
+      sector="Higher education"
+      title="Close the loop from LMS assignment to reviewable evidence."
+      description="Give provosts, deans, and instructional designers an audit trail that complements Canvas workflows while preserving the student's response, rubric, and iterative feedback history."
+      points={[
+        {
+          title: "Immutable, transcript-backed session logs",
+          description:
+            "Review the oral response alongside the rubric, feedback, and iteration history.",
+        },
+        {
+          title: "Evidence of student comprehension",
+          description:
+            "Inspect how a student explains a concept and responds to a follow-up, not only the submitted document.",
+        },
+        {
+          title: "Canvas-connected course context",
+          description:
+            "Keep assignments and outcomes connected to LMS workflows, with access and retention configured to institutional policy.",
+        },
+      ]}
+    />
   );
 }

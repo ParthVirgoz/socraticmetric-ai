@@ -1,64 +1,50 @@
-import { RefreshCw, Repeat, ShieldCheck } from "lucide-react";
+import { SectorInteractiveStory } from "@/components/industry/SectorInteractiveStory";
 
 export function EnterpriseSolution() {
-  const solutions = [
-    {
-      icon: <RefreshCw className="w-8 h-8 text-[#A5662C]" strokeWidth={1.75} />,
-      bg: "bg-orange-50",
-      title: "AI-moderated adaptive dialogue",
-      desc: "The platform listens to oral responses and generates targeted follow-up questions in real time to verify policy alignment under pressure and probe the depth of reasoning.",
-    },
-    {
-      icon: <Repeat className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
-      bg: "bg-blue-50",
-      title: "Iterative feedback loop",
-      desc: "Rather than testing memory, the system evaluates reasoning in motion, providing immediate feedback that allows users to correct misconceptions and refine their logic on the spot.",
-    },
-    {
-      icon: <ShieldCheck className="w-8 h-8 text-emerald-600" strokeWidth={1.75} />,
-      bg: "bg-emerald-50",
-      title: "Identity-verified audit records",
-      desc: "Generate an immutable, transcript-backed record of verified competency, utilizing secure voice authentication to produce proof of authentic human engagement.",
-    },
-  ];
-
   return (
-    <section
-      id="how-it-works"
-      className="relative py-20 md:py-32 bg-[#F5F5F2] overflow-hidden"
-    >
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#1E4E8A]" />
-            <span className="text-[#1E4E8A] font-bold text-sm tracking-widest uppercase">How It Works</span>
-            <div className="h-px w-12 bg-[#1E4E8A]" />
-          </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-            Cognition in motion: creating a new enterprise trust layer
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {solutions.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col items-start space-y-6 h-full"
-            >
-              <div
-                className={`w-16 h-16 flex items-center justify-center rounded-2xl ${item.bg} transition-transform duration-300`}
-              >
-                {item.icon}
-              </div>
-              <h3 className="text-xl font-bold text-[#163460]">{item.title}</h3>
-              <p className="text-[#65717D] leading-relaxed text-base flex-grow">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <SectorInteractiveStory
+      sector="Enterprise"
+      science={{
+        title: "Workforce competence is demonstrated through retrieval and explanation.",
+        description:
+          "The Production Effect and Generation Effect describe memory benefits associated with producing or generating information. An oral scenario can make an employee's decision process visible, while follow-up questions test whether policy can be applied beyond recall.",
+        principles: [
+          {
+            label: "Production Effect",
+            description:
+              "Speaking information aloud can make it more memorable than silent reading in studied tasks. In workplace training, explanation provides observable evidence to review alongside other competency measures.",
+          },
+          {
+            label: "Generation Effect",
+            description:
+              "Generating a response can strengthen memory when it is correct. Feedback and another attempt help distinguish a reasoned application of policy from a confident guess.",
+          },
+        ],
+      }}
+      product={{
+        title: "Move from course completion to policy application.",
+        description:
+          "Use safety and compliance scenarios to let employees explain what they would do, receive targeted feedback, and refine their reasoning before a reviewer inspects the session record.",
+      }}
+      demo={{
+        sector: "Enterprise",
+        context: "EHS · Annual safety training",
+        title: "Workforce Safety Protocol Assessment",
+        status: "Policy set",
+        objectiveLabel: "Policy objective",
+        objective:
+          "Explain the approved safety response to a near-miss scenario and why each escalation step matters.",
+        details: [
+          { label: "Reference material", value: "EHS policy · Revision 4" },
+          { label: "Question mode", value: "Scenario · Adaptive follow-up" },
+        ],
+        verification: "Explain the procedure · apply feedback",
+        evidence: "Transcript · rubric · immutable session log",
+        studentPrompt:
+          "A contractor reports an unguarded machine during a shift. What should happen first, and why?",
+        followUpQuestion:
+          "How would your response change if someone were injured and the equipment were still active?",
+      }}
+    />
   );
 }

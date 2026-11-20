@@ -1,63 +1,28 @@
-import { CheckCircle2, RotateCw } from "lucide-react";
+import { SectorEvidenceSection } from "@/components/industry/SectorEvidenceSection";
 
 export function GovernmentCompliance() {
-  const points = [
-    "Identity-verified documentation that key roles grasp autonomous system oversight and contingency planning",
-    "Repeatable workflows for verifying regulatory and safety doctrine alignment",
-    "Immutable proof of readiness to demonstrate compliance to external reviewers and command",
-  ];
-
   return (
-    <section className="relative py-20 md:py-32 bg-white overflow-hidden">
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 items-center gap-16 lg:gap-24">
-          <div className="space-y-6">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[#1E4E8A]" />
-              <span className="text-[#1E4E8A] font-bold text-sm tracking-widest uppercase">Oversight</span>
-            </div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-              Defensible evidence for safety doctrine and oversight
-            </h2>
-            <p className="text-lg md:text-xl text-[#65717D] leading-relaxed max-w-lg">
-              In environments where failure carries national or human consequences, Socratic Metric
-              provides structured cognitive verification, giving agencies defensible proof that
-              personnel truly understand the regulatory frameworks and safety doctrines they operate
-              within.
-            </p>
-          </div>
-
-          <div className="relative group">
-            <div className="relative rounded-3xl border border-slate-200/80 bg-white/95 p-8 backdrop-blur-md md:p-12">
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E4E8A]/40 to-transparent" />
-              <div className="space-y-6 relative z-10">
-                {points.map((point, index) => (
-                  <div
-                    key={index}
-                   
-                   
-                   
-                   
-                    className="flex items-start gap-4"
-                  >
-                    <div className="mt-1 bg-blue-50 rounded-full p-1 shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-[#1E4E8A]" />
-                    </div>
-                    <span className="text-[#163460] font-medium text-lg leading-snug">
-                      {point}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="absolute bottom-6 right-6 text-[#1E4E8A]/10 pointer-events-none">
-                <RotateCw className="w-24 h-24" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <SectorEvidenceSection
+      sector="Government & Defense"
+      title="Make mission-readiness evidence reviewable and controlled."
+      description="Build tamper-evident training audit trails from approved material. Classified information must only be handled in systems explicitly authorized for its classification."
+      points={[
+        {
+          title: "Assess approved clearance protocols",
+          description:
+            "Use agency-authorized learning objectives and reference material to evaluate protocol comprehension.",
+        },
+        {
+          title: "Keep immutable training audit logs",
+          description:
+            "Make transcripts, rubric results, and session events available for authorized oversight.",
+        },
+        {
+          title: "Respect handling and access controls",
+          description:
+            "Align retention, access, and deployment with agency handling requirements and authorization boundaries.",
+        },
+      ]}
+    />
   );
 }

@@ -1,82 +1,80 @@
-import { CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+
+const studies = [
+  {
+    author: "Hale et al. (2007)",
+    finding:
+      "Reported a comprehension benefit for reading aloud in their study context and highlighted that silent reading made it difficult for an examiner to know whether a passage had been read.",
+  },
+  {
+    author: "Schiavo et al. (2021)",
+    finding:
+      "Studied attention-driven read-aloud support for students with reading disabilities and reported improved comprehension in that population.",
+  },
+  {
+    author: "Forrin & MacLeod (2018)",
+    finding:
+      "Examined the production effect and found a memory advantage for self-produced words compared with words read silently in their experimental tasks.",
+  },
+];
 
 export function ScienceEvidence() {
-  const studies = [
-    {
-      author: "Hale et al. (2007)",
-      finding:
-        'Found students reading aloud demonstrated significantly higher comprehension than those reading silently, noting a critical limitation of silent reading: "the examiner had no way of knowing if the student was actually reading and/or read the entire passage."',
-    },
-    {
-      author: "Schiavo et al. (2021)",
-      finding:
-        "Demonstrated approximately a 24% improvement in comprehension among students with reading disabilities when utilizing attention-driven read-aloud technology.",
-    },
-    {
-      author: "Forrin & MacLeod (2018)",
-      finding:
-        "Confirmed the memory advantage is particularly strong when learners hear their own voices, demonstrating that self-generated vocal production creates the most distinctive memory encoding.",
-    }
-  ];
-
   return (
-    <section className="py-10 md:py-12 relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          <div>
-            <div className="mb-6">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
-                Research
-              </span>
-            </div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight mb-6">
-              Evidence of Impact
-            </h2>
-            <p className="text-lg text-[#65717D] leading-relaxed mb-6">
-              Multiple peer-reviewed studies support the distinct advantages of oral engagement and the production effect.
-            </p>
-
-            <div className="space-y-6">
-              {studies.map((study, i) => (
-                <div
-                  key={i}
-                 
-                 
-                 
-                 
-                  className="flex items-start gap-4"
-                >
-                  <div className="mt-1 bg-blue-50 rounded-full p-1 shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-[#1E4E8A]" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#163460] text-lg mb-2">{study.author}</h4>
-                    <p className="text-[#65717D] leading-relaxed">{study.finding}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div
-            className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-md"
+    <section
+      id="science-evidence"
+      aria-labelledby="science-evidence-heading"
+      className="bg-white py-16 md:py-20"
+    >
+      <div className="container mx-auto grid max-w-7xl gap-10 px-6 md:px-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+        <div className="max-w-xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#1E4E8A]">
+            Research evidence
+          </p>
+          <h2
+            id="science-evidence-heading"
+            className="font-serif text-3xl font-bold leading-[1.1] tracking-tight text-[#163460] sm:text-4xl"
           >
-            <h3 className="font-serif text-2xl font-bold text-[#163460] mb-6">
-              Addressing the Counter Evidence
-            </h3>
-            <div className="space-y-4 text-[#65717D] leading-relaxed">
-              <p>
-                Research shows that highly fluent readers can achieve comparable comprehension through silent reading under optimal conditions. This does not refute the value of oral assessment; it clarifies its purpose.
-              </p>
-              <p>
-                Silent reading optimizes efficiency for low-stakes information processing. Oral reading ensures verifiable comprehension, creates distinctive memory traces, and produces observable evidence of understanding.
-              </p>
-              <p className="font-medium text-[#163460]">
-                Socratic Metric occupies the domain where verifiable authenticity and demonstrable learning are absolute priorities—precisely where traditional assessment fails in the AI age.
-              </p>
-            </div>
+            What the research supports—and where it stops.
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-[#65717D] sm:text-lg">
+            Studies on read-aloud support and oral production inform assessment
+            design. Their findings depend on task, learner, and context; they do
+            not establish that oral assessment is superior in every situation.
+          </p>
+          <div className="mt-6 border-l-2 border-[#E79636] pl-4 text-sm leading-relaxed text-slate-600">
+            Use oral defense when educators need observable explanation and
+            reviewable evidence—not as a replacement for every form of
+            assessment.
           </div>
         </div>
+
+        <ol className="border-y border-slate-200">
+          {studies.map((study) => (
+            <li
+              key={study.author}
+              className="group grid gap-3 border-b border-slate-200 py-5 transition-colors duration-300 last:border-b-0 hover:bg-[#F8FAFC] sm:grid-cols-[12rem_minmax(0,1fr)] sm:gap-6 sm:py-6"
+            >
+              <div className="flex items-start justify-between gap-3 sm:block">
+                <h3 className="text-sm font-semibold tracking-tight text-[#163460] sm:text-base">
+                  {study.author}
+                </h3>
+                <ArrowUpRight
+                  className="h-4 w-4 shrink-0 text-[#1E4E8A] opacity-60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2
+                  className="mt-0.5 h-4 w-4 shrink-0 text-[#1E4E8A]"
+                  aria-hidden="true"
+                />
+                <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {study.finding}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

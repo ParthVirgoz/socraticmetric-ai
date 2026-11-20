@@ -16,6 +16,7 @@ const useCases = [
   { value: "corporate-compliance", label: "Corporate Compliance" },
   { value: "government-defense", label: "Government & Defense" },
 ] as const;
+type ContactUseCase = (typeof useCases)[number]["value"];
 
 const assessmentVolumes = [
   "Under 250",
@@ -24,9 +25,13 @@ const assessmentVolumes = [
   "5,000+",
 ] as const;
 
-export function ContactSection() {
+export function ContactSection({
+  initialUseCase = useCases[0].value,
+}: {
+  initialUseCase?: ContactUseCase;
+}) {
   const [primaryUseCase, setPrimaryUseCase] = useState<string | null>(
-    useCases[0].value,
+    initialUseCase,
   );
   const [assessmentVolume, setAssessmentVolume] = useState<string | null>(
     assessmentVolumes[0],

@@ -1,33 +1,50 @@
+import { SectorInteractiveStory } from "@/components/industry/SectorInteractiveStory";
+
 export function EducationSolution() {
   return (
-    <section
-      id="how-it-works"
-      className="relative py-10 md:py-12 bg-transparent overflow-hidden"
-    >
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="text-center mb-10 max-w-4xl mx-auto">
-          <div className="mb-4">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-[#F5F1E8] border border-[#1E4E8A]/20 text-[#1E4E8A] font-bold text-xs tracking-widest uppercase">
-              How It Works
-            </span>
-          </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-            Verifying Authentic Comprehension Through Dialogue
-          </h2>
-        </div>
-
-        <div
-          className="max-w-5xl mx-auto overflow-hidden bg-transparent"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="/img/educationpage/how-it-works.png" 
-            alt="How Socratic Metric Works: Verifying authentic comprehension through dialogue"
-            className="w-full h-auto block"
-          />
-        </div>
-      </div>
-    </section>
+    <SectorInteractiveStory
+      sector="Higher education"
+      science={{
+        title: "Oral production makes a learner's reasoning observable.",
+        description:
+          "The Production Effect and Generation Effect help explain why speaking and generating an explanation can support memory differently from silent review. Neither effect alone proves comprehension; an oral defense lets educators inspect the reasoning.",
+        principles: [
+          {
+            label: "Production Effect",
+            description:
+              "Research finds that producing information aloud can improve later memory for those items compared with reading them silently. The effect supports including student production in an assessment, not treating speech as proof by itself.",
+          },
+          {
+            label: "Generation Effect",
+            description:
+              "Generating an explanation from memory can support later retention when the response is correct. Targeted feedback and another attempt can help students refine incomplete reasoning.",
+          },
+        ],
+      }}
+      product={{
+        title: "Connect coursework to a live, iterative defense.",
+        description:
+          "A Canvas-connected assignment can ground oral questions in course material, surface comprehension gaps, and let students apply feedback before submitting a final response.",
+      }}
+      demo={{
+        sector: "Higher education",
+        context: "Canvas · BIO 204 course shell",
+        title: "Small Business Owners vs. Entrepreneurs",
+        status: "Assignment ready",
+        objectiveLabel: "Core learning objective",
+        objective:
+          "Assess understanding of key distinctions between entrepreneurs and small business owners, including goals, risk tolerance, and growth strategies.",
+        details: [
+          { label: "Reference material", value: "Lecture notes · Chapter 4" },
+          { label: "Question mode", value: "Adaptive oral defense" },
+        ],
+        verification: "Read the prompt · explain · refine",
+        evidence: "Transcript · rubric · iteration log",
+        studentPrompt:
+          "What distinguishes an entrepreneur's growth goals from those of a small business owner?",
+        followUpQuestion:
+          "How would your answer change if the owner's goal shifted from local stability to rapid scale?",
+      }}
+    />
   );
 }

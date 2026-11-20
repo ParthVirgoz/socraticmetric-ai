@@ -1,64 +1,50 @@
-import { RefreshCw, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { SectorInteractiveStory } from "@/components/industry/SectorInteractiveStory";
 
 export function GovernmentSolution() {
-  const solutions = [
-    {
-      icon: <RefreshCw className="w-8 h-8 text-[#A5662C]" strokeWidth={1.75} />,
-      bg: "bg-orange-50",
-      title: "AI-moderated adaptive dialogue",
-      desc: "Present complex operational scenarios organically and use targeted follow-up questions to verify operators can articulate and defend mission-critical reasoning aloud.",
-    },
-    {
-      icon: <ClipboardCheck className="w-8 h-8 text-[#1E4E8A]" strokeWidth={1.75} />,
-      bg: "bg-blue-50",
-      title: "Cognitive readiness evaluation",
-      desc: "Go beyond memory tests by evaluating reasoning in motion during simulations, recertification, and pre-launch readiness checks, ensuring true comprehension under pressure.",
-    },
-    {
-      icon: <ShieldCheck className="w-8 h-8 text-emerald-600" strokeWidth={1.75} />,
-      bg: "bg-emerald-50",
-      title: "Identity-verified audit records",
-      desc: "Generate an immutable, transcript-backed record of genuine human engagement, bridging the gap between static documentation and operational authorization.",
-    },
-  ];
-
   return (
-    <section
-      id="how-it-works"
-      className="relative py-20 md:py-32 bg-[#F5F5F2] overflow-hidden"
-    >
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#1E4E8A]" />
-            <span className="text-[#1E4E8A] font-bold text-sm tracking-widest uppercase">How It Works</span>
-            <div className="h-px w-12 bg-[#1E4E8A]" />
-          </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#163460] leading-tight">
-            Cognition in motion: the new readiness layer for critical operations
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {solutions.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col items-start space-y-6 h-full"
-            >
-              <div
-                className={`w-16 h-16 flex items-center justify-center rounded-2xl ${item.bg} transition-transform duration-300`}
-              >
-                {item.icon}
-              </div>
-              <h3 className="text-xl font-bold text-[#163460]">{item.title}</h3>
-              <p className="text-[#65717D] leading-relaxed text-base flex-grow">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <SectorInteractiveStory
+      sector="Government & Defense"
+      science={{
+        title: "Mission readiness requires more than recognizing a procedure.",
+        description:
+          "Production and generation effects help explain why speaking and retrieving information can create stronger memory traces than passive review. Oral scenario responses let evaluators inspect how personnel apply approved guidance; they do not replace formal qualification or authorization.",
+        principles: [
+          {
+            label: "Production Effect",
+            description:
+              "Producing material aloud can improve memory for it compared with silent reading in studied tasks. In training, a spoken explanation adds an observable signal for review rather than relying only on a completion mark.",
+          },
+          {
+            label: "Generation Effect",
+            description:
+              "Generating a response from memory can support later recall when accurate. Structured feedback can identify uncertainty and prompt a more complete explanation.",
+          },
+        ],
+      }}
+      product={{
+        title: "Assess approved procedures with an auditable practice session.",
+        description:
+          "Agency directors and defense contractors can evaluate mission-readiness reasoning against authorized training objectives. Use only material approved for the deployment; do not enter classified information unless the system is explicitly approved for that classification.",
+      }}
+      demo={{
+        sector: "Government & Defense",
+        context: "Personnel readiness · Unclassified demo",
+        title: "Clearance Protocol Assessment",
+        status: "Demo protocol",
+        objectiveLabel: "Readiness objective",
+        objective:
+          "Explain approved access-control and incident-response steps using authorized training material.",
+        details: [
+          { label: "Reference material", value: "Approved unclassified directive" },
+          { label: "Question mode", value: "Scenario · Oral defense" },
+        ],
+        verification: "Reason through a live scenario",
+        evidence: "Transcript · rubric · immutable session log",
+        studentPrompt:
+          "A badge fails at a controlled entry point. What is the approved first action, and who should be notified?",
+        followUpQuestion:
+          "How should the response change if a tailgating attempt is reported?",
+      }}
+    />
   );
 }

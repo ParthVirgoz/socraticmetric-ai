@@ -19,7 +19,7 @@ export default function GovernmentPage() {
         <GovernmentCompliance />
         <GovernmentUseCases />
         <GovernmentTestimonial />
-        <ContactSection />
+        <ContactSection initialUseCase="government-defense" />
       </main>
       <Footer />
     </div>

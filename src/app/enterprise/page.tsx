@@ -19,7 +19,7 @@ export default function EnterprisePage() {
         <EnterpriseCompliance />
         <EnterpriseUseCases />
         <EnterpriseTestimonial />
-        <ContactSection />
+        <ContactSection initialUseCase="corporate-compliance" />
       </main>
       <Footer />
     </div>

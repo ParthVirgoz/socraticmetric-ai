@@ -23,11 +23,11 @@ export default function SciencePage() {
       <div className="flex-1">
         <ScienceHero />
         <ScienceChallengeSolution />
+        <SciencePrinciples />
         <ScienceEvidence />
         <SciencePlatform />
-        <SciencePrinciples />
         <ScienceAIReplication />
-        <ContactSection />
+        <ContactSection initialUseCase="higher-education" />
       </div>
       <Footer />
     </main>
