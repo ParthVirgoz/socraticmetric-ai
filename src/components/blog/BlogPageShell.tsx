@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export function BlogPageShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#F1F2EE] font-sans text-[#163460] selection:bg-[#E79636]/20 selection:text-[#163460]">
+    <div className="flex min-h-screen flex-col overflow-x-clip bg-[#F8F6F0] font-sans text-[#163460] selection:bg-[#E79636]/20 selection:text-[#163460]">
       <Navbar />
-      <main className="relative flex-1">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );
@@ -14,43 +14,33 @@ export function BlogPageShell({ children }: { children: React.ReactNode }) {
 
 export function BlogHero() {
   return (
-    <div className="relative overflow-hidden pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-32 lg:pb-20">
-      <div className="relative z-10 mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-10 xl:px-14">
-        <div
-          className="mx-auto max-w-4xl space-y-5 text-center sm:space-y-6 lg:space-y-7"
+    <header className="border-b border-slate-200 bg-white pb-12 pt-32 md:pb-16 md:pt-40">
+      <div className="mx-auto max-w-7xl px-6 md:px-12">
+        <nav
+          aria-label="Breadcrumb"
+          className="mb-8 flex items-center gap-2 text-xs font-semibold text-[#65717D]"
         >
-          <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-slate-200/90 bg-white/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#69737D] shadow-sm backdrop-blur-md sm:text-xs">
-            <Link href="/" className="text-[#1E4E8A] transition-colors hover:text-[#2663A5]">
-              Home
-            </Link>
-            <span className="text-slate-300" aria-hidden>
-              /
-            </span>
-            <span className="text-[#163460]">Blog</span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <span className="h-px w-12 rounded-full bg-gradient-to-r from-transparent via-[#1E4E8A]/50 to-transparent" aria-hidden />
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1E4E8A] sm:text-sm">Insights</p>
-          </div>
-
-          <h1 className="animate-text-enter font-serif text-4xl font-bold leading-[1.08] tracking-tight text-[#163460] sm:text-5xl md:text-6xl lg:text-[4.5rem]">
-            Ideas on assessment, <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-[#1E4E8A] via-[#2663A5] to-[#E79636] bg-clip-text text-transparent">
-              AI-era learning
-            </span>
+          <Link href="/" className="transition-colors hover:text-[#1E4E8A]">
+            Home
+          </Link>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page" className="text-[#163460]">
+            Blog
+          </span>
+        </nav>
+        <div className="max-w-3xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#1E4E8A]">
+            Insights
+          </p>
+          <h1 className="animate-text-enter font-serif text-4xl font-bold leading-[1.08] tracking-tight text-[#163460] sm:text-5xl md:text-6xl">
+            Ideas on assessment in the age of AI.
           </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#65717D] sm:text-lg md:text-xl">
-            Exploring oral verification, cognitive science, and what proof of understanding means when written output is
-            no longer enough.
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#65717D] sm:text-lg">
+            Perspectives on oral verification, cognitive science, and what proof
+            of understanding means when written output is no longer enough.
           </p>
         </div>
       </div>
-
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#ECEEEA]/90 via-[#F1F2EE]/40 to-transparent md:h-32"
-        aria-hidden
-      />
-    </div>
+    </header>
   );
 }

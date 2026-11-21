@@ -1,38 +1,21 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { LegalPageHeader } from "@/components/layout/LegalPageHeader";
 
 export default function PrivacyPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F5F5F2] text-[#163460] overflow-x-hidden">
+    <div className="flex min-h-screen flex-col bg-[#F8F6F0] text-[#163460]">
       <Navbar />
 
       <main className="flex-1">
-        {/* Header */}
-        <section className="relative pt-40 pb-12 md:pt-48 md:pb-16 bg-white border-b border-[#F5F5F2]">
-          <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
-            <h1 
-             
-             
-             
-              className="animate-text-enter font-serif text-4xl md:text-5xl font-bold tracking-tight text-[#163460] leading-tight mb-4"
-            >
-              Privacy Policy
-            </h1>
-            <p 
-             
-             
-             
-              className="text-[#65717D]"
-            >
-              How The Socratic Metric Learning System Protects Student Privacy
-            </p>
-          </div>
-        </section>
+        <LegalPageHeader
+          title="Privacy Policy"
+          description="How the Socratic Metric Learning System protects student privacy."
+        />
 
-        {/* Content */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-            <div className="prose prose-lg prose-slate max-w-none">
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto max-w-3xl px-6 md:px-12">
+            <div className="prose prose-lg prose-slate max-w-none prose-p:leading-[1.8] prose-li:leading-[1.8]">
               
               <h2 className="font-serif text-3xl font-bold text-[#163460] mt-12 mb-6">Why the Socratic Metric Uses Oral Dialogue</h2>
               <p className="text-[#65717D] leading-relaxed mb-6">

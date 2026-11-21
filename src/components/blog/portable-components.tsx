@@ -19,37 +19,51 @@ type PortableImageValue = {
 
 function PortableImage({ value }: { value: PortableImageValue }) {
   const asset = value?.asset;
+  const dim = asset?.metadata?.dimensions;
+  const naturalW = dim?.width ?? 1200;
+  const naturalH = dim?.height ?? Math.round(naturalW * 0.56);
+  const displayW = Math.min(naturalW, 1400);
   let src: string | null = null;
   if (asset && typeof asset === "object") {
     if (typeof asset.url === "string" && asset.url.length > 0) {
-      src = asset.url;
+      src =
+        urlForImage(value as SanityImageSource, {
+          width: displayW,
+          fit: "max",
+        }) ?? asset.url;
     } else if (typeof asset._ref === "string" && asset._ref.length > 0) {
-      src = urlForImage(value as SanityImageSource);
+      src =
+        urlForImage(value as SanityImageSource, {
+          width: displayW,
+          fit: "max",
+        }) ?? null;
     }
   }
 
   if (!src) return null;
 
-  const dim = asset?.metadata?.dimensions;
-  const naturalW = dim?.width ?? 1200;
-  const naturalH = dim?.height ?? Math.round(naturalW * 0.56);
-  const displayW = Math.min(naturalW, 1400);
-  const displayH = dim?.width && dim?.height ? Math.round((displayW / dim.width) * dim.height) : naturalH;
+  const displayH =
+    dim?.width && dim?.height
+      ? Math.round((displayW / dim.width) * dim.height)
+      : naturalH;
 
   return (
     <figure className="my-8 sm:my-10 not-prose">
-      <div className="relative w-full overflow-hidden rounded-xl bg-[#F1F2EE] shadow-lg shadow-[#163460]/[0.06] ring-1 ring-black/[0.06] sm:rounded-2xl">
+      <div className="relative w-full overflow-hidden border border-slate-200 bg-[#F1F2EE]">
         <Image
           src={src}
           alt={value.alt?.trim() ? value.alt : "Blog image"}
           width={displayW}
           height={displayH}
           className="w-full h-auto object-cover"
+          unoptimized
           sizes="(max-width: 768px) 100vw, (max-width: 1152px) 90vw, 1152px"
         />
       </div>
       {value.caption?.trim() ? (
-        <figcaption className="mt-3 text-center text-sm text-[#69737D]">{value.caption}</figcaption>
+        <figcaption className="mt-3 text-center text-sm text-[#69737D]">
+          {value.caption}
+        </figcaption>
       ) : null}
     </figure>
   );
@@ -59,7 +73,9 @@ export const blogPortableTextComponents: PortableTextComponents = {
   types: {
     image: ({ value }) => <PortableImage value={value as PortableImageValue} />,
     videoEmbed: ({ value }) => (
-      <PortableVideoEmbed value={value as { url?: string; title?: string; caption?: string }} />
+      <PortableVideoEmbed
+        value={value as { url?: string; title?: string; caption?: string }}
+      />
     ),
   },
   block: {
@@ -80,15 +96,19 @@ export const blogPortableTextComponents: PortableTextComponents = {
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="font-serif text-lg sm:text-xl font-bold mt-6 mb-2 text-[#163460] tracking-tight">{children}</h4>
+      <h4 className="font-serif text-lg sm:text-xl font-bold mt-6 mb-2 text-[#163460] tracking-tight">
+        {children}
+      </h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="my-8 rounded-2xl border border-[#1E4E8A]/10 bg-gradient-to-br from-[#F5F1E8]/50 to-[#F1F2EE]/40 py-5 pl-5 pr-5 text-base italic leading-relaxed text-[#163460]/90 shadow-sm ring-1 ring-[#1E4E8A]/5 sm:pl-6 sm:pr-6 lg:text-lg">
+      <blockquote className="my-8 border-l-2 border-[#1E4E8A] bg-[#F8F6F0] py-5 pl-5 pr-5 text-base italic leading-relaxed text-[#163460]/90 sm:pl-6 sm:pr-6 lg:text-lg">
         {children}
       </blockquote>
     ),
     normal: ({ children }) => (
-      <p className="mb-5 text-[#65717D] text-base sm:text-lg lg:text-[1.125rem] leading-[1.75]">{children}</p>
+      <p className="mb-5 text-[#65717D] text-base sm:text-lg lg:text-[1.125rem] leading-[1.75]">
+        {children}
+      </p>
     ),
   },
   list: {
@@ -104,8 +124,12 @@ export const blogPortableTextComponents: PortableTextComponents = {
     ),
   },
   listItem: {
-    bullet: ({ children }) => <li className="leading-relaxed pl-1">{children}</li>,
-    number: ({ children }) => <li className="leading-relaxed pl-1">{children}</li>,
+    bullet: ({ children }) => (
+      <li className="leading-relaxed pl-1">{children}</li>
+    ),
+    number: ({ children }) => (
+      <li className="leading-relaxed pl-1">{children}</li>
+    ),
   },
   marks: {
     link: ({ value, children }) => {
@@ -122,7 +146,9 @@ export const blogPortableTextComponents: PortableTextComponents = {
         </a>
       );
     },
-    strong: ({ children }) => <strong className="font-semibold text-[#163460]">{children}</strong>,
+    strong: ({ children }) => (
+      <strong className="font-semibold text-[#163460]">{children}</strong>
+    ),
     em: ({ children }) => <em className="text-[#163460]/90">{children}</em>,
   },
 };

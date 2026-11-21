@@ -1,123 +1,93 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, FileText } from "lucide-react";
 import type { BlogPostCard } from "@/lib/sanity/types";
 
 type Props = {
   posts: BlogPostCard[];
 };
 
-function PostMeta({
-  post,
-  className = "",
-}: {
-  post: BlogPostCard;
-  className?: string;
-}) {
+function PostMeta({ post }: { post: BlogPostCard }) {
   return (
-    <div
-      className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] text-[#1E4E8A] ${className}`}
-    >
-      <span className="rounded-full bg-[#F5F1E8]/90 px-2.5 py-0.5 text-[#1E4E8A] ring-1 ring-[#1E4E8A]/10">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold text-[#65717D]">
+      <span className="border-l-2 border-[#E79636] pl-2 text-[#1E4E8A]">
         {post.category}
       </span>
-      <span className="flex items-center gap-1.5 text-[#69737D] normal-case font-semibold tracking-normal">
-        <Clock className="h-3.5 w-3.5 shrink-0 text-[#1E4E8A]/70" strokeWidth={2} />
+      <span className="inline-flex items-center gap-1.5">
+        <Clock className="h-3.5 w-3.5 text-[#1E4E8A]" aria-hidden="true" />
         {post.readTime}
       </span>
     </div>
   );
 }
 
-function AuthorRow({ post }: { post: BlogPostCard }) {
+function CoverImage({
+  post,
+  priority = false,
+  className = "",
+}: {
+  post: BlogPostCard;
+  priority?: boolean;
+  className?: string;
+}) {
   return (
-    <div className="flex min-w-0 items-center gap-3">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#F5F1E8] to-[#F1F2EE] text-sm font-bold text-[#1E4E8A] shadow-sm ring-2 ring-white">
-        {post.author.charAt(0)}
-      </div>
-      <div className="min-w-0">
-        <p className="truncate text-sm font-bold text-[#163460]">{post.author}</p>
-        <p className="truncate text-xs text-[#65717D]">{post.date}</p>
-      </div>
+    <div className={`relative overflow-hidden bg-[#F1F2EE] ${className}`}>
+      {post.coverImageUrl ? (
+        <Image
+          src={post.coverImageUrl}
+          alt={`Cover: ${post.title}`}
+          fill
+          unoptimized
+          priority={priority}
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
+        />
+      ) : (
+        <div
+          className={`absolute inset-0 ${post.imageClass}`}
+          aria-hidden="true"
+        />
+      )}
     </div>
   );
 }
 
-function ReadCircleLink({ slug, title }: { slug: string; title: string }) {
+function FeaturedPost({ post }: { post: BlogPostCard }) {
   return (
-    <Link
-      href={`/blog/${slug}`}
-      className="shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200/90 bg-white text-[#1E4E8A] shadow-sm transition-all duration-300 hover:bg-[#1E4E8A] hover:text-white hover:border-[#1E4E8A] hover:shadow-md hover:shadow-[#163460]/10"
-      aria-label={`Read ${title}`}
-    >
-      <ArrowRight className="h-5 w-5" strokeWidth={2} />
-    </Link>
-  );
-}
-
-function FeaturedPostCard({ post }: { post: BlogPostCard }) {
-  return (
-    <article
-      className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white bg-white shadow-xl shadow-[#163460]/[0.06] ring-1 ring-black/[0.05] transition-shadow duration-300 hover:shadow-2xl hover:ring-[#1E4E8A]/12"
-    >
-      <div className="grid lg:grid-cols-[1.25fr_1fr] lg:gap-0">
+    <article className="group overflow-hidden border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40">
+      <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
         <Link
           href={`/blog/${post.slug}`}
-          className="relative block h-56 sm:h-64 lg:h-full lg:min-h-[320px] w-full overflow-hidden shrink-0"
+          className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1E4E8A]"
+          aria-label={`Read ${post.title}`}
         >
-          <div className={`absolute inset-0 ${post.coverImageUrl ? "" : post.imageClass}`}>
-            {post.coverImageUrl ? (
-              <Image
-                src={post.coverImageUrl}
-                alt={`Cover: ${post.title}`}
-                fill
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                sizes="(max-width: 1024px) 100vw, 55vw"
-                priority
-              />
-            ) : (
-              <>
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent" />
-                <div className="absolute top-6 right-6 text-[#1E4E8A]/20 transition-colors group-hover:text-[#1E4E8A]/30">
-                  <svg className="h-36 w-36 sm:h-40 sm:w-40" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
-                  </svg>
-                </div>
-              </>
-            )}
-          </div>
-          <div className="absolute inset-0 bg-[#163460]/0 transition-colors duration-500 group-hover:bg-[#163460]/[0.03] pointer-events-none" />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/35 via-black/10 to-transparent pointer-events-none lg:h-40" />
+          <CoverImage
+            post={post}
+            priority
+            className="aspect-[16/10] h-full min-h-56"
+          />
         </Link>
-
-        <div className="relative flex flex-col justify-center p-6 sm:p-8 lg:p-10 xl:p-12 lg:border-l lg:border-slate-100">
-          <div className="absolute right-6 top-6 hidden lg:flex h-10 w-10 items-center justify-center rounded-xl bg-[#E79636]/10 text-[#A5662C]">
-            <Sparkles className="h-5 w-5" strokeWidth={2} aria-hidden />
-          </div>
-
-          <PostMeta post={post} className="mb-4" />
-
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] font-bold text-[#163460] leading-[1.15] tracking-tight mb-5 group-hover:text-[#1E4E8A] transition-colors duration-300">
-            <Link
-              href={`/blog/${post.slug}`}
-              className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A]/30 focus-visible:rounded-sm"
-            >
-              {post.title}
-            </Link>
+        <div className="flex flex-col p-6 sm:p-8 lg:p-10">
+          <PostMeta post={post} />
+          <h2 className="mt-4 font-serif text-2xl font-bold leading-tight tracking-tight text-[#163460] transition-colors group-hover:text-[#1E4E8A] sm:text-3xl">
+            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h2>
-
-          <p className="text-[#65717D] leading-relaxed text-base sm:text-lg mb-8 line-clamp-3 sm:line-clamp-4 lg:line-clamp-[5]">
+          <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-[#65717D] sm:text-base">
             {post.excerpt}
           </p>
-
-          <div className="mt-auto flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between border-t border-slate-100 pt-6">
-            <AuthorRow post={post} />
+          <div className="mt-auto flex flex-wrap items-end justify-between gap-5 border-t border-slate-200 pt-5">
+            <div>
+              <p className="text-sm font-semibold text-[#163460]">
+                {post.author}
+              </p>
+              <p className="mt-1 text-xs text-[#65717D]">{post.date}</p>
+            </div>
             <Link
               href={`/blog/${post.slug}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1E4E8A] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#163460]/10 transition-all hover:bg-[#2663A5] hover:shadow-xl hover:shadow-[#163460]/10"
+              className="group/read inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-[#1E4E8A] transition-colors hover:text-[#163460] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
             >
               Read article
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={2.5} />
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/read:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -126,62 +96,40 @@ function FeaturedPostCard({ post }: { post: BlogPostCard }) {
   );
 }
 
-function GridPostCard({ post, i }: { post: BlogPostCard; i: number }) {
+function ArticleCard({ post }: { post: BlogPostCard }) {
   return (
-    <article
-      className="group flex h-full flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-white bg-white shadow-lg shadow-[#163460]/[0.04] ring-1 ring-black/[0.05] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#163460]/[0.08] hover:ring-[#1E4E8A]/10"
-    >
+    <article className="group flex h-full flex-col overflow-hidden border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40">
       <Link
         href={`/blog/${post.slug}`}
-        className="relative block h-48 sm:h-52 lg:h-56 w-full shrink-0 overflow-hidden"
+        className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1E4E8A]"
+        aria-label={`Read ${post.title}`}
       >
-        <div className={`absolute inset-0 ${post.coverImageUrl ? "" : post.imageClass}`}>
-          {post.coverImageUrl ? (
-            <Image
-              src={post.coverImageUrl}
-              alt={`Cover: ${post.title}`}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-              sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 720px"
-            />
-          ) : (
-            <>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent" />
-              <div className="absolute top-4 right-4 p-4 text-[#1E4E8A]/25 transition-colors group-hover:text-[#1E4E8A]/35">
-                {i % 2 === 0 ? (
-                  <svg className="h-24 w-24 sm:h-28 sm:w-28" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
-                  </svg>
-                ) : (
-                  <svg className="h-24 w-24 sm:h-28 sm:w-28" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
-                  </svg>
-                )}
-              </div>
-            </>
-          )}
-        </div>
-        <div className="absolute inset-0 bg-[#163460]/0 transition-colors duration-500 group-hover:bg-[#163460]/[0.03] pointer-events-none" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/15 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <CoverImage post={post} className="aspect-[16/10]" />
       </Link>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-7">
-        <PostMeta post={post} className="mb-3" />
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <PostMeta post={post} />
+        <h3 className="mt-3 font-serif text-xl font-bold leading-snug tracking-tight text-[#163460] transition-colors group-hover:text-[#1E4E8A]">
+          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+        </h3>
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-[#65717D]">
+          {post.excerpt}
+        </p>
 
-        <h2 className="mb-3 font-serif text-xl font-bold leading-tight text-[#163460] transition-colors duration-300 group-hover:text-[#1E4E8A] sm:text-2xl">
+        <div className="mt-auto flex flex-wrap items-end justify-between gap-4 border-t border-slate-200 pt-4">
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-[#163460]">
+              {post.author}
+            </p>
+            <p className="mt-1 text-xs text-[#65717D]">{post.date}</p>
+          </div>
           <Link
             href={`/blog/${post.slug}`}
-            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A]/30 focus-visible:rounded-sm"
+            className="inline-flex min-h-9 shrink-0 items-center gap-2 text-xs font-semibold text-[#1E4E8A] transition-colors hover:text-[#163460] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
           >
-            {post.title}
+            Read article
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
-        </h2>
-
-        <p className="mb-6 flex-1 text-sm leading-relaxed text-[#65717D] sm:text-[0.9375rem] line-clamp-3">{post.excerpt}</p>
-
-        <div className="mt-auto flex items-center justify-between gap-4 border-t border-slate-100 pt-5">
-          <AuthorRow post={post} />
-          <ReadCircleLink slug={post.slug} title={post.title} />
         </div>
       </div>
     </article>
@@ -191,48 +139,52 @@ function GridPostCard({ post, i }: { post: BlogPostCard; i: number }) {
 export function BlogListing({ posts }: Props) {
   if (posts.length === 0) {
     return (
-      <div
-        className="mx-auto max-w-lg rounded-2xl border border-white bg-white/90 px-8 py-14 text-center shadow-xl shadow-black/[0.04] ring-1 ring-black/5 sm:rounded-3xl sm:px-12"
-      >
-        <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F5F1E8] to-[#F1F2EE] ring-1 ring-[#1E4E8A]/10">
-          <Sparkles className="h-7 w-7 text-[#1E4E8A]" strokeWidth={1.75} />
-        </div>
-        <p className="mb-2 text-lg font-bold text-[#163460]">Insights coming soon</p>
-        <p className="text-sm leading-relaxed text-[#69737D]">
-          We don&apos;t have any articles published here yet. New perspectives on oral verification, learning, and
-          assessment will appear when they&apos;re ready — please check back later.
+      <div className="mx-auto max-w-xl border-y border-slate-200 py-12 text-center sm:py-16">
+        <FileText
+          className="mx-auto h-7 w-7 text-[#1E4E8A]"
+          aria-hidden="true"
+        />
+        <h2 className="mt-4 font-serif text-2xl font-bold tracking-tight text-[#163460]">
+          Insights coming soon
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-[#65717D]">
+          New perspectives on oral verification, learning, and assessment will
+          appear here when they&apos;re ready.
         </p>
       </div>
     );
   }
 
   const [featured, ...rest] = posts;
-  const showFeatured = posts.length >= 1;
 
   return (
-    <div className="w-full space-y-10 sm:space-y-12 lg:space-y-14">
-      {showFeatured ? <FeaturedPostCard post={featured} /> : null}
-
+    <div className="mx-auto max-w-7xl space-y-12 md:space-y-16">
+      <FeaturedPost post={featured} />
       {rest.length > 0 ? (
-        <div>
-          <div className="mb-6 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
+        <section aria-labelledby="more-articles-heading">
+          <div className="flex flex-col gap-2 border-b border-slate-200 pb-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1E4E8A]">Library</p>
-              <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-[#163460] sm:text-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1E4E8A]">
+                The library
+              </p>
+              <h2
+                id="more-articles-heading"
+                className="mt-2 font-serif text-2xl font-bold tracking-tight text-[#163460] sm:text-3xl"
+              >
                 More articles
               </h2>
             </div>
-            <p className="text-sm font-medium text-[#69737D]">
-              {rest.length} more {rest.length === 1 ? "article" : "articles"} to explore
+            <p className="text-sm text-[#65717D]">
+              {rest.length} more {rest.length === 1 ? "article" : "articles"} to
+              explore
             </p>
           </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-10">
-            {rest.map((post, i) => (
-              <GridPostCard key={post.slug} post={post} i={i} />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
+            {rest.map((post) => (
+              <ArticleCard key={post.slug} post={post} />
             ))}
           </div>
-        </div>
+        </section>
       ) : null}
     </div>
   );

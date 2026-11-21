@@ -1,21 +1,18 @@
 import { createClient, type SanityClient } from "next-sanity";
+import { sanityDataset, sanityProjectId } from "./config";
 
 const apiVersion = "2025-04-01";
 
 export function isSanityConfigured(): boolean {
-  const id = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
-  return id.length >= 8;
+  return sanityProjectId.length >= 8;
 }
 
 export function getSanityClient(): SanityClient | null {
-  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
-  if (projectId.length < 8) return null;
-
-  const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
+  if (!isSanityConfigured()) return null;
 
   return createClient({
-    projectId,
-    dataset,
+    projectId: sanityProjectId,
+    dataset: sanityDataset,
     apiVersion,
     // Read from the API (not Sanity’s CDN) so each site refresh matches what you just published.
     useCdn: false,

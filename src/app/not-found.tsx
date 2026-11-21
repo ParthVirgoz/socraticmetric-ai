@@ -1,8 +1,7 @@
 import Link from "next/link";
+import { ArrowRight, Home } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowRight, GraduationCap, Building2, Shield, Microscope, Home } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { createPageMetadata } from "@/lib/site-metadata";
 
 export const metadata = createPageMetadata({
@@ -12,102 +11,97 @@ export const metadata = createPageMetadata({
   noIndex: true,
 });
 
+const helpfulLinks = [
+  {
+    title: "Why it matters",
+    description:
+      "Explore the gap between written output and real understanding.",
+    href: "/why-it-matters",
+  },
+  {
+    title: "Education",
+    description: "See how oral verification supports authentic assessment.",
+    href: "/education",
+  },
+  {
+    title: "Enterprise",
+    description: "Explore verification for workforce knowledge and compliance.",
+    href: "/enterprise",
+  },
+  {
+    title: "Government",
+    description: "Learn about readiness assurance in high-stakes operations.",
+    href: "/government",
+  },
+  {
+    title: "Insights",
+    description: "Read about learning, assessment, and AI-era verification.",
+    href: "/blog",
+  },
+];
+
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F5F5F2] font-sans text-[#163460] selection:bg-[#E79636]/20 selection:text-[#163460] overflow-x-hidden">
+    <div className="flex min-h-screen flex-col bg-[#F8F6F0] font-sans text-[#163460]">
       <Navbar />
-      
-      <main className="flex-1 flex flex-col items-center justify-center pt-32 pb-20 md:pt-40 md:pb-32 px-6">
-        <div className="container max-w-4xl mx-auto text-center">
-          {/* 404 Header */}
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-[#1E4E8A]/10 text-[#1E4E8A] text-sm font-bold tracking-widest uppercase">
-            Error 404
-          </div>
-          <h1 className="animate-text-enter font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#163460] leading-[1.1] mb-6">
-            Page Not Found
-          </h1>
-          <p className="text-lg md:text-xl text-[#65717D] leading-relaxed max-w-2xl mx-auto mb-10">
-            We couldn't find the page you're looking for. It might have been moved, deleted, or never existed in the first place.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/">
-              <Button variant="primary" size="lg" className="gap-2 text-base">
-                <Home className="w-5 h-5" />
-                Back to Homepage
-              </Button>
-            </Link>
-            <Link href="/request-demo">
-              <Button variant="outline" size="lg" className="gap-2 text-base">
+      <main className="flex flex-1 items-center py-16 pt-32 md:py-24 md:pt-40">
+        <div className="container mx-auto max-w-4xl px-6 md:px-12">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#A5662C]">
+              Error 404
+            </p>
+            <h1 className="animate-text-enter mt-4 font-serif text-4xl font-bold leading-[1.08] tracking-tight text-[#163460] sm:text-5xl md:text-6xl">
+              This page isn&apos;t here.
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-[#65717D] sm:text-lg">
+              The link may be outdated or the page may have moved. Start again
+              from the homepage, or explore one of these paths.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="/"
+                className="inline-flex min-h-11 items-center gap-2 bg-[#1E4E8A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#1A4175] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
+              >
+                <Home className="h-4 w-4" aria-hidden="true" />
+                Back to home
+              </Link>
+              <Link
+                href="/request-demo#book-demo"
+                className="inline-flex min-h-11 items-center gap-2 border border-slate-300 bg-white px-5 text-sm font-semibold text-[#163460] transition-colors hover:border-[#1E4E8A] hover:text-[#1E4E8A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
+              >
                 Book a demo
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
-
-          {/* Helpful Links Grid */}
-          <div className="text-left bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/50 border border-slate-100">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#163460] mb-8 text-center sm:text-left">
-              Explore Our Solutions
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "Education",
-                  desc: "Verify authentic student comprehension beyond AI-written submissions.",
-                  icon: GraduationCap,
-                  href: "/education",
-                  color: "text-blue-600",
-                  bg: "bg-blue-50"
-                },
-                {
-                  title: "Enterprise",
-                  desc: "Verify authentic employee comprehension for enterprise training and compliance.",
-                  icon: Building2,
-                  href: "/enterprise",
-                  color: "text-emerald-600",
-                  bg: "bg-emerald-50"
-                },
-                {
-                  title: "Government",
-                  desc: "Mission-critical readiness assurance for the public sector and agencies.",
-                  icon: Shield,
-                  href: "/government",
-                  color: "text-rose-600",
-                  bg: "bg-rose-50"
-                },
-                {
-                  title: "The Science",
-                  desc: "Explore the cognitive neuroscience and research behind our platform.",
-                  icon: Microscope,
-                  href: "/science",
-                  color: "text-purple-600",
-                  bg: "bg-purple-50"
-                }
-              ].map((link) => (
-                <Link 
-                  key={link.title} 
-                  href={link.href}
-                  className="group flex gap-4 p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all duration-200"
-                >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${link.bg} transition-colors group-hover:bg-white group-hover:shadow-sm`}>
-                    <link.icon className={`w-6 h-6 ${link.color}`} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-[#163460] group-hover:text-[#1E4E8A] transition-colors mb-1">
-                      {link.title}
-                    </h3>
-                    <p className="text-sm text-[#65717D] leading-relaxed">
-                      {link.desc}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
             </div>
           </div>
+
+          <nav
+            aria-label="Helpful pages"
+            className="mt-12 border-y border-slate-200"
+          >
+            {helpfulLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-center justify-between gap-5 border-b border-slate-200 py-5 last:border-b-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1E4E8A]"
+              >
+                <span>
+                  <span className="block font-semibold text-[#163460] transition-colors group-hover:text-[#1E4E8A]">
+                    {link.title}
+                  </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-[#65717D]">
+                    {link.description}
+                  </span>
+                </span>
+                <ArrowRight
+                  className="h-4 w-4 shrink-0 text-[#1E4E8A] transition-transform duration-200 group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+            ))}
+          </nav>
         </div>
       </main>
-      
       <Footer />
     </div>
   );

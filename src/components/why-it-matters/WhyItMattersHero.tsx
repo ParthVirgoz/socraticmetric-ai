@@ -1,137 +1,95 @@
 import Link from "next/link";
 import { REQUEST_DEMO_BOOKING_HREF } from "@/lib/urls";
-import { Check, FileText, Mic } from "lucide-react";
-
-const waveHeights = [4, 10, 6, 14, 8, 16, 10, 18, 7, 12, 9, 15, 6, 11, 8, 14, 5, 12];
-
-function Waveform() {
-  return (
-    <div className="flex h-11 flex-1 items-end justify-center gap-px sm:gap-0.5" aria-hidden>
-      {waveHeights.map((h, i) => (
-        <div
-          key={i}
-          className="w-[3px] shrink-0 rounded-full bg-[#1E4E8A]/90 sm:w-1"
-          style={{ height: `${Math.min(h, 18)}px`, opacity: 0.35 + (i / waveHeights.length) * 0.55 }}
-        />
-      ))}
-    </div>
-  );
-}
+import { ArrowDown, Check, FileText, Mic } from "lucide-react";
 
 function VerificationJourneyVisual() {
   return (
-    <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-200/90 bg-white/95 p-5 backdrop-blur-md sm:max-w-lg sm:p-6">
-      {/* Unverified documentation */}
-      <div
-        className="rounded-xl border border-slate-100 bg-slate-50/90 p-4 sm:p-5"
-      >
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex min-w-0 flex-1 items-start gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F5F1E8] text-[#1E4E8A]">
-              <FileText className="h-5 w-5" strokeWidth={2} />
-            </div>
-            <div className="min-w-0">
-              <p className="font-bold text-[#163460]">Documentation</p>
-              <p className="text-sm text-[#65717D]">AI-generated report</p>
-            </div>
+    <div className="mx-auto w-full max-w-md border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40 sm:max-w-lg">
+      <div className="grid sm:grid-cols-2">
+        <div className="p-5 sm:p-6">
+          <div className="flex h-10 w-10 items-center justify-center border border-slate-200 bg-[#F8F6F0] text-[#1E4E8A]">
+            <FileText className="h-5 w-5" aria-hidden="true" />
           </div>
-          <span className="shrink-0 rounded-full border border-amber-300 bg-amber-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-700 sm:text-xs">
-            Unverified
-          </span>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#65717D]">
+            Written output
+          </p>
+          <h2 className="mt-1 text-lg font-semibold tracking-tight text-[#163460]">
+            What was submitted
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[#65717D]">
+            A finished document can show the result without showing who
+            understands it.
+          </p>
         </div>
-        <div className="mt-4 space-y-2.5">
-          <div className="h-2 rounded-full bg-slate-200" />
-          <div className="h-2 w-[92%] rounded-full bg-slate-200" />
-          <div className="h-2 w-[78%] rounded-full bg-slate-200" />
+
+        <div className="border-t border-slate-200 p-5 sm:border-l sm:border-t-0 sm:p-6">
+          <div className="flex h-10 w-10 items-center justify-center border border-[#1E4E8A]/20 bg-[#1E4E8A] text-white">
+            <Mic className="h-5 w-5" aria-hidden="true" />
+          </div>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#1E4E8A]">
+            Oral dialogue
+          </p>
+          <h2 className="mt-1 text-lg font-semibold tracking-tight text-[#163460]">
+            How a person reasons
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[#65717D]">
+            A live explanation makes it possible to ask what sits behind an
+            answer.
+          </p>
         </div>
       </div>
 
-      {/* Mic + waveform bridge */}
-      <div
-        className="flex items-center gap-3 py-4 sm:gap-4 sm:py-5"
-      >
-        <div className="relative flex h-[4.5rem] w-14 shrink-0 justify-center sm:h-[5rem] sm:w-16">
-          <div className="absolute left-1/2 top-0 h-full w-0 -translate-x-1/2 border-l-2 border-dashed border-slate-300" />
-          <div className="relative z-10 my-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#1E4E8A] sm:h-14 sm:w-14">
-            <Mic className="h-5 w-5 text-white sm:h-6 sm:w-6" strokeWidth={2} />
-          </div>
+      <div className="border-t border-slate-200 bg-[#F8F6F0] px-5 py-5 sm:px-6">
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#163460]">
+          <ArrowDown className="h-4 w-4 text-[#1E4E8A]" aria-hidden="true" />
+          Evidence to review
         </div>
-        <Waveform />
-      </div>
-
-      {/* Verified understanding */}
-      <div
-        className="overflow-hidden rounded-xl border border-slate-100 bg-slate-50/90"
-      >
-        <div className="h-1 w-full bg-gradient-to-r from-emerald-500 via-teal-400 to-[#1E4E8A]" />
-        <div className="p-4 sm:p-5">
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex min-w-0 flex-1 items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 ring-1 ring-emerald-200/80">
-                <Check className="h-5 w-5" strokeWidth={2.5} />
-              </div>
-              <div className="min-w-0">
-                <p className="font-bold text-[#163460]">Authentic Cognition Verified</p>
-                <p className="text-sm text-[#65717D]">Oral defense completed successfully</p>
-              </div>
-            </div>
-            <span className="shrink-0 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-700 sm:text-xs">
-              Verified
-            </span>
-          </div>
-
-          <div className="mt-5 space-y-3.5">
-            {[
-              { label: "Comprehension", value: 92, color: "bg-emerald-500" },
-              { label: "Reasoning", value: 88, color: "bg-[#1E4E8A]" },
-              { label: "Defense", value: 95, color: "bg-emerald-500" },
-            ].map((row) => (
-              <div key={row.label} className="flex items-center gap-3">
-                <span className="w-[7.5rem] shrink-0 text-xs font-medium text-[#65717D] sm:text-sm">{row.label}</span>
-                <div className="h-2 min-w-0 flex-1 overflow-hidden rounded-full bg-slate-100">
-                  <div
-                    className={`h-full rounded-full ${row.color}`}
-                   
-                   
-                   
-                  />
-                </div>
-                <span className="w-7 shrink-0 text-right text-sm font-bold tabular-nums text-[#163460]">{row.value}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ul className="mt-3 grid gap-2 sm:grid-cols-3">
+          {["Explanation", "Adaptive follow-up", "Session record"].map(
+            (item) => (
+              <li
+                key={item}
+                className="group flex items-center gap-2 text-sm text-[#40566F]"
+              >
+                <Check
+                  className="h-4 w-4 shrink-0 text-[#1E4E8A] transition-transform duration-200 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+                {item}
+              </li>
+            ),
+          )}
+        </ul>
       </div>
     </div>
   );
 }
 
 export function WhyItMattersHero() {
-
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#EEF1EF] to-[#F5F5F2] pb-20 pt-32 md:pb-32 md:pt-40">
-
+    <section className="relative overflow-hidden bg-[#F8F6F0] pb-16 pt-32 md:pb-24 md:pt-40">
       <div className="container relative z-10 mx-auto max-w-7xl px-6 md:px-12">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div
-            className="max-w-2xl space-y-6"
-          >
+        <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
+          <div className="max-w-2xl space-y-6">
             <div className="flex items-center gap-4">
               <div className="h-px w-8 bg-[#1E4E8A]" />
-              <span className="text-sm font-bold uppercase tracking-widest text-[#1E4E8A]">The Threat of False Assurance</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-[#1E4E8A]">
+                The Threat of False Assurance
+              </span>
               <div className="h-px w-8 bg-[#1E4E8A]" />
             </div>
 
-            <h1 className="animate-text-enter font-serif text-4xl font-bold leading-[1.15] tracking-tight text-[#163460] sm:text-5xl md:text-6xl">
-              Verify True Comprehension When <br />
-              <span className="text-[#1E4E8A]">AI Can Generate the Output</span>
+            <h1 className="animate-text-enter font-serif text-4xl font-bold leading-[1.08] tracking-tight text-[#163460] sm:text-5xl md:text-5xl lg:text-6xl">
+              Verify true comprehension when{" "}
+              <span className="text-[#1E4E8A]">AI can generate the output</span>
             </h1>
 
             <p className="text-lg leading-relaxed text-[#65717D] md:text-xl">
-              Generative AI creates a dangerous false assurance of competence by producing flawless
-              documentation. Socratic Metric™ evaluates live cognition, providing defensible,
-              identity-verified proof that your team can articulate, refine, and defend high-stakes
-              decisions before operations go live.
+              Generative AI creates a dangerous false assurance of competence by
+              producing flawless documentation. Socratic Metric™ evaluates live
+              cognition, providing defensible, identity-verified proof that your
+              team can articulate, refine, and defend high-stakes decisions
+              before operations go live.
             </p>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
@@ -139,14 +97,12 @@ export function WhyItMattersHero() {
                 href={REQUEST_DEMO_BOOKING_HREF}
                 className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-white/10 bg-[#1E4E8A] px-8 text-base font-bold text-white transition-colors hover:bg-[#2663A5] active:scale-95 sm:w-auto"
               >
-                Talk to our team
+                Choose a time
               </Link>
             </div>
           </div>
 
-          <div
-            className="relative flex w-full flex-col items-center lg:items-end"
-          >
+          <div className="relative flex w-full flex-col items-center lg:items-end">
             <VerificationJourneyVisual />
           </div>
         </div>

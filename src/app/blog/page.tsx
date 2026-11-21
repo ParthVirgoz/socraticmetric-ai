@@ -9,10 +9,10 @@ export default async function BlogPage() {
     <BlogPageShell>
       <BlogHero />
       <section
-        className="relative overflow-hidden border-t border-slate-200/70 pb-16 pt-6 md:pb-20 md:pt-8 lg:pb-24"
+        className="bg-[#F8F6F0] py-10 md:py-14 lg:py-16"
         aria-label="Blog articles"
       >
-        <div className="relative z-10 mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-10 xl:px-14">
+        <div className="mx-auto max-w-7xl px-6 md:px-12">
           <BlogListing posts={posts} />
         </div>
       </section>
