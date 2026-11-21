@@ -60,14 +60,14 @@ export default function NotFound() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/"
-                className="inline-flex min-h-11 items-center gap-2 bg-[#1E4E8A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#1A4175] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
+                className="inline-flex min-h-11 items-center gap-2 rounded-sm bg-[#1E4E8A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#1A4175] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
               >
                 <Home className="h-4 w-4" aria-hidden="true" />
                 Back to home
               </Link>
               <Link
                 href="/request-demo#book-demo"
-                className="inline-flex min-h-11 items-center gap-2 border border-slate-300 bg-white px-5 text-sm font-semibold text-[#163460] transition-colors hover:border-[#1E4E8A] hover:text-[#1E4E8A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
+                className="inline-flex min-h-11 items-center gap-2 rounded-sm border border-slate-300 bg-white px-5 text-sm font-semibold text-[#163460] transition-colors hover:border-[#1E4E8A] hover:text-[#1E4E8A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
               >
                 Book a demo
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />

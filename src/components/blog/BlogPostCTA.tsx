@@ -10,7 +10,7 @@ const benefits = [
 
 export function BlogPostCTA() {
   return (
-    <section className="mt-12 border border-white/10 bg-[#163460] py-12 text-center sm:mt-16 md:py-16">
+    <section className="mt-12 rounded-md border border-white/10 bg-[#163460] py-12 text-center sm:mt-16 md:py-16">
       <div className="mx-auto max-w-3xl space-y-5 px-6 sm:px-10 md:px-12">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8CA4C2]">
           Next step · live walkthrough
@@ -41,7 +41,7 @@ export function BlogPostCTA() {
         <div className="flex justify-center pt-4">
           <Link
             href={REQUEST_DEMO_BOOKING_HREF}
-            className="group inline-flex h-14 min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-[#E79636] px-8 font-bold text-[#163460] transition-colors duration-200 hover:bg-[#F3D09A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#163460] active:scale-[0.98] sm:w-auto"
+            className="group inline-flex h-14 min-h-[48px] w-full items-center justify-center gap-2 rounded-md border border-white/10 bg-[#E79636] px-8 font-bold text-[#163460] transition-colors duration-200 hover:bg-[#F3D09A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#163460] active:scale-[0.98] sm:w-auto"
           >
             Choose a time
             <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1 sm:h-5 sm:w-5" />

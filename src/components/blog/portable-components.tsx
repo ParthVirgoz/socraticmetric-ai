@@ -49,7 +49,7 @@ function PortableImage({ value }: { value: PortableImageValue }) {
 
   return (
     <figure className="my-8 sm:my-10 not-prose">
-      <div className="relative w-full overflow-hidden border border-slate-200 bg-[#F1F2EE]">
+      <div className="relative w-full overflow-hidden rounded-md border border-slate-200 bg-[#F1F2EE]">
         <Image
           src={src}
           alt={value.alt?.trim() ? value.alt : "Blog image"}
@@ -101,7 +101,7 @@ export const blogPortableTextComponents: PortableTextComponents = {
       </h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="my-8 border-l-2 border-[#1E4E8A] bg-[#F8F6F0] py-5 pl-5 pr-5 text-base italic leading-relaxed text-[#163460]/90 sm:pl-6 sm:pr-6 lg:text-lg">
+      <blockquote className="my-8 rounded-r-md border-l-2 border-[#1E4E8A] bg-[#F8F6F0] py-5 pl-5 pr-5 text-base italic leading-relaxed text-[#163460]/90 sm:pl-6 sm:pr-6 lg:text-lg">
         {children}
       </blockquote>
     ),

@@ -36,7 +36,7 @@ export function RequestDemoHero() {
           </p>
           <Link
             href="#book-demo"
-            className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 bg-[#1E4E8A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#1A4175] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
+            className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-[#1E4E8A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#1A4175] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E4E8A] focus-visible:ring-offset-2"
           >
             Choose a time
             <ArrowDown className="h-4 w-4" aria-hidden="true" />

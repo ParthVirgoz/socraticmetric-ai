@@ -40,8 +40,8 @@ export function VerificationGap() {
             risk is treating that output as evidence that a person can explain
             or apply the thinking behind it.
           </p>
-          <figure className="group mt-8 border border-slate-200 bg-[#F8F6F0] p-3 transition-colors duration-300 hover:border-[#1E4E8A]/40 sm:p-4">
-            <div className="relative aspect-[1045/677] overflow-hidden bg-white">
+          <figure className="group mt-8 overflow-hidden rounded-md border border-slate-200 bg-[#F8F6F0] p-3 transition-colors duration-300 hover:border-[#1E4E8A]/40 sm:p-4">
+            <div className="relative aspect-[1045/677] overflow-hidden rounded-sm bg-white">
               <Image
                 src="/img/sciencepage/challenge-solution.png"
                 alt="A diagram tracing the shift from written output to oral engagement and verifiable learning."

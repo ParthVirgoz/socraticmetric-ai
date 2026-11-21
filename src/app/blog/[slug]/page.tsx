@@ -57,7 +57,7 @@ function ArticleContextVisual() {
   ];
 
   return (
-    <figure className="border border-white/15 bg-[#F8F6F0] text-[#163460]">
+    <figure className="overflow-hidden rounded-md border border-white/15 bg-[#F8F6F0] text-[#163460]">
       <div
         role="img"
         aria-label="A three-step illustration: written output, oral dialogue, and reviewable evidence"
@@ -68,7 +68,7 @@ function ArticleContextVisual() {
           return (
             <Fragment key={stage.label}>
               <div className="min-w-0 text-center">
-                <span className="mx-auto flex h-9 w-9 items-center justify-center border border-[#1E4E8A]/20 bg-white text-[#1E4E8A] sm:h-11 sm:w-11">
+                <span className="mx-auto flex h-9 w-9 items-center justify-center rounded-sm border border-[#1E4E8A]/20 bg-white text-[#1E4E8A] sm:h-11 sm:w-11">
                   <Icon className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                 </span>
                 <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#163460] sm:text-xs">
@@ -171,7 +171,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
 
             {hasCover ? (
-              <figure className="relative aspect-[16/10] overflow-hidden border border-white/15 bg-[#1A4175]">
+              <figure className="relative aspect-[16/10] overflow-hidden rounded-md border border-white/15 bg-[#1A4175]">
                 <Image
                   src={post.coverImageUrl!}
                   alt={`Cover: ${post.title}`}

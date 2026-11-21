@@ -124,7 +124,7 @@ const team = [
 
 function SessionWorkflowVisual() {
   return (
-    <div className="overflow-hidden border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/35">
+    <div className="overflow-hidden rounded-md border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/35">
       <div className="flex h-12 items-center gap-3 border-b border-slate-200 bg-[#F4F5F3] px-4">
         <div className="flex shrink-0 gap-1.5" aria-hidden="true">
           <span className="h-2.5 w-2.5 rounded-full bg-[#D69B94]" />
@@ -158,7 +158,7 @@ function SessionWorkflowVisual() {
                 />
               ) : null}
               <span
-                className={`relative z-10 flex h-10 w-10 items-center justify-center border transition-transform duration-200 group-hover:translate-x-0.5 ${step.surface} ${step.color}`}
+                className={`relative z-10 flex h-10 w-10 items-center justify-center rounded-sm border transition-transform duration-200 group-hover:translate-x-0.5 ${step.surface} ${step.color}`}
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
               </span>
@@ -175,7 +175,7 @@ function SessionWorkflowVisual() {
                   {step.description}
                 </p>
                 {index === 1 ? (
-                  <div className="mt-3 flex h-7 items-center justify-between gap-1 border-y border-slate-200 bg-[#F8F6F0] px-2.5">
+                  <div className="mt-3 flex h-7 items-center justify-between gap-1 rounded-sm border border-slate-200 bg-[#F8F6F0] px-2.5">
                     {[2, 4, 3, 6, 4, 7, 5, 3, 6, 4, 2, 5, 3, 6, 4].map(
                       (height, barIndex) => (
                         <span
@@ -360,9 +360,9 @@ export default function AboutPage() {
                       key={principle.title}
                       delayMs={index * 70}
                     >
-                      <article className="group h-full border border-slate-200 bg-[#F8F6F0] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#1E4E8A]/30 sm:p-8">
+                      <article className="group h-full rounded-md border border-slate-200 bg-[#F8F6F0] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#1E4E8A]/30 sm:p-8">
                         <span
-                          className={`mb-6 flex h-12 w-12 items-center justify-center border border-slate-200 ${principle.surface} ${principle.color}`}
+                          className={`mb-6 flex h-12 w-12 items-center justify-center rounded-sm border border-slate-200 ${principle.surface} ${principle.color}`}
                         >
                           <Icon className="h-5 w-5" aria-hidden="true" />
                         </span>
@@ -378,7 +378,7 @@ export default function AboutPage() {
                 })}
               </div>
 
-              <div className="mt-12 border border-white/10 bg-[#163460] px-5 py-6 text-white sm:px-8 sm:py-8">
+              <div className="mt-12 rounded-md border border-white/10 bg-[#163460] px-5 py-6 text-white sm:px-8 sm:py-8">
                 <div className="grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-center lg:gap-10">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F3D09A]">
@@ -439,7 +439,7 @@ export default function AboutPage() {
                 {team.map((member, index) => (
                   <li key={member.name}>
                     <ScrollReveal delayMs={index * 70}>
-                      <article className="group flex h-full flex-col items-center border border-slate-200 bg-white px-6 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#1E4E8A]/30 sm:px-8">
+                      <article className="group flex h-full flex-col items-center rounded-md border border-slate-200 bg-white px-6 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#1E4E8A]/30 sm:px-8">
                         <span
                           className={`mb-5 flex h-24 w-24 items-center justify-center rounded-full border text-xl font-semibold transition-transform duration-300 group-hover:scale-[1.03] ${
                             index === 1
@@ -482,7 +482,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href={REQUEST_DEMO_BOOKING_HREF}
-                className="group mt-7 inline-flex min-h-12 items-center justify-center gap-2 bg-[#E79636] px-5 text-sm font-semibold text-[#163460] transition-colors hover:bg-[#F3D09A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#163460]"
+                className="group mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-[#E79636] px-5 text-sm font-semibold text-[#163460] transition-colors hover:bg-[#F3D09A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#163460]"
               >
                 Choose a time
                 <ArrowRight

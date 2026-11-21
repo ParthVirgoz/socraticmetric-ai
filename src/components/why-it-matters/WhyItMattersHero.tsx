@@ -4,10 +4,10 @@ import { ArrowDown, Check, FileText, Mic } from "lucide-react";
 
 function VerificationJourneyVisual() {
   return (
-    <div className="mx-auto w-full max-w-md border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40 sm:max-w-lg">
+    <div className="mx-auto w-full max-w-md overflow-hidden rounded-md border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40 sm:max-w-lg">
       <div className="grid sm:grid-cols-2">
         <div className="p-5 sm:p-6">
-          <div className="flex h-10 w-10 items-center justify-center border border-slate-200 bg-[#F8F6F0] text-[#1E4E8A]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-[#F8F6F0] text-[#1E4E8A]">
             <FileText className="h-5 w-5" aria-hidden="true" />
           </div>
           <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#65717D]">
@@ -23,7 +23,7 @@ function VerificationJourneyVisual() {
         </div>
 
         <div className="border-t border-slate-200 p-5 sm:border-l sm:border-t-0 sm:p-6">
-          <div className="flex h-10 w-10 items-center justify-center border border-[#1E4E8A]/20 bg-[#1E4E8A] text-white">
+          <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-[#1E4E8A]/20 bg-[#1E4E8A] text-white">
             <Mic className="h-5 w-5" aria-hidden="true" />
           </div>
           <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#1E4E8A]">
@@ -95,7 +95,7 @@ export function WhyItMattersHero() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <Link
                 href={REQUEST_DEMO_BOOKING_HREF}
-                className="inline-flex h-14 w-full items-center justify-center rounded-xl border border-white/10 bg-[#1E4E8A] px-8 text-base font-bold text-white transition-colors hover:bg-[#2663A5] active:scale-95 sm:w-auto"
+                className="inline-flex h-14 w-full items-center justify-center rounded-md border border-white/10 bg-[#1E4E8A] px-8 text-base font-bold text-white transition-colors hover:bg-[#2663A5] active:scale-95 sm:w-auto"
               >
                 Choose a time
               </Link>

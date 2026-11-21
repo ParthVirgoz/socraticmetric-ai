@@ -93,7 +93,7 @@ export function RequestDemoForm() {
 
         <div
           ref={mountRef}
-          className="mx-auto max-w-5xl border border-slate-200 bg-white p-3 sm:p-5 md:p-8"
+          className="mx-auto max-w-5xl overflow-hidden rounded-md border border-slate-200 bg-white p-3 sm:p-5 md:p-8"
         >
           {!CALCOM_LINK ? (
             <div className="flex min-h-72 flex-col items-center justify-center px-5 text-center">

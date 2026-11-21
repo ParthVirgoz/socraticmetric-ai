@@ -21,7 +21,7 @@ export function PortableVideoEmbed({ value }: { value: PortableVideoValue }) {
   if (resolved.kind === "iframe") {
     return (
       <figure className="my-8 sm:my-10 not-prose">
-        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[#163460] shadow-lg shadow-[#163460]/[0.12] ring-1 ring-black/[0.08] sm:rounded-2xl">
+        <div className="relative aspect-video w-full overflow-hidden rounded-md bg-[#163460] shadow-lg shadow-[#163460]/[0.12] ring-1 ring-black/[0.08]">
           <iframe
             src={resolved.src}
             title={iframeTitle}
@@ -45,7 +45,7 @@ export function PortableVideoEmbed({ value }: { value: PortableVideoValue }) {
         href={resolved.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex flex-col sm:flex-row sm:items-stretch gap-0 overflow-hidden rounded-xl sm:rounded-2xl ring-1 ring-black/5 shadow-lg shadow-black/[0.06] bg-white transition-all hover:ring-[#1E4E8A]/25 hover:shadow-xl"
+        className="group flex flex-col sm:flex-row sm:items-stretch gap-0 overflow-hidden rounded-md ring-1 ring-black/5 shadow-lg shadow-black/[0.06] bg-white transition-all hover:ring-[#1E4E8A]/25 hover:shadow-xl"
       >
         <div className="flex shrink-0 items-center justify-center bg-gradient-to-br from-[#F5F1E8] to-[#F1F2EE] px-6 py-10 sm:w-40 sm:py-0">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1E4E8A]/15 text-[#1E4E8A] ring-2 ring-[#1E4E8A]/20 transition-transform group-hover:scale-105">

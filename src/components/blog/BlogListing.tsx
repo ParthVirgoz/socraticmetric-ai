@@ -54,7 +54,7 @@ function CoverImage({
 
 function FeaturedPost({ post }: { post: BlogPostCard }) {
   return (
-    <article className="group overflow-hidden border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40">
+    <article className="group overflow-hidden rounded-md border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40">
       <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
         <Link
           href={`/blog/${post.slug}`}
@@ -98,7 +98,7 @@ function FeaturedPost({ post }: { post: BlogPostCard }) {
 
 function ArticleCard({ post }: { post: BlogPostCard }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40">
+    <article className="group flex h-full flex-col overflow-hidden rounded-md border border-slate-200 bg-white transition-colors duration-300 hover:border-[#1E4E8A]/40">
       <Link
         href={`/blog/${post.slug}`}
         className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1E4E8A]"
