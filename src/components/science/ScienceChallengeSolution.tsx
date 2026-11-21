@@ -1,4 +1,5 @@
 import { AlertTriangle, Lightbulb } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function ScienceChallengeSolution() {
   return (
@@ -18,16 +19,16 @@ export function ScienceChallengeSolution() {
           </p>
         </div>
 
-        <div
-          className="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/5 border border-slate-100 bg-white"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="/img/sciencepage/challenge-solution.png" 
-            alt="The Challenge vs The Solution: Moving from static output to verified cognition"
-            className="w-full h-auto block"
-          />
-        </div>
+        <ScrollReveal className="mx-auto max-w-5xl">
+          <div className="science-visual-frame">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/img/sciencepage/challenge-solution.png"
+              alt="The Challenge vs The Solution: Moving from static output to verified cognition"
+              className="science-visual-image block h-auto w-full"
+            />
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

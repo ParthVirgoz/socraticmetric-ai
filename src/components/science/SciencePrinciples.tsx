@@ -1,4 +1,5 @@
 import { Brain, Focus, Ear } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function SciencePrinciples() {
 
@@ -16,16 +17,16 @@ export function SciencePrinciples() {
           </h2>
         </div>
 
-        <div
-          className="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl shadow-orange-900/5 border border-slate-100 bg-white"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="/img/sciencepage/oral-learning.png" 
-            alt="The Science Behind Oral Learning"
-            className="w-full h-auto block"
-          />
-        </div>
+        <ScrollReveal className="mx-auto max-w-5xl">
+          <div className="science-visual-frame">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/img/sciencepage/oral-learning.png"
+              alt="The Science Behind Oral Learning"
+              className="science-visual-image block h-auto w-full"
+            />
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
